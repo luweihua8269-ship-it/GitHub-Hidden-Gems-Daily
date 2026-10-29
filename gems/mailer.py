@@ -2,6 +2,7 @@ import os
 import smtplib
 import ssl
 from email.message import EmailMessage
+from email.policy import SMTP as SMTP_POLICY
 
 
 def deliver(store, config, checkpoint=None, smtp_factory=None):
@@ -44,6 +45,7 @@ def deliver(store, config, checkpoint=None, smtp_factory=None):
     client = None
     data_started = False
     try:
+        log['smtp_phase'] = 'connect'
         if smtp_factory:
             client = smtp_factory()
         elif port == 465:
@@ -53,27 +55,39 @@ def deliver(store, config, checkpoint=None, smtp_factory=None):
             client.ehlo()
             client.starttls(context=ssl.create_default_context())
             client.ehlo()
-        client.login(os.environ['SMTP_USER'], os.environ['SMTP_PASSWORD'])
+        log['smtp_phase'] = 'authenticate'
+        password = os.environ['SMTP_PASSWORD']
+        if host == 'smtp.gmail.com':
+            password = password.replace(' ', '')
+        client.login(os.environ['SMTP_USER'], password)
+        log['smtp_phase'] = 'sender'
         code, _ = client.mail(os.environ['SMTP_USER'])
         if code != 250:
             raise RuntimeError('smtp_sender_rejected')
+        log['smtp_phase'] = 'recipient'
         code, _ = client.rcpt(os.environ['MAIL_TO'])
         if code not in (250, 251):
             raise RuntimeError('smtp_recipient_rejected')
         log['email_result'] = 'sending'
         log['smtp_data_attempts'] = log.get('smtp_data_attempts', 0) + 1
+        log['smtp_phase'] = 'persist_intent'
         checkpoint()  # Commit+push intent, fail closed if remote state cannot be saved.
         data_started = True
-        code, _ = client.data(msg.as_bytes())
+        log['smtp_phase'] = 'data'
+        code, _ = client.data(msg.as_bytes(policy=SMTP_POLICY))
         if code != 250:
             log['email_result'] = 'rejected_after_data'
         else:
             log['email_result'] = 'accepted'  # SMTP acceptance does not prove inbox arrival.
+        log['smtp_phase'] = 'persist_result'
         checkpoint()
+        log['smtp_phase'] = 'completed'
     except Exception as e:
         # No SMTP response body, addresses or credentials are written to logs.
         log['email_result'] = 'unknown' if data_started else 'failed_before_data'
         log['smtp_error_type'] = type(e).__name__
+        if isinstance(e, smtplib.SMTPResponseException):
+            log['smtp_error_code'] = e.smtp_code
         store.save()
         raise RuntimeError('smtp_' + log['email_result']) from None
     finally:
