@@ -1,0 +1,41 @@
+name: One-time source deployment
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unpack:
+    if: github.event.repository.visibility == 'public' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+      - name: Verify and unpack reviewed source archive
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path, PurePosixPath
+          import hashlib, zipfile
+          archive = Path('GitHub-Hidden-Gems-Daily.zip')
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == 'bf9617debcfd81812d7db5bb9381fe225073633837cf1e5587535650ed5bf154'
+          with zipfile.ZipFile(archive) as z:
+              for member in z.infolist():
+                  parts = PurePosixPath(member.filename).parts
+                  assert parts[0] == 'GitHub-Hidden-Gems-Daily' and '..' not in parts
+                  relative = Path(*parts[1:])
+                  if not parts[1:] or parts[1] == '.github' or member.is_dir():
+                      continue
+                  relative.parent.mkdir(parents=True, exist_ok=True)
+                  relative.write_bytes(z.read(member))
+          PYCODE
+      - name: Run offline safety tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Persist source and first report
+        run: |
+          git config user.name hidden-gems-bot
+          git config user.email hidden-gems-bot@users.noreply.github.com
+          git add README.md .gitignore .env.example ACCEPTANCE.md config.json gems templates data reports tests
+          git rm GitHub-Hidden-Gems-Daily.zip
+          git commit -m "Deploy verified zero-model source and first report"
+          git push origin HEAD:main
