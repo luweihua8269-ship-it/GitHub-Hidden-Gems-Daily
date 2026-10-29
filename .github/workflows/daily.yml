@@ -1,0 +1,66 @@
+name: GitHub Hidden Gems Daily
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hidden-gems-daily
+  cancel-in-progress: false
+jobs:
+  daily:
+    if: vars.DAILY_ENABLED == 'true' && github.event.repository.visibility == 'public' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PERSIST_STATE: git
+      AI_EDITOR_ENABLED: 'false'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Safety tests (no network, no SMTP)
+        run: python3 -m unittest discover -s tests -v
+      - name: Collect once or reuse today's outbox
+        id: prepare
+        run: python3 -m gems.main prepare
+      - name: Persist report and budget before delivery
+        id: save
+        if: always()
+        run: |
+          git config user.name hidden-gems-bot
+          git config user.email hidden-gems-bot@users.noreply.github.com
+          git add data reports
+          if ! git diff --cached --quiet; then
+            git commit -m "Persist daily discovery and budget"
+            git push origin HEAD:main
+          fi
+      - name: Deliver frozen outbox (one safe retry at most)
+        if: steps.prepare.outcome == 'success' && steps.save.outcome == 'success'
+        env:
+          SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.gmail.com' }}
+          SMTP_PORT: ${{ vars.SMTP_PORT || '465' }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          SMTP_FREE_CONFIRMED: ${{ vars.SMTP_FREE_CONFIRMED }}
+        run: |
+          if python3 -m gems.main deliver; then exit 0; fi
+          if python3 -c "from gems.storage import Store; from gems.main import configuration; from gems.storage import ROOT; s=Store(); raise SystemExit(0 if s.log['email_result']=='failed_before_data' and s.log['smtp_attempts']<2 and not s.log['retry_used'] and configuration(ROOT)['max_retries_per_day']>0 else 1)"; then
+            python3 -m gems.main deliver
+          else
+            exit 1
+          fi
+      - name: Persist final state and expose resource log
+        if: always()
+        run: |
+          python3 -m gems.main summary
+          git add data reports
+          if ! git diff --cached --quiet; then
+            git commit -m "Persist delivery result and resource log"
+            git push origin HEAD:main
+          fi
+          python3 -c "from gems.storage import today; from pathlib import Path; print(Path('reports',today(),'usage.json').read_text())" >> "$GITHUB_STEP_SUMMARY"
