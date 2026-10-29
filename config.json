@@ -1,0 +1,18 @@
+{
+  "api_requests_per_day": 50,
+  "candidate_limit": 60,
+  "deep_limit": 10,
+  "recommendation_limit": 3,
+  "readme_bytes": 18000,
+  "dedup_days": 90,
+  "similarity_days": 7,
+  "minimum_evidence_score": 48,
+  "max_stars": 5000,
+  "max_inactive_days": 180,
+  "max_retries_per_day": 1,
+  "ai_editor_enabled": false,
+  "ai_monthly_budget_cny": 0,
+  "smtp_messages_per_day": 1,
+  "smtp_monthly_cap": 31,
+  "cloud_mode": "public_standard_linux_only"
+}

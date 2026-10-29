@@ -1,0 +1,116 @@
+[
+  {
+    "repository": {
+      "id": 1010952567,
+      "name": "Tomato",
+      "full_name": "nsh07/Tomato",
+      "html_url": "https://github.com/nsh07/Tomato",
+      "description": "Minimalist, data-oriented pomodoro timer for Android and Desktop based on Material 3 Expressive",
+      "stargazers_count": 1518,
+      "pushed_at": "2026-10-28T22:13:00Z",
+      "created_at": "2025-06-30T04:58:06Z",
+      "default_branch": "dev",
+      "homepage": "",
+      "topics": [
+        "android",
+        "compose-multiplatform",
+        "desktop-app",
+        "hacktoberfest",
+        "jetpack-compose",
+        "kotlin-multiplatform",
+        "material-3-expressive",
+        "material3",
+        "material3-expressive",
+        "pomodoro",
+        "pomodoro-clock",
+        "pomodoro-timer"
+      ],
+      "_category": "生活工具"
+    },
+    "assessment": {
+      "accepted": true,
+      "category": "生活工具",
+      "audience": "有相应生活管理需求的用户",
+      "feature_match": "pomodoro",
+      "documented_facts": [
+        {
+          "text": "统计工作和学习时长",
+          "readme_evidence": "Detailed statistics of work/study times"
+        },
+        {
+          "text": "可自定义计时参数",
+          "readme_evidence": "Customizable timer parameters"
+        }
+      ],
+      "license": "GPL-3.0",
+      "platforms": [
+        "Android"
+      ],
+      "assets": [
+        {
+          "name": "tomato-v2.0.1-arm64.dmg",
+          "url": "https://github.com/nsh07/Tomato/releases/download/v2.0.1/tomato-v2.0.1-arm64.dmg"
+        },
+        {
+          "name": "tomato-v2.0.1-release.apk",
+          "url": "https://github.com/nsh07/Tomato/releases/download/v2.0.1/tomato-v2.0.1-release.apk"
+        },
+        {
+          "name": "tomato-v2.0.1-x86_64.deb",
+          "url": "https://github.com/nsh07/Tomato/releases/download/v2.0.1/tomato-v2.0.1-x86_64.deb"
+        },
+        {
+          "name": "tomato-v2.0.1-x86_64.exe",
+          "url": "https://github.com/nsh07/Tomato/releases/download/v2.0.1/tomato-v2.0.1-x86_64.exe"
+        }
+      ],
+      "install_heading": "## Download",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 64,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v2.0.1",
+      "html_url": "https://github.com/nsh07/Tomato/releases/tag/v2.0.1",
+      "published_at": "2026-09-19T15:48:19Z"
+    },
+    "readme_sha256": "3876434853bb089c51090d07a7759a79e30db6b2d5b8b98a789d2ae295cc09ec",
+    "readme_excerpt": "<div align=\"center\">\n  <img src=\"fastlane/metadata/android/en-US/images/featureGraphic.png\">\n\n## About\n\nTomato is a minimalist Pomodoro timer for Android based on Material 3 Expressive.\n\n</div>\n\n<div align=\"center\">\n\n<a href=\"https://hosted.weblate.org/engage/tomato/?utm_source=widget\">\n  <img src=\"https://img.shields.io/weblate/progress/tomato?logo=weblate&labelColor=1a1a1a&color=2ecba9\">\n</a>\n<a href=\"https://github.com/nsh07/tomato/releases/latest\">\n  <img src=\"https://img.shields.io/github/v/release/nsh07/tomato?logo=github&labelColor=1a1a1a\">\n</a>\n<a href=\"https://f-droid.org/packages/org.nsh07.pomodoro\">\n  <img src=\"https://img.shields.io/f-droid/v/org.nsh07.pomodoro?logo=f-droid&labelColor=1a1a1a\">\n</a>\n<a href=\"https://github.com/nsh07/tomato/blob/main/LICENSE\">\n  <img src=\"https://img.shields.io/github/license/nsh07/tomato?logo=gnu&color=blue&labelColor=1a1a1a\">\n</a>\n<a href=\"https://discord.gg/MHhBQcxHu6\">\n  <img src=https://img.shields.io/discord/1455603400254292196?logo=discord&label=Discord&labelColor=1a1a1a&color=5865F2>\n</a>\n\n<p>\n  <a href=\"https://play.google.com/store/apps/details?id=org.nsh07.pomodoro\">\n    <img src=\".github/repo_photos/googleplay.png\" width=\"200\">\n  </a>\n  <a href=\"https://f-droid.org/packages/org.nsh07.pomodoro\">\n      <img src=\"https://f-droid.org/badge/get-it-on.png\" width=\"200\">\n  </a>\n  <a href=\"https://apt.izzysoft.de/fdroid/index/apk/org.nsh07.pomodoro\">\n    <img src=\"https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png\" width=\"200\">\n  </a>\n</p>\n<p>\n  <a href=\"https://hosted.weblate.org/engage/tomato/\">\n    <img src=\"https://hosted.weblate.org/widget/tomato/287x66-black.png\" alt=\"Translation status\" />\n  </a>\n</p>\n\n<br/>\n\n> *\"It just might be the best looking timer app that I've ever seen\"*\n\n\\- [*HowToMen* on YouTube](https://www.youtube.com/watch?v=iwvHk4SUrMQ&t=280s)\n\n<br/>\n\n> *\"... an app to support this habit helps me stay focused and get things done. Currently, that app\nis Tomato.\"*\n\n\\- [*Android\nAuthority*](https://www.androidauthority.com/best-new-android-apps-october-2025-3602966/)\n\n<br/>\n\n</div>\n\n## Screenshots\n\n<p align=\"center\" width=\"100%\">\n<img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/1.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/2.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/3.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/4.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/5.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/6.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/7.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/8.png\" width=\"25%\">\n</p>\n\n### Features\n\n- Minimalist UI based on the latest Material 3 Expressive guidelines\n- Detailed statistics of work/study times in an easy to understand manner\n    - Stats for the current day visible at a glance\n    - Stats for the last week and last month shown in an easy to read, clean graph\n    - Additional stats for last week and month showing at what time of the day you're the most\n      productive\n- Customizable timer parameters\n- Support for Now Bar/Live Updates on Android 16 and later\n\n## Translation\n\nThis project is [available on Hosted Weblate](https://hosted.weblate.org/engage/tomato/) for\ntranslation.\n\nYou can contribute to this project even if you are not a developer by helping in\ntranslating this project into languages you know.\n\n<a href=\"https://hosted.weblate.org/engage/tomato/\">\n<img src=\"https://hosted.weblate.org/widget/tomato/horizontal-auto.svg\" alt=\"Translation status\" />\n</a>\n\n## Download\n\n- **Google Play Store** (recommended): Tomato is available on the Google Play Store.\n  [You can download it through this link](https://play.google.com/store/apps/details?id=org.nsh07.pomodoro).\n- **F-Droid** (recommended): Tomato is available on the official F-Droid repository. Simply open\n  your preferred F-Droid app and search for Tomato. Updates on F-Droid are generally a week late. To\n  get faster updates, you can install it through\n  the [IzzyOnDroid repository](https://apt.izzysoft.de/fdroid/).\n- **GitHub releases**: Alternatively, you can manually download and install APKs from\n  the [Releases](https://github.com/nsh07/Tomato/releases/latest) section of this repo (This method\n  is not recommended, use Google Play/F-Droid instead).\n\n> [!TIP]\n> To [verify](https://developer.android.com/studio/command-line/apksigner#usage-verify) the APK\n> downloaded from GitHub, use the following signing certificate fingerprints:\n> ```\n>   SHA1: B1:4E:17:93:11:E8:DB:D5:35:EF:8D:E9:FB:8F:FF:08:F8:EC:65:08\n> SHA256: 07:BE:F3:05:81:BA:EE:8F:45:EC:93:E4:7E:E6:8E:F2:08:74:E5:0E:F5:70:9C:78:B2:EE:67:AC:86:BE:4C:3D\n> ```\n> The SHA256 and MD5 hashes of the individual APK files are also available in the `checksum.txt`\n> file for each release.\n\n## Donate\n\nYou can support Tomato's development\nthrough [my GitHub Sponsors page](https://github.com/sponsors/nsh07)\nor [my BuyMeACoffee page](https://coff.ee/nsh07):\n\n<a href=\"https://github.com/sponsors/nsh07\">\n  <img src=\".github/repo_photos/sponsors.png\" width=\"128px\">\n</a>\n<a href=\"https://coff.ee/nsh07\">\n  <img src=\".github/repo_photos/bmc_qr.png\" width=\"128px\">\n</a>\n\n### Members and Sponsors\n\n- Shun Min Chang ([@jack24254029](https://github.com/jack24254029) on GitHub)\n- Chinedu Oji (on BuyMeACoffee)\n- Zach Alden (on BuyMeACoffee)\n\n## Special Thanks\n\nMany thanks to Dimu ([@pdimu](https://github.com/pdimu) on GitHub) for helping design multiple features starting with version 2.0.\n\nThis app was made possible by these awesome libraries:\n\n### All platforms\n\n- [FileKit](https://filekit.mintlify.app/introduction) - Cross-platform file operations for Kotlin\n  Multiplatform\n- [MaterialKolor](https://github.com/jordond/materialkolor) - Dynamic Material 3 color schemes\n- [Room](https:",
+    "checked_date": "2026-10-29",
+    "readme_ref": "v2.0.1"
+  }
+]

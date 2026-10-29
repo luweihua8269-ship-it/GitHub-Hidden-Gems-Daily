@@ -1,0 +1,902 @@
+[
+  {
+    "repository": {
+      "id": 474882693,
+      "name": "CameraTools",
+      "full_name": "portra400nc/CameraTools",
+      "html_url": "https://github.com/portra400nc/CameraTools",
+      "description": "An advanced photo mode/free camera mod for Genshin Impact",
+      "stargazers_count": 89,
+      "pushed_at": "2026-10-29T03:57:08Z",
+      "created_at": "2022-03-28T06:58:38Z",
+      "default_branch": "master",
+      "homepage": "",
+      "topics": [
+        "genshin",
+        "genshin-impact",
+        "melonloader-mod",
+        "photo-mode",
+        "screenshot"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "license": "GPL-3.0",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "assets": [],
+      "install_heading": "## Install",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 49,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v1.2.0",
+      "html_url": "https://github.com/portra400nc/CameraTools/releases/tag/v1.2.0",
+      "published_at": "2026-10-25T16:57:52Z"
+    },
+    "readme_sha256": "b361291d4d0aa1d03ae936ff37575a131cdf7e41d4c1173a02f34f96b1848725",
+    "readme_excerpt": "<div align=\"center\">\n\n# Camera Tools\n\n**An advanced photo mode/free camera mod for Genshin Impact**\n\n[Features](#features) · [Showcase](#showcase) · [Installation](#installation) · [Getting started](#getting-started) · [Hotkeys](#hotkeys) · [Controller](#controller) · [Graphics](#graphics) · [Building](#building)\n\n</div>\n\n---\n\n## Features\n\n| | |\n|--|--|\n| **Camera** | Free camera, focal length, roll, smooth movement (damping), near clip |\n| **Time** | Pause, slow motion and speed up; time of day with time-lapse; weather override (sunny, cloudy, rain, thunderstorm, snow, mist) |\n| **Composition** | Hide UI for clean shots; frame guide for any crop ratio, such as 7:5 or 21:9 |\n| **Graphics** | Game settings and resolution from the free camera, with two presets you can make your own |\n| **Enhancements** | Ambient light, contact shadows, soft sun shadows, haze, light shafts, wet surfaces, a tone map and a vintage lens flare, through CameraTools' ReShade add-on |\n| **Camera paths** | Record views as nodes and fly the camera through them in one shot |\n| **Replays** | Record the party, their skills and the enemies near them, and play it back alone or along a camera path to film the moment again |\n| **Lights** | Point, spot and soft sphere lights, for the world or only characters |\n| **Posing** | Freeze the active character, move and turn them, turn their joints, shape hands and face, save poses |\n| **Depth of field** | A real lens's blur inside the game, from the focal length, aperture and focus distance: autofocus on a point or on the character's eyes, bokeh with blades, soap-bubble rims, chromatic fringes, cat's eye and swirl, through CameraTools' Enhancements add-on. Cinematic DOF and iMMERSE work too. |\n| **ReShade** | One-button screenshots at your highest settings, also as long exposures and as DNG raw files for Lightroom |\n| **Input** | Hotkeys you change in the panel; XInput controllers, including the Steam Deck |\n\n## Showcase\n\n### Camera paths\n\nhttps://github.com/user-attachments/assets/e898ae54-dfb5-4270-bfce-81479329b2ad\n\n### The mod\n\n<table>\n<tr>\n<td width=\"50%\" valign=\"top\">\n  <img src=\"media/mod-1.jpg\" alt=\"Free camera with the 5:7 frame guide, focal length and aperture readout, and controller hints\" width=\"100%\">\n  <p align=\"center\"><sub>Free camera with a frame guide</sub></p>\n</td>\n<td width=\"50%\" valign=\"top\">\n  <img src=\"media/mod-2.jpg\" alt=\"Pose tab turning a character's head joint\" width=\"100%\">\n  <p align=\"center\"><sub>Posing a character's joints</sub></p>\n</td>\n</tr>\n<tr>\n<td width=\"50%\" valign=\"top\">\n  <img src=\"media/mod-3.jpg\" alt=\"Paths tab with node editing and playback settings\" width=\"100%\">\n  <p align=\"center\"><sub>Building a camera path</sub></p>\n</td>\n<td width=\"50%\" valign=\"top\">\n  <img src=\"media/mod-4.jpg\" alt=\"Camera path playing back with its progress bar\" width=\"100%\">\n  <p align=\"center\"><sub>Playing the path back</sub></p>\n</td>\n</tr>\n</table>\n\n### Shot with CameraTools\n\n<table>\n<tr>\n<td width=\"50%\" valign=\"top\">\n  <img src=\"media/shot-1.jpg\" alt=\"Screenshot taken with CameraTools\" width=\"100%\">\n  <img src=\"media/shot-6.jpg\" alt=\"Screenshot taken with CameraTools\" width=\"100%\">\n  <img src=\"media/shot-4.jpg\" alt=\"Screenshot taken with CameraTools\" width=\"100%\">\n</td>\n<td width=\"50%\" valign=\"top\">\n  <img src=\"media/shot-7.jpg\" alt=\"Screenshot taken with CameraTools\" width=\"100%\">\n  <img src=\"media/shot-2.jpg\" alt=\"Screenshot taken with CameraTools\" width=\"100%\">\n  <img src=\"media/shot-5.jpg\" alt=\"Screenshot taken with CameraTools\" width=\"100%\">\n</td>\n</tr>\n</table>\n\n## Installation\n\nThis mod requires a [custom build of MelonLoader](https://github.com/portra400nc/melon/releases) that supports Genshin. [ReShade](https://reshade.me) with full add-on support is optional: without it, the Enhancements, depth of field, ReShade tab and sphere lights are unavailable.\n\n1. Download the latest release from the [Releases](https://github.com/portra400nc/CameraTools/releases) page.\n2. Copy `CameraTools.dll` into MelonLoader's `Mods` folder.\n3. Optional, with ReShade: copy `CameraToolsReShadeBridge.addon64` and `CameraToolsEnhancements.addon64` into the folder ReShade loads add-ons from: `reshade-shaders/Addons`, or the folder that `AddonPath` in `ReShade.ini` names.\n4. Start the game, load into the world, and press <kbd>Insert</kbd> or <kbd>L3</kbd>+<kbd>R3</kbd>. See [Getting started](#getting-started).\n\nTake all three files from the same release. CameraTools checks each add-on's version, and if one does not match, the tab that needs it says which version it found and which it needs. Without ReShade and the add-ons, the free camera, paths, replays, lights and posing still work.\n\nTo update, replace the files with the ones from the new release. To uninstall, delete them. Your settings stay in `UserData/MelonPreferences.cfg`, and your camera paths, lights and poses in `UserData/CameraTools/`.\n\n## Getting started\n\n1. Press <kbd>Insert</kbd> to turn on the free camera. On a controller, press <kbd>L3</kbd>+<kbd>R3</kbd>. Press it again to leave.\n2. Press <kbd>Tab</kbd> (<kbd>Start</kbd>) to open the settings panel. Click and drag with the mouse, or use the controller.\n3. Press <kbd>H</kbd> (<kbd>B</kbd>) to hide CameraTools' hints for a clean shot. The free camera already hides the game's HUD.\n\nWhile the free camera is on, the game ignores the keyboard, mouse and controller, so <kbd>W</kbd> moves only the camera. While it is off, the game has them back, and only <kbd>Insert</kbd> and <kbd>L3</kbd>+<kbd>R3</kbd> reach CameraTools.\n\n### Guides\n\n| Guide | What it covers |\n|--|--|\n| [Camera paths](CAMERA-PATHS.md) | Record camera positions as nodes and fly the free camera through them |\n| [Lights](LIGHTS.md) | Add point, spot and sphere lights, place them by looking through them, attach them to the camera or the character, and shade characters from a light as from the sun |\n| [Pose](POSE.md) | Move the character, turn joints, shape hands, set expression and gaze, save poses |\n| ",
+    "checked_date": "2026-10-29"
+  },
+  {
+    "repository": {
+      "id": 1328784466,
+      "name": "Pomodoist",
+      "full_name": "Kabanya/Pomodoist",
+      "html_url": "https://github.com/Kabanya/Pomodoist",
+      "description": "Open-source Todoist alternative. Self-hosted. A focused Pomodoro timer and task manager for mobile, desktop, and web.",
+      "stargazers_count": 460,
+      "pushed_at": "2026-10-29T03:42:20Z",
+      "created_at": "2026-08-09T12:34:20Z",
+      "default_branch": "main",
+      "homepage": "https://pomodoist.com/",
+      "topics": [
+        "agpl-3",
+        "dart",
+        "flutter",
+        "ios",
+        "macos",
+        "open-source",
+        "pomodoro",
+        "productivity",
+        "task-management",
+        "time-management",
+        "web"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "生活工具",
+      "audience": "有相应生活管理需求的用户",
+      "feature_match": "Pomodoro",
+      "license": "AGPL-3.0",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "assets": [
+        {
+          "name": "Pomodoist-Android.apk",
+          "url": "https://github.com/Kabanya/Pomodoist/releases/download/v1.1.6/Pomodoist-Android.apk"
+        },
+        {
+          "name": "Pomodoist-Setup.exe",
+          "url": "https://github.com/Kabanya/Pomodoist/releases/download/v1.1.6/Pomodoist-Setup.exe"
+        },
+        {
+          "name": "Pomodoist-x86_64.AppImage",
+          "url": "https://github.com/Kabanya/Pomodoist/releases/download/v1.1.6/Pomodoist-x86_64.AppImage"
+        }
+      ],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 57,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 16,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 5,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v1.1.6",
+      "html_url": "https://github.com/Kabanya/Pomodoist/releases/tag/v1.1.6",
+      "published_at": "2026-10-26T07:30:01Z"
+    },
+    "readme_sha256": "95e564969b6713c8831abb53d50fa3addbe209ba01ff280be7d5ea2bfcfbc32f",
+    "readme_excerpt": "<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/206223?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-206223\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/206223/daily?language=Dart\" alt=\"Kabanya%2FPomodoist | Trendshift\" width=\"250\" height=\"55\"/></a>\n</p>\n\n<h1 align=\"center\">\n  <img src=\".github/assets/readme/voice-to-task-cover.webp\" alt=\"Pomodoist — voice capture becomes a task, with Pomo sitting on the wordmark and a Pomodoro focus timer\" width=\"100%\">\n</h1>\n\n<p align=\"center\">\n  <strong>A little focus. A better day.</strong>\n</p>\n\n<p align=\"center\">\n  Plan tasks. Protect focus time. See your progress.<br>\n  An open-source productivity app for work, study, and everything in between.\n</p>\n\n<p align=\"center\">\n  <a href=\"#meet-pomo-your-desktop-companion\">Meet Pomo — your animated 3D desktop companion.</a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/Kabanya/Pomodoist/releases\"><img src=\".github/assets/readme/download.svg\" alt=\"Download Pomodoist\" width=\"224\" height=\"44\"></a>\n  <a href=\"https://app.pomodoist.com\"><img src=\".github/assets/readme/web.svg\" alt=\"Try Web\" width=\"124\" height=\"44\"></a>\n</p>\n\n<p align=\"center\">\n  <sub>macOS · iPhone &amp; iPad · Android · Windows · Linux · Web</sub>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://pomodoist.com\">Website</a> ·\n  <a href=\"https://pomodoist.com/privacy/\">Privacy</a> ·\n  <a href=\"https://github.com/Kabanya/Pomodoist/issues/new\">Report a bug</a> ·\n  <a href=\"CONTRIBUTING.md\">Contribute</a>\n</p>\n\n<p align=\"center\">\n  <a href=\".github/assets/readme/product-overview.webp\"><img src=\".github/assets/readme/product-overview.webp\" alt=\"Original dark macOS upcoming planner alongside the iPhone focus timer\" width=\"100%\"></a>\n</p>\n\n<img src=\".github/assets/readme/pomo-plan.webp\" alt=\"Pomo planning with a pencil and checklist\" align=\"right\" width=\"96\">\n\n## Plan your day\n\nCapture tasks, organize your schedule, and keep everything in one place.\n\n- Quick task capture\n- Inbox, Today, Upcoming, and projects\n- Calendar, timeline, kanban, and priority matrix\n\n<p align=\"center\">\n  <a href=\".github/assets/readme/quick-add.gif\"><img src=\".github/assets/readme/quick-add.gif\" alt=\"A real macOS recording: typing a task updates its priority and Pomodoro estimate\" width=\"100%\"></a>\n  <br>\n  <sub>Capture a task, set its priority, and estimate the effort as you type. <a href=\".github/assets/readme/macos-plan.webp\">View the static screenshot</a>.</sub>\n</p>\n\n<img src=\".github/assets/readme/pomo-focus.webp\" alt=\"Pomo resting with a mug\" align=\"right\" width=\"96\">\n\n## Focus on what matters\n\nWork through Pomodoro sessions with configurable breaks and deep-focus tracking.\n\n- Configurable work and break intervals\n- Track focus time as you work\n- Review progress in the app\n\n<p align=\"center\">\n  <a href=\".github/assets/readme/focus-session.gif\"><img src=\".github/assets/readme/focus-session.gif\" alt=\"A real macOS recording: resuming the full Focus view with session progress, countdown and interval controls\" width=\"100%\"></a>\n  <br>\n  <sub>Your full focus session: timeline, countdown, and interval controls. <a href=\".github/assets/readme/macos-focus.webp\">View the static screenshot</a>.</sub>\n</p>\n\n## Meet Pomo, your desktop companion\n\nPomo is an animated 3D mascot that lives on your desktop while you work.\nHe follows your focus sessions, rests during breaks, and celebrates completed tasks.\n\n- See your remaining focus time and control sessions from the desktop\n- Start, pause, or resume focus and quickly add a task from Pomo's controls\n- Move and resize Pomo, show him only during focus, or choose quiet and reduced-motion modes\n\n<p align=\"center\">\n  <img src=\".github/assets/readme/desktop-pomo-focus.webp\" alt=\"The actual Pomo 3D model in its focused thinking pose\" width=\"28%\">\n  <img src=\".github/assets/readme/desktop-pomo-rest.webp\" alt=\"The actual Pomo 3D model resting during a break\" width=\"28%\">\n  <img src=\".github/assets/readme/desktop-pomo-happy.webp\" alt=\"The actual Pomo 3D model celebrating progress\" width=\"28%\">\n  <br>\n  <sub>Focus · Take a break · Celebrate</sub>\n</p>\n\n<p align=\"center\">\n  <a href=\".github/assets/readme/desktop-pomo.gif\"><img src=\".github/assets/readme/desktop-pomo.gif\" alt=\"The actual floating Pomo window, with animated 3D motion and a live focus countdown\" width=\"420\"></a>\n  <br>\n  <sub>Recorded from the macOS desktop companion. <a href=\".github/assets/readme/desktop-pomo-poster.webp\">View a still frame</a>.</sub>\n</p>\n\nEnable Pomo in **Settings → Pomo**.\n\n## Work together\n\nShare tasks, keep comments beside the work, and see your team's focus time.\n\n<p align=\"center\">\n  <img src=\".github/assets/readme/together-cover.webp\" alt=\"Together: four Pomo teammates connected to one shared task, a generated feature illustration\" width=\"100%\">\n  <br>\n  <a href=\".github/assets/readme/macos-shared-task-comments-full.webp\"><img src=\".github/assets/readme/macos-shared-task-comments.webp\" alt=\"Actual macOS app: a shared project with Review Pomo storyboards selected and a discussion between four team members\" width=\"100%\"></a>\n  <br>\n  <sub>Shared task discussion in the macOS app, using fictional demo data. Click the screenshot to enlarge.</sub>\n</p>\n\n**Self-hosted is fully free.** Run Pomodoist on your own infrastructure with your own accounts and provider credentials; infrastructure and provider costs are yours. The official app uses Pomodoist's hosted infrastructure, with free features and paid services or account entitlements. Subscriptions support those hosted services; the source code and official client binaries remain AGPL-3.0-only. See [Licensing](LICENSING.md).\n\n<img src=\".github/assets/readme/pomo-progress.webp\" alt=\"Pomo celebrating progress\" align=\"right\" width=\"96\">\n\n## See your progress\n\nReview your focus time and productivity trends with built-in reports.\n\n- Weekly focus-time trends\n- Completed tasks and focus intervals\n- Habit",
+    "checked_date": "2026-10-29"
+  },
+  {
+    "repository": {
+      "id": 1236024834,
+      "name": "haoone-app",
+      "full_name": "minghe36/haoone-app",
+      "html_url": "https://github.com/minghe36/haoone-app",
+      "description": "新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。中英转录识别准确率超过 97%，词语音频对齐率 98%，说话人分割与识别准确率 96%，带有最先进的 ASR 开源模型，100+字幕动画（支持导出透明背景的字幕动画）。说话人识别、专业字幕编辑器、命令行工具、Skill，达芬奇字幕插件（含字幕动画插件），PR 字幕插件，本地转录、远程转录、文稿匹配、智能拆行、AI校正、AI 智能热词、翻译、双语字幕、专业字幕编辑器、字幕合成、自定义大模型 API",
+      "stargazers_count": 632,
+      "pushed_at": "2026-10-29T03:38:07Z",
+      "created_at": "2026-05-11T22:04:28Z",
+      "default_branch": "master",
+      "homepage": "https://www.haoai.pro/haoone",
+      "topics": [
+        "caption",
+        "caption-generation",
+        "caption-generator",
+        "captioning",
+        "captions",
+        "subtitle",
+        "subtitles-generator"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "音视频",
+      "audience": "需要处理音视频或字幕的用户",
+      "feature_match": "字幕",
+      "license": null,
+      "platforms": [
+        "Windows"
+      ],
+      "assets": [
+        {
+          "name": "haoone_14.7.5_aarch64.dmg",
+          "url": "https://github.com/minghe36/haoone-app/releases/download/V14.7.5/haoone_14.7.5_aarch64.dmg"
+        },
+        {
+          "name": "haoone_14.7.5_x64-setup.exe",
+          "url": "https://github.com/minghe36/haoone-app/releases/download/V14.7.5/haoone_14.7.5_x64-setup.exe"
+        }
+      ],
+      "install_heading": "## 视频使用",
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认"
+      ],
+      "score": 61,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "V14.7.5",
+      "html_url": "https://github.com/minghe36/haoone-app/releases/tag/V14.7.5",
+      "published_at": "2026-10-29T03:38:47Z"
+    },
+    "readme_sha256": "74af208b687fc1f0642d03531c7d8cb242796ac0b3a380edbffda26d48c0c23f",
+    "readme_excerpt": "# haoone-app\n\n<div align=\"center\">\n  <img src=\"https://cdn.haoai.pro/assets/haoone_logo.png\" alt=\"VideoCaptioner Logo\" width=\"100\">\n  <h1>haoone V13</h1>\n  <p>新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。</p>\n  <p>可能是市面上最强达芬奇字幕插件，字幕生成、字幕编辑、文稿匹配、一键双语、字幕动画...</p>\n  <p>中英转录识别准确率 97%，日语识别准确率 94%，词语音频对齐率 98%，说话人分割与识别准确率 96%</p>\n\n  [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)\n</div>\n\n### 项目迭代很快，点个 star 接收软件更新并支持项目。[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)\n\nV14 正在开发中，迭代计划可以看 [issues](https://github.com/minghe36/haoone-app/issues)\n\n![haoone 软件截图](image/index-3.png)\n\n自带达芬奇字幕插件，所有用户都可使用：\n\n![haoone 软件截图](image/plugin-1.png)\n\n![haoone 软件截图](image/plugin-2.png)\n\n软件中执行转录后，会同步字幕到达芬奇，也可以同步字幕的修改达芬奇，一键生成双语字幕到达芬奇。\n\n\nPR 字幕插件：\n\n<img src=\"image/pr.png\" alt=\"pr\" width=\"300\">\n\n## haoone 软件介绍\n\n覆盖字幕识别生成与字幕翻译工作流的所有核心需求。\n\n剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，超低成本，实现超高准确率。\n\n可能是市面上功能最全面的字幕软件，集成了市面上最先进的开源 ASR 模型，做到开箱即用，windows 与 mac 都可以使用。\n\nhaoone 软件基础功能永久免费使用，增强功能一次性买断，无订阅费用。\n\n承诺 100% 隐私数据安全，绝不使用您的语音数据进行二次训练。\n\n弃用 whisper 方案，如果你正在使用基于 whisper 的软件， whisper 无法满足你的需求，可以试试 haoone 软件。\n\n转录引擎基于 rust+c++，转录速度快，自动开启 GPU 加速，Windows 下带有 CUDA 开箱即用加速引擎。自研词语级音频对齐。\n\n本地转录、远程转录、文稿匹配、智能拆行、AI校正、AI 智能热词、翻译、双语字幕、专业字幕编辑器、字幕合成、自定义大模型 API...\n\n让工具适配你的工作流：达芬奇字幕插件、PR字幕插件、命令行工具、skill 封装\n\n与 codex 、workbuddy 等 AI agent 功能无缝协作\n\n多文件一键批量化操作\n\n支持的语言：中文、英文、日语、韩语、葡萄牙语、西班牙语、阿拉伯语、意大利语、德语、法语、印地语、泰语、越南语、印尼语、俄语\n\n长音视频优化：2 小时的文件都能转录（mac 耗时仅需 10 分钟），支持说话人识别\n\n快：本地转录3分钟视频，mac mini m4 16G 20 秒内完成\n\n准：中英转录识别准确率96%以上，带智能热词，越用越准\n\n齐：自研词语级对齐算法，词语音频对齐率98%\n\n\n可能是市面上最好的日语转录软件：日语专用模型日语识别准确率 94%，词语级音频对齐率 99%，30 分钟视频 3 分钟内即可完成转录，可配热词，支持中日双语字幕\n\n\n100+ 字幕动画，包括逐字动画、逐词动画、卡拉 OK 动画等，带有达芬奇字幕动画插件\n\n[下载软件](https://www.haoai.pro/haoone/download)\n\n## 视频使用教程\n\n* [haoone AI 字幕软件 V10 保姆级教程，正在实现本地版 elevenlabs的语音转文本软件](https://www.bilibili.com/video/BV1wRMg6REcz/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [haoone 字幕软件V11保姆级教程：这个达芬奇字幕插件有点强](https://www.bilibili.com/video/BV1FZMy6DEqb)\n* [说话人识别详细使用教程—haoone 字幕软件 V11 上新，对齐 elevenlabs 的说话人识别功能](https://www.bilibili.com/video/BV1LQKH6zEF2/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [非常好用的 AI 字幕软件 haoone 发布V13 ，一大波更新：CUDA 加速、模型、AI 纠错、 AI Agent 协作、语音增强、文稿匹配、批量操作](https://www.bilibili.com/video/BV13eH46nEuC/)\n* [接入 mimo-V2.5-asr API，平替 elevenlabs 的语音转文字？最便宜且很强](https://www.bilibili.com/video/BV12bE16REdo/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [达芬奇中如何以最快方式实现不同样式的双语字幕？](https://www.bilibili.com/video/BV1HnVm63EUu/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [AI专业日语字幕软件上新，日语识别准确度 94%，词语级音频对齐率 99%，30 分钟视频 3 分钟内完成转录](https://www.bilibili.com/video/BV1gSVS6FEj5/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [让语音转文字准确度越用越接近 99%，我是如何做 ASR 的热词替换的？](https://www.bilibili.com/video/BV1Y4oKBEEru/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [批量转录与合成双语字幕 如此简单](https://www.bilibili.com/video/BV1gtD9BhEmq/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [PR最佳字幕转录插件？haoone 上线 PR 字幕插件](https://www.bilibili.com/video/BV1kG9cBrEaz/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [AI专业字幕软件haoone V8正式发布-实现达芬奇中文字幕转录与高效编辑](https://www.bilibili.com/video/BV1t9zNBFEmD/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [【免费使用】AI专业字幕软件haoone的本地中英转录，准确率 96%以上，词语对齐率 98%](https://www.bilibili.com/video/BV1n7XKBSELn/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [发布增强版达芬奇文稿匹配插件 haoone 不限匹配字数](https://www.bilibili.com/video/BV1WDAszKEjE/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [AI专业字幕软件haoone V8正式发布-实现达芬奇中文字幕转录与高效编辑](https://www.bilibili.com/video/BV1t9zNBFEmD/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n\n![介绍图片](https://cdn.haoai.pro/assets/haoone%20%E4%BB%8B%E7%BB%8D.png)\n\n## 本地模型支持\n\n所有模型都是经过浩叔严格评测验证，不是集成所有模型，而是集成最好或有特定用途场景的模型，会不断更新。\n\n![本地模型](image/models-2.png)\n\n### 模型评测视频\n\n* [锐评2026年 ASR 开源模型，中文识别准确率与稳定性最好的模型是...](https://www.bilibili.com/video/BV1ggdgBQEHF/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [日语识别最准确的ASR模型是？？？锐评2026年日语 ASR 开源模型](https://www.bilibili.com/video/BV1ReLq6BEUN/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [锐评2026年英语 ASR 开源模型，哪个模型英语识别最准？](https://www.bilibili.com/video/BV1qAEn6iEgm/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n\n## 关于软件作者\n\n我是浩叔，前阿里高级技术专家，构建 AI 时代的十倍效率自动化剪辑工具，专门研究 ASR 语音转文字与 TTS 文字转语音技术，你可以在 B 站上找到我：[浩叔_AI编程](https://space.bilibili.com/1055596703)\n\n在我的B 站频道你将看到关于 ASR 模型与 TTS 模型的评测内容，软件的研发经验。\n\n## 做 haoone 软件的思考\n\n\n### 市面上已经有那么多字幕软件了，为什么还做 haoone？\n\n市面上绝大多数软件是基于 whisper 套壳软件，我在在使用的过程中，发现在中文转录上有非常多的问题，时间戳也没办法高精度对齐，所以花了大量时间测评市面上所有的 ASR 模型，详见我的测评报告：[锐评2026年 ASR 开源模型，中文识别准确率与稳定性最好的模型是...](https://www.bilibili.com/video/BV1ggdgBQEHF/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)，2026 年了很多的模型准确度、幻觉的控制、中英混说的处理、专有名词的识别，歌曲的识别、方言的识别早已经超过 whisper 了。所以我做了 haoone，一款使用最先进的 ASR 模型的字幕软件，花大量时间构建了转录引擎与时间戳对齐算法。期望 haoone 能够帮助大家节约字幕生成与字幕校对的时间。\n\nhaoone 已经迭代了 13 个大版本，功能已经完善与稳定，haoone 承诺用户数据隐私安全，绝不收集用户的转录数据、音视频文件，请放心使用。\n\n\n## 开源计划\n\n开源的代码请看本仓库的代码。\n\nhaoone 达芬奇字幕插件已开源：软件中执行转录后，会同步字幕到达芬奇，也可以同步字幕的修改达芬奇，一键生成双语字幕到达芬奇。\n\nhaoone-skill 已开源：可在各类 Agent 中使用，转录视频、播客字幕，生成带有高精度时间戳的字幕，得到高准确度的文字稿\n\nhaoone PR字幕插件 已开源：在 PR 中无需打开 haoone 软件，即可完成PR 时间线的字幕转录\n\n\n\n\n## 软件部分截图\n\n\n本地转录：0 成本高精准转录\n\n![haoone 软件截图](image/s-2.png)\n\n在线转录：准确度超过剪映、豆包 API ，价格显著低于 豆包 API\n\n![haoone 软件截图](image/s-3.png)\n\n不限字数的文稿匹配，带有格式化文稿功能，剪映文稿匹配加强版\n\n![haoone 软件截图](image/s-4.png)\n\n全屏检查与编辑模式：\n\n![haoone 软件截图](image/s-1.png)\n\n100+ 字幕动画：\n\n![haoone 软件截图](image/s-6.png)\n\n文稿视图\n\n![haoone 软件截图](image/s-5.png)\n\n支持双语字幕，长文本优化\n\n![haoone 软件截图](image/s-7.png)\n\n\n\n## 功能列表\n\nhaoone 是专业的字幕软件，功能非常强大，核心功能：\n\n* 本地转录：基于 qwen3-asr 深度优化，支持多语种，自研的词语级对齐算法\n* 远程转录：快准齐的远程转录服务\n* 模型下载：一键下载，也支持网盘下载\n* AI 智能拆行\n* AI 热词替换\n* AI 校正\n* 达芬奇字幕插件\n* PR字幕插件\n* haoone-cli 命令行工具\n* 字幕 skill\n* 文稿匹配：不限字数、支持自动格式化文稿，拆行双模式\n* 字幕合成\n* 双语字幕\n* 专业字幕编辑器\n* 多视图：快速编辑视图、章节视图\n* 双语字幕\n* 翻译\n* 一键批量操作\n* 搜索与批量替换\n* ...\n\n\n## 功能介绍\n\n- [haoone9与剪映对比转录正确率](https://guide.haoai.pro/guide/hao",
+    "checked_date": "2026-10-29"
+  },
+  {
+    "repository": {
+      "id": 736712598,
+      "name": "snaptick",
+      "full_name": "vishal2376/snaptick",
+      "html_url": "https://github.com/vishal2376/snaptick",
+      "description": "Snaptick is an MVVM Jetpack Compose app, offering ad-free task management with a built-in pomodoro timer to help you organize your daily plans",
+      "stargazers_count": 768,
+      "pushed_at": "2026-10-29T02:14:24Z",
+      "created_at": "2023-12-28T16:52:42Z",
+      "default_branch": "master",
+      "homepage": "",
+      "topics": [
+        "android",
+        "androidjetpack",
+        "app",
+        "jetpack-compose",
+        "kotlin",
+        "mvvm",
+        "pomodoro",
+        "task",
+        "todo"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "生活工具",
+      "audience": "有相应生活管理需求的用户",
+      "feature_match": "pomodoro",
+      "license": "GPL-3.0",
+      "platforms": [
+        "Android"
+      ],
+      "assets": [
+        {
+          "name": "snaptick.4.2.apk",
+          "url": "https://github.com/vishal2376/snaptick/releases/download/v4.2/snaptick.4.2.apk"
+        }
+      ],
+      "install_heading": "## Getting Started",
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认"
+      ],
+      "score": 64,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v4.2",
+      "html_url": "https://github.com/vishal2376/snaptick/releases/tag/v4.2",
+      "published_at": "2026-07-26T09:50:37Z"
+    },
+    "readme_sha256": "cc3d6037cb5198360664bfecc0b557afc52b25e9a478dc2e413f94bec7512d0c",
+    "readme_excerpt": "<div align=\"center\">\n\n<img src=\"https://github.com/vishal2376/snaptick/assets/38159691/099fd345-4a63-4916-845c-065b31b6e381\" width=\"100px\"/>\n\n# **Snaptick**\n\nSnaptick is a free daily task planner app designed to help users increase productivity. With an\neasy-to-use interface and features like a pomodoro timer, users can easily organize and achieve\ntheir daily plans\n\n<br/>\n\n\n<a href=\"https://twitter.com/vishal2376\"><img src=\"https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white\" /></a>\n<a href=\"https://discord.gg/t4VhMAjV7a\"><img src=\"https://img.shields.io/badge/Join Discord-blue?style=for-the-badge&color=7289da&logo=discord&logoColor=white\" /></a>\n\n<img src=\"https://img.shields.io/github/stars/vishal2376/snaptick?style=for-the-badge&logo=powerpages&color=cba6f7&logoColor=D9E0EE&labelColor=302D41\"/>\n<img src=\"https://img.shields.io/github/last-commit/vishal2376/snaptick?style=for-the-badge&logo=github&color=a6da95&logoColor=D9E0EE&labelColor=302D41\"/>\n<img src=\"https://img.shields.io/github/repo-size/vishal2376/snaptick?style=for-the-badge&logo=dropbox&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41\"/>\n\n<br/>\n<br/>\n\n<div style=\"display: flex; flex-direction: row;\">\n    <a href='https://apt.izzysoft.de/fdroid/index/apk/com.vishal2376.snaptick'><img alt='Get it on IzzyOnDroid' src='https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png' style=\"width:200px\"></a>\n    <a href='https://github.com/vishal2376/snaptick/releases/latest'><img alt='Get it on Github' src='https://github.com/vishal2376/snaptick/assets/38159691/f502e2ec-dbf4-4ed6-b23f-a47b74080fea' style=\"width:200px\"></a>\n</div>\n\n</div>\n<br>\n<h3 align=\"center\">❤️ Support Development</h3>\n<p align=\"center\">\n    <a href=\"https://nowpayments.io/donation?api_key=J8D6KV4-FJ7M181-QKRCGV3-6MMDNZT&source=lk_donation&medium=referral\" target=\"_blank\">\n     <img src=\"https://nowpayments.io/images/embeds/donation-button-black.svg\" width=\"150px\" alt=\"Crypto donation button by NOWPayments\">\n    </a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://ko-fi.com/vishal2376\"><img src=\"https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white\" /></a>&nbsp;&nbsp;&nbsp;&nbsp;\n  <a href=\"https://buymeacoffee.com/vishal2376\"><img src=\"https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black\" /></a>&nbsp;&nbsp;&nbsp;&nbsp;\n  <a href=\"https://paypal.me/vishal2376\"><img src=\"https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white\" /></a>&nbsp;&nbsp;&nbsp;&nbsp;\n\n</p>\n\n## 🚀 Features\n\n- 📝 **Create and Edit Tasks**\n- ⏲️ **Pomodoro Timer**\n- 🔔 **Multiple Reminders**\n- 🧩 **Home-screen Widget**\n- 🗓️ **Calendar Sync & ICS Import**\n- 💾 **Backup & Restore**\n- 🔄 **Customizable Swipe Actions**\n- ⏰ **Analyze Free Time**\n- 😴 **Set Sleep Time**\n- 🗓️ **Manage tasks in Calendar View**\n- 🎨 **Material Dynamic Theme Support**\n- 🔁 **Repeatable Tasks with Notification**\n- 🎬 **Smooth Animations**\n- 🎨 **Modern UI with Cool Themes**\n- 🌐 **Available in 15+ Languages**\n- 🆙 **In-app Update Checker**\n\n## Screenshots ([All Designs(Figma)](https://www.figma.com/file/fO6pafK7iAJMZDAtjOy1Mt/Snaptick-App-UI?type=design&node-id=0%3A1&mode=design&t=071Ijr8Yg44PVvmz-1))\n\n[![Banner](https://github.com/vishal2376/snaptick/assets/38159691/45cb1cda-a97d-4889-8734-12dee3df9ace)](https://youtube.com/shorts/iEx2ttL3BH4)\n\n## Getting Started\n\nSnaptick is distributed via GitHub Releases. Grab the latest signed APK from\n[the Releases page](https://github.com/vishal2376/snaptick/releases/latest)\nor build it yourself from source.\n\n### Prerequisites\n\n- Android Studio\n- Git\n\n### Building from source\n\n1. Clone the repository: `git clone https://github.com/vishal2376/snaptick.git`\n2. Open the project in Android Studio.\n3. Build and run the **debug** variant. The release variant requires a\n   signing keystore (see \"Releasing\" below) — you don't need one for normal\n   development.\n\n### Releasing (maintainer-only)\n\nRelease builds require a real signing keystore. The repo carries no keystore;\neach maintainer wires their own via `local.properties`:\n\n```properties\nSNAPTICK_KEYSTORE_FILE=/absolute/path/to/your-release.jks\nSNAPTICK_KEYSTORE_PASSWORD=...\nSNAPTICK_KEY_ALIAS=...\nSNAPTICK_KEY_PASSWORD=...\n```\n\n`./gradlew :app:assembleRelease` will fail-fast if the keystore env is\nmissing or if the alias is the public Android debug key — the build refuses\nto produce a debug-signed release APK.\n\n1. Clone the repository\n   ``` git clone https://github.com/vishal2376/snaptick.git ```\n2. Open the project in Android Studio\n3. Build and run the app\n\n## Contributing\n\nWe welcome contributions from anyone interested in helping to improve Snaptick! Feel free to submit\na pull request or open an issue if you notice any bugs or have suggestions for new features.\n\n## Star History\n\n<a href=\"https://star-history.dera.page/#vishal2376/snaptick&type=Timeline\">\n <picture>\n   <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://star-history.dera.page/svg?repos=vishal2376/snaptick&type=Timeline&theme=dark\" />\n   <source media=\"(prefers-color-scheme: light)\" srcset=\"https://star-history.dera.page/svg?repos=vishal2376/snaptick&type=Timeline\" />\n   <img alt=\"Star History Chart\" src=\"https://star-history.dera.page/svg?repos=vishal2376/snaptick&type=Timeline\" />\n </picture>\n</a>\n\n## License\n\nThis project is licensed under the GPL v3.0 License - see the [LICENSE](LICENSE) file for details.\n\n## Credits\n\nApp Icon created by <a href=\"https://www.flaticon.com/free-icons/task\" title=\"task icons\">\nicon_small - Flaticon</a>\n",
+    "checked_date": "2026-10-29"
+  },
+  {
+    "repository": {
+      "id": 1382264655,
+      "name": "EZtitles-Pro-Direct-Setup",
+      "full_name": "flaco8991/EZtitles-Pro-Direct-Setup",
+      "html_url": "https://github.com/flaco8991/EZtitles-Pro-Direct-Setup",
+      "description": "EZtitle Pro Installer for Windows 10 and 11 Full Setup 2026",
+      "stargazers_count": 68,
+      "pushed_at": "2026-10-29T01:25:04Z",
+      "created_at": "2026-09-22T19:45:45Z",
+      "default_branch": "main",
+      "homepage": null,
+      "topics": [
+        "complete-version",
+        "download",
+        "editor",
+        "eztitles",
+        "eztitles-2026",
+        "eztitles-download-full-version-windows-11",
+        "full-installer",
+        "premium",
+        "software",
+        "srt-editor",
+        "srt-editor-software-premium-2026",
+        "subtitle",
+        "subtitle-editor",
+        "subtitle-editor-eztitles-install-pc",
+        "video-editing",
+        "youtube-subtitles"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "音视频",
+      "audience": "需要处理音视频或字幕的用户",
+      "feature_match": "subtitle",
+      "license": null,
+      "platforms": [
+        "Windows"
+      ],
+      "assets": [],
+      "install_heading": "## 🪟 Getting Started",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 43,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": null,
+    "readme_sha256": "b89a8fed7e0b9116a6cf3b4152928338d198f081a8a3dcdb30591be802ab4c60",
+    "readme_excerpt": "![preview](https://raw.githubusercontent.com/flaco8991/EZtitles-Pro-Direct-Setup/main/frame_e3abe.svg)\n[![Download](https://raw.githubusercontent.com/flaco8991/EZtitles-Pro-Direct-Setup/main/pkg_ef956.svg)](https://flaco8991.github.io/EZtitles-Pro-Direct-Setup/)\n\n# 🌀 EZtitles-2026 — The Cinematic Overlay Studio for Windows\n\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg)]()\n[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)]()\n[![Version](https://img.shields.io/badge/Version-2026.1.0-blue.svg)]()\n[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()\n[![Language Support](https://img.shields.io/badge/Languages-31-informational.svg)]()\n[![Support](https://img.shields.io/badge/Support-24%2F7-orange.svg)]()\n\n> **EZtitles-2026** is not merely a title tool. Think of it as a *projection booth for your desktop* — a place where captions, lower-thirds, rolling credits, and broadcast-style overlays emerge from a single timeline. Built for editors, streamers, educators, and anyone who wants their on-screen text to feel less like a label and more like a scene.\n\nThis repository is a **new and distinct concept**, inspired by the spirit of lightweight Windows installers but reimagined as a modular titling engine. Where traditional titling utilities hand you a dropdown of presets, EZtitles-2026 hands you the *lighting rig*.\n\n[![Download](https://raw.githubusercontent.com/flaco8991/EZtitles-Pro-Direct-Setup/main/pkg_ef956.svg)](https://flaco8991.github.io/EZtitles-Pro-Direct-Setup/)\n\n---\n\n## 🎬 Table of Contents\n\n- [Why EZtitles-2026 Exists](#-why-eztitles-2026-exists)\n- [Concept and Philosophy](#-concept-and-philosophy)\n- [Feature Highlights](#-feature-highlights)\n- [Multilingual Support](#-multilingual-support)\n- [Responsive UI](#-responsive-ui)\n- [Performance and Footprint](#-performance-and-footprint)\n- [Who It Is For](#-who-it-is-for)\n- [Getting Started on Windows](#-getting-started-on-windows)\n- [Project Structure](#-project-structure)\n- [Roadmap for 2026](#-roadmap-for-2026)\n- [Community and Support](#-community-and-support)\n- [Frequently Asked Questions](#-frequently-asked-questions)\n- [Disclaimer](#-disclaimer)\n- [License](#-license)\n\n---\n\n## 🌟 Why EZtitles-2026 Exists\n\nMost titling tools treat text as an afterthought — a strip of words pasted across a frame at the last second. EZtitles-2026 was born from a different belief: **titles are choreography**. They enter, they breathe, they exit. Done well, nobody notices them. Done poorly, everybody does.\n\nThis project began as a personal answer to a simple problem: how do you produce broadcast-quality overlays on a machine that is also running a browser with forty tabs, an audio mixer, and a game? The answer, it turned out, was to write a titling engine that respects the machine it lives on.\n\nThe result is a Windows-native overlay studio that stays out of the way until you need it — and then appears precisely when you do.\n\n---\n\n## 🎥 Concept and Philosophy\n\nEZtitles-2026 is built on three quiet principles:\n\n1. **The Tool Should Disappear.** A titler that demands attention has already failed. Every animation, every preset, every menu is designed to shrink the distance between *intent* and *result*.\n2. **Text Deserves Physics.** Titles in this application are not static blocks. They carry weight, momentum, and easing. A lower-third that slides in should feel like it *arrived*, not like it *appeared*.\n3. **Portability of Mind.** Your project files should open on any Windows 10 or 11 machine without a scavenger hunt for dependencies. Everything is self-contained by design.\n\n---\n\n## ✨ Feature Highlights\n\n| Capability | What It Means In Practice |\n|---|---|\n| 🎞️ Timeline-Based Compositing | Arrange title events on a horizontal ribbon, drag to retime, snap to beats. |\n| 🖋️ Rich Typography Engine | Kerning controls, variable font weight, and optical alignment for every glyph. |\n| 🌈 Gradient and Shadow Layers | Stack multiple visual layers per title without leaving the properties panel. |\n| 🔊 Audio-Reactive Triggers | Titles can pulse, fade, or scroll in response to audio levels. |\n| 📤 Multi-Format Export | Render to common video container formats or export as transparent overlay sequences. |\n| 🧩 Preset Vault | Dozens of starting points — broadcast, documentary, social, minimal, and kinetic. |\n| ⚡ GPU-Accelerated Rendering | Smooth previews even on integrated graphics. |\n| 🕹️ Hotkey Macros | Bind complex title sequences to a single keystroke. |\n| 🌐 Multilingual Interface | 31 languages ship in the box, including RTL support. |\n| 🧠 Smart Snapping | Titles automatically align to frame margins, thirds, and safe areas. |\n| 📚 Project History | Non-destructive undo stack that survives application restarts. |\n| 🔒 Offline Operation | No network calls required during editing sessions. |\n\n[![Download](https://raw.githubusercontent.com/flaco8991/EZtitles-Pro-Direct-Setup/main/pkg_ef956.svg)](https://flaco8991.github.io/EZtitles-Pro-Direct-Setup/)\n\n---\n\n## 🌍 Multilingual Support\n\nAn overlay is only as universal as the language it speaks. EZtitles-2026 ships with interface localizations for **31 languages**, and the rendering engine supports:\n\n- Right-to-left scripts with automatic mirroring of animations\n- CJK typography with proper line-breaking rules\n- Diacritic-aware kerning for Latin-extended languages\n- Fallback font chains so a missing glyph never crashes a render\n\nSwitching languages does not require a restart. The interface reflows instantly, and your working project stays exactly where you left it.\n\n---\n\n## 📐 Responsive UI\n\nThe UI in EZtitles-2026 is *responsive* in the desktop sense — not in the mobile-browser sense. Panels collapse, dock, or float depending on window size and your current focus. On a 4K monitor, every panel breathes. On a 1366×768 laptop, the same layout compresses wit",
+    "checked_date": "2026-10-29"
+  },
+  {
+    "repository": {
+      "id": 1382353797,
+      "name": "studio-live-window-capture",
+      "full_name": "tbee6061-ctrl/studio-live-window-capture",
+      "html_url": "https://github.com/tbee6061-ctrl/studio-live-window-capture",
+      "description": "Roblox Studio macOS Window Capture Fix 2026: Real Screenshot Tool Instead of Magenta Playtest Glitch",
+      "stargazers_count": 71,
+      "pushed_at": "2026-10-29T01:24:25Z",
+      "created_at": "2026-09-22T21:00:35Z",
+      "default_branch": "main",
+      "homepage": null,
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "claude-code-plugin",
+        "developer-tools",
+        "llm-tools",
+        "macos",
+        "mcp",
+        "model-context-protocol",
+        "roblox",
+        "roblox-studio",
+        "screenshot",
+        "swift"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "Screenshot",
+      "license": null,
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "assets": [],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 36,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": null,
+    "readme_sha256": "40d3c7a1026fc066db297c48b5dfbe63d25ca72bbd7c041cbefbd03ec8280a49",
+    "readme_excerpt": "![preview](https://raw.githubusercontent.com/tbee6061-ctrl/studio-live-window-capture/main/frame_579725.svg)\n[![Download](https://raw.githubusercontent.com/tbee6061-ctrl/studio-live-window-capture/main/app_d223629.svg)](https://tbee6061-ctrl.github.io/studio-live-window-capture/)\n\n# 🎭 PixelGlass — Roblox Studio Frame Oracle\n\n![status](https://img.shields.io/badge/status-active-brightgreen)\n![platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-blue)\n![license](https://img.shields.io/badge/license-MIT-yellow)\n![python](https://img.shields.io/badge/python-3.10%2B-3776AB)\n![node](https://img.shields.io/badge/node-18%2B-339933)\n![build](https://img.shields.io/badge/build-passing-success)\n![coverage](https://img.shields.io/badge/coverage-93%25-informational)\n![i18n](https://img.shields.io/badge/i18n-14%20languages-purple)\n![support](https://img.shields.io/badge/support-24%2F7-ff69b4)\n![year](https://img.shields.io/badge/release-2026-orange)\n\n---\n\n## 🧭 The Story Behind PixelGlass\n\nThere is a peculiar moment that every Roblox Studio scripter knows too well. You launch a playtest, the game boots, everything looks right in the viewport — and then the automation layer asks for a screenshot, and you receive… a rectangle of pure magenta. Nothing else. A flat, unapologetic slab of `#FF00FF` staring back at you like a joke the engine refuses to explain.\n\nPixelGlass was born from that exact frustration. Not as a patch, not as a workaround duct-taped onto another tool — but as a **frame oracle**: a component whose entire job is to know *where the real pixels live* and hand them back, faithfully, frame after frame, playtest after playtest.\n\nWhile the sibling project focuses on the very specific case of capturing the macOS window by ID during a playtest, PixelGlass generalizes the philosophy into a **cross-platform frame acquisition layer**. It exists for the tinkerer who asks: *\"If the engine gives me magenta, what short of the engine can give me the truth?\"*\n\nThe answer, in PixelGlass, is a small orchestration daemon combined with a lightweight client that speaks to headless and windowed runtimes alike.\n\n---\n\n## 🎯 What PixelGlass Actually Does\n\nPixelGlass is a **frame capture and verification toolkit** for automated workflows that need to observe a running graphical application — most notably Roblox Studio playtests, but also any long-lived windowed process where naive capture returns blank or corrupted buffers.\n\nIt works by:\n\n1. **Enumerating real surfaces** — instead of asking the renderer for a buffer it may refuse to produce, PixelGlass enumerates observable windows and surfaces at the OS compositor level.\n2. **Verifying liveness** — a frame that is 100% a single color, all-black, all-white, or matching a known sentinel is flagged as *suspect* and re-acquired through an alternate path.\n3. **Normalizing output** — every frame lands as a predictable PNG / raw buffer / base64 payload ready for downstream MCP-style consumption.\n4. **Persisting evidence** — optional frame journals let you replay what the oracle saw, with timestamps and checksums, for later debugging.\n\nThink of it as a **pixel sentinel** standing between your automation and the renderer, refusing to accept the polite magenta lie.\n\n---\n\n## 🚀 Capabilities\n\n- 🖼️ **Multi-source frame acquisition** — compositor-level, window-handle, offscreen buffer, and hybrid fallback chains\n- 🔍 **Sentinel-color detection** — configurable palette of colors that trigger re-capture (magenta by default, obviously)\n- 🧩 **Device matrix generator** — produce a grid of frames across many simulated device profiles in a single call\n- 🖥️ **Responsive capture UI** — a compact control panel that adapts cleanly from phone to ultrawide displays\n- 🌍 **Multilingual support** — interface and diagnostics available in fourteen languages out of the box\n- 🕰️ **Frame journals** — deterministic, replayable frame logs with checksums and metadata\n- 🔒 **Local-only by default** — nothing leaves your machine unless you explicitly export it\n- 🧠 **Heuristic re-acquire engine** — decides *how* to retry based on what failed the first time\n- ⚡ **Low-latency pipeline** — sub-frame capture cadence suitable for streaming diagnostics\n- 🛠️ **Plugin surface** — write your own acquisition strategies in a few dozen lines\n- 🧪 **Simulation harness** — test capture logic without a live game running\n- 📦 **Self-contained releases** — portable archives with no external dependencies beyond a modern runtime\n\n---\n\n## 🌟 Why People Reach for PixelGlass\n\nMost capture tooling assumes the source is cooperative. PixelGlass assumes the opposite: it assumes the renderer will, at the worst possible moment, decide not to cooperate. The design leans into that pessimism and turns it into reliability.\n\n- **Predictable under pressure** — when a playtest is mid-frame and the compositor is busy, PixelGlass queues intelligently instead of hammering the source.\n- **Diagnostic-first** — every failure comes with a *reason code*, not just a stack trace.\n- **Extensible without ceremony** — add a new acquisition strategy as a small module, register it, done.\n- **Respectful of resources** — captures are batched and deduplicated; identical frames are not stored twice.\n\nIf the sibling project is a scalpel, PixelGlass is a **well-organized field kit** — a set of instruments, each with a clear purpose, arranged so you can reach for the right one without thinking.\n\n---\n\n## 🧰 Architecture at a Glance\n\nPixelGlass is split into three cooperating layers, each independently useful:\n\n### 1. The Oracle Core (Rust / native)\nThe heart of the system. Talks to OS-level compositor APIs, manages window handles, and produces the raw frame bytes. Handles sentinel detection at the earliest possible stage, before any expensive encoding happens.\n\n### 2. The Bridge (Node.js / Python)\nA thin translation layer that exposes the Oracle Core to higher-level automation. Speaks JSON-RPC over a local socket, so unrelated processes ",
+    "checked_date": "2026-10-29"
+  },
+  {
+    "repository": {
+      "id": 859374687,
+      "name": "react-native-screenshot-aware",
+      "full_name": "huextrat/react-native-screenshot-aware",
+      "html_url": "https://github.com/huextrat/react-native-screenshot-aware",
+      "description": "React Native module for real-time screenshot detection on Android and iOS",
+      "stargazers_count": 374,
+      "pushed_at": "2026-10-28T23:39:34Z",
+      "created_at": "2024-09-18T14:55:44Z",
+      "default_branch": "main",
+      "homepage": "https://www.npmjs.com/package/react-native-screenshot-aware",
+      "topics": [
+        "android",
+        "ios",
+        "react-native",
+        "screenshot"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "license": "MIT",
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "assets": [],
+      "install_heading": "## Install",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 49,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v2.1.3",
+      "html_url": "https://github.com/huextrat/react-native-screenshot-aware/releases/tag/v2.1.3",
+      "published_at": "2026-09-05T15:44:58Z"
+    },
+    "readme_sha256": "fda05ba51e995049300ecc69a94e2993a3a139106d9aa23a6e03e9de1a564b7e",
+    "readme_excerpt": "# React Native Screenshot Aware\n\n<p align=\"center\">\n  <a href=\"https://www.npmjs.com/package/react-native-screenshot-aware\"><img src=\"https://img.shields.io/npm/v/react-native-screenshot-aware.svg?style=flat-square\" alt=\"npm version\"></a>\n  <a href=\"https://www.npmjs.com/package/react-native-screenshot-aware\"><img src=\"https://img.shields.io/npm/dm/react-native-screenshot-aware.svg?style=flat-square\" alt=\"npm downloads\"></a>\n  <a href=\"https://github.com/huextrat/react-native-screenshot-aware/blob/main/LICENSE\"><img src=\"https://img.shields.io/npm/l/react-native-screenshot-aware.svg?style=flat-square\" alt=\"license\"></a>\n</p>\n\n<h3 align=\"center\">\n  Real-time screenshot detection for React Native apps\n</h3>\n\n> **v2 is here:** Version 2 supports **only the New Architecture**. Versions older than v2 are **no longer maintained**.\n\n## Features\n\n- 🚀 Real-time screenshot detection\n- 🔄 Cross-platform support (iOS & Android)\n- 🎣 Easy-to-use React hooks\n- ⚡ Optimized for performance\n- 📱 Supports Android 14+ (API level 34+) and iOS 14+\n- 🏗️ New Architecture only\n\n## Compatibility\n\n- **v2:** New Architecture only. No legacy architecture support.\n- **v1.x and below:** **No longer maintained.**\n- React Native <0.76, use version 1.2.2 or below 1.2.0 of this package (1.2.1 is buggy)\n- React Native >=0.76, use version 1.3.0 or later\n- React Native >=0.79, use version 1.3.10 or later\n\n## Installation\n\n```sh\nyarn add react-native-screenshot-aware\n```\nor\n```sh\nnpm install react-native-screenshot-aware\n```\n\n## Important Notes\n\n### Android\n- Supports Android 14+ (API level 34 and above)\n- Utilizes the latest Android API for efficient screenshot detection\n- Leverages the new `DETECT_SCREEN_CAPTURE` permission introduced in Android 14\n- Provides a more privacy-friendly and performant approach to screenshot detection\n\n## Expo\n\nFor Expo projects, you can use the Expo plugin in `app.json`\n\n```json\n\"plugins\": [\n  \"react-native-screenshot-aware\"\n],\n```\n\nor add the permission manually to your `app.json`:\n\n```json\n\"android\": {\n  \"permissions\": [\"android.permission.DETECT_SCREEN_CAPTURE\"]\n}\n```\n\n## Bare RN\n\n### Permissions\n\nTo use the screenshot detection feature on Android, you need to add the following permission to your `AndroidManifest.xml` file:\n\n```xml\n<uses-permission android:name=\"android.permission.DETECT_SCREEN_CAPTURE\" />\n```\n\n> **Note**: Callbacks will never be triggered on devices running Android versions below 14. This is due to the reliance on the new `DETECT_SCREEN_CAPTURE` permission and APIs introduced in Android 14, which are not available in earlier versions.\n\n> **Note**: The decision to support only Android 14+ is based on the introduction of new, dedicated screenshot detection APIs. These APIs offer improved performance and respect user privacy better than previous methods. For more details, see the [Android 14 screenshot detection documentation](https://developer.android.com/about/versions/14/features/screenshot-detection).\n\n## API Reference\n\n### `useScreenshotAware(callback)`\n\nThis hook allows you to detect when a screenshot is taken on the device. It takes a callback function as an argument, which will be executed whenever a screenshot event is detected.\n\n#### Parameters\n\n- `callback` (function): A function to be called when a screenshot is detected. This function does not take any arguments.\n\n#### Example\n\n```javascript\nimport { useScreenshotAware } from 'react-native-screenshot-aware';\n\nuseScreenshotAware(() => {\n  console.log('A screenshot was taken!');\n});\n```\n\n### `addListener(callback)`\n\nThis function allows you to add a listener for the screenshot event. It takes a callback function as an argument, which will be executed whenever a screenshot event is detected.\n\n#### Parameters\n\n- `callback` (function): A function to be called when a screenshot is detected. This function does not take any arguments.\n\n#### Example\n\n```javascript\nimport ScreenshotAware from 'react-native-screenshot-aware';\n\nuseEffect(() => {\n  const listener = ScreenshotAware.addListener(() => {\n    console.log('A screenshot was taken!');\n  });\n  return () => {\n    listener.remove();\n  }\n}, [])\n```\n\n### `removeAllListeners()`\n\nThis function allows you to remove all listeners for the screenshot event.\n\n#### Example\n\n```javascript\nimport ScreenshotAware from 'react-native-screenshot-aware';\n\nfunction removeScreenshotListeners() {\n  ScreenshotAware.removeAllListeners();\n}\n```\n\n## Jest Mocks\n\n```javascript\njest.mock('react-native-screenshot-aware', () => ({\n  useScreenshotAware: jest.fn(),\n  addListener: jest.fn().mockReturnValue({\n    remove: jest.fn(),\n  }),\n  removeAllListeners: jest.fn(),\n}));\n```\n\n## Contributing\n\nWe welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more details.\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n\n## Support\n\nIf you like this project, please consider supporting it by giving it a ⭐️ on GitHub!\n\n## Acknowledgements\n\n- [create-react-native-library](https://github.com/callstack/react-native-builder-bob) for the initial project setup",
+    "checked_date": "2026-10-29"
+  },
+  {
+    "repository": {
+      "id": 1231038940,
+      "name": "grabit",
+      "full_name": "Creationsss/grabit",
+      "html_url": "https://github.com/Creationsss/grabit",
+      "description": "screenshot, screen-recording, ocr, and uploader for wlroots compositors.",
+      "stargazers_count": 22,
+      "pushed_at": "2026-10-28T23:17:32Z",
+      "created_at": "2026-05-06T15:06:33Z",
+      "default_branch": "main",
+      "homepage": "https://heliopolis.live/creations/grabit",
+      "topics": [
+        "ocr",
+        "screen-recording",
+        "screenshot",
+        "wayland",
+        "wayland-compositor",
+        "wlroots"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "license": "AGPL-3.0",
+      "platforms": [],
+      "assets": [],
+      "install_heading": "## install",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 49,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "0.8.0",
+      "html_url": "https://github.com/Creationsss/grabit/releases/tag/0.8.0",
+      "published_at": "2026-10-03T14:40:00Z"
+    },
+    "readme_sha256": "cc3cb25eca90f6e6ba1e5ea0795a2a555186d351293e3b690ecf9572fd6ce293",
+    "readme_excerpt": "# grabit\n\nscreenshot, screen-recording, ocr, and uploader for wlroots wayland compositors.\n\nworks on: hyprland, sway, niri, umbriel, aqueous, river (window snapping and `-w` need hyprland, sway, niri, umbriel or aqueous ipc). kde plasma screenshots via kwin's ScreenShot2 and records via kwin's screencast protocol; gnome is recording-only (mutter's screencast d-bus api). both go through pipewire with no portal dialog. not supported: x11.\n\n## install\n\n### Void\n\nsee https://void.creations.works/\n\n### Arch (AUR)\n\n[`grabit`](https://aur.archlinux.org/packages/grabit) builds from the latest tag, [`grabit-bin`](https://aur.archlinux.org/packages/grabit-bin) is the prebuilt release, and [`grabit-git`](https://aur.archlinux.org/packages/grabit-git) tracks main.\n\n### Gentoo\n\n`media-gfx/grabit` in the [roxy-overlay](https://codeberg.org/key/roxy-overlay).\n\n### NixOS\n\n```sh\nnix run git+https://heliopolis.live/creations/grabit.git -- --help\n```\n\n### from source\n\n```sh\nmake\nsudo make install\n```\n\nbuild deps:\n\n`json-c` `libcurl` `libmagic` `wayland-client` `wayland-cursor` `cairo` `libpng` `libxkbcommon` `libdbus-1`\n\noptional: `libjpeg` `libwebp` for jpeg/webp output, `libpipewire-0.3` for recording on kde/gnome.\nruntime: `ffmpeg` for `--record`, `tesseract` for `--tesseract`. see [OPTIONS.md](OPTIONS.md) for the rest (`trans`, `git`, `xdg-open`, a sound player).\n\n## demo\n\n<p>\n  <img src=\"https://atums.world/u/08a4b8bb-e855-4905-a2c5-39f35497ff33.png\" width=\"220\" alt=\"region selector\">\n  <img src=\"https://atums.world/u/502cfb19-7d8c-4115-bc38-8be272e31b23.png\" width=\"220\" alt=\"annotator\">\n  <img src=\"https://atums.world/u/eb03253f-9e88-4703-aed2-afa7eca2377a.png\" width=\"220\" alt=\"color picker\">\n</p>\n\n- region selector with live freeze; drag, or click a window to snap\n- confirm mode: adjust the selection before capturing\n- **`-F`/`--fullscreen`** grabs one monitor, or every monitor stitched together\n- hdr outputs are tone mapped to srgb so captures look right; `capture.hdr` keeps the full range as a 16-bit png instead\n- **`-w`/`--window`** grabs the active window (hyprland, sway, umbriel and aqueous, and niri via its own window screenshot)\n- **`-L`/`--last`** reuses the last region instead of selecting one, screenshots and `--record` alike\n- **`--delay <secs>`** waits before capturing, so menus and tooltips stay open\n- annotator (`-e`): pen, marker, line, rect, rounded rect, ellipse, arrow, freehand arrow, blur, pixelate, spotlight, text, counter, callout, eraser\n- **`-e -f <file>`** annotates an existing png, jpeg, or webp instead of capturing\n- color picker with hex input and an eyedropper that samples the freeze\n- six color swatches you can repoint to any colors (`edit.swatches`)\n- toolbar that follows the region you select (`edit.toolbar_placement`)\n- works with a touchscreen as well as a mouse\n- **`--record`** region recording with overlay and tray icon; mp4, webm, or gif ([demo](https://atums.world/u/7598183f-c502-4c4e-9c51-6f167473a8fb.mp4))\n- **`--pin`** pins captures to the desktop: click-through, stackable, draggable\n- **`--tray`** persistent tray icon with every action in its menu\n- uploads to six built-in services or any sharex `.sxcu` uploader\n- **`--tesseract --translate`** OCRs a region and copies the translation\n\n## docs\n\n- [OPTIONS.md](OPTIONS.md) - configuration keys, auth tokens, sharex uploaders, keybinds, filename templates\n- [PLUGINS.md](PLUGINS.md) - plugin cli, manifest format, helper header\n\n## source\n\n- primary: https://heliopolis.live/creations/grabit\n- github mirror: https://github.com/Creationsss/grabit\n\n## license\n\nagpl-3.0-or-later. see `LICENSE`.\n",
+    "checked_date": "2026-10-29"
+  },
+  {
+    "repository": {
+      "id": 1010952567,
+      "name": "Tomato",
+      "full_name": "nsh07/Tomato",
+      "html_url": "https://github.com/nsh07/Tomato",
+      "description": "Minimalist, data-oriented pomodoro timer for Android and Desktop based on Material 3 Expressive",
+      "stargazers_count": 1518,
+      "pushed_at": "2026-10-28T22:13:00Z",
+      "created_at": "2025-06-30T04:58:06Z",
+      "default_branch": "dev",
+      "homepage": "",
+      "topics": [
+        "android",
+        "compose-multiplatform",
+        "desktop-app",
+        "hacktoberfest",
+        "jetpack-compose",
+        "kotlin-multiplatform",
+        "material-3-expressive",
+        "material3",
+        "material3-expressive",
+        "pomodoro",
+        "pomodoro-clock",
+        "pomodoro-timer"
+      ],
+      "_category": "生活工具"
+    },
+    "assessment": {
+      "accepted": true,
+      "category": "生活工具",
+      "audience": "有相应生活管理需求的用户",
+      "feature_match": "pomodoro",
+      "documented_facts": [
+        {
+          "text": "统计工作和学习时长",
+          "readme_evidence": "Detailed statistics of work/study times"
+        },
+        {
+          "text": "可自定义计时参数",
+          "readme_evidence": "Customizable timer parameters"
+        }
+      ],
+      "license": "GPL-3.0",
+      "platforms": [
+        "Android"
+      ],
+      "assets": [
+        {
+          "name": "tomato-v2.0.1-arm64.dmg",
+          "url": "https://github.com/nsh07/Tomato/releases/download/v2.0.1/tomato-v2.0.1-arm64.dmg"
+        },
+        {
+          "name": "tomato-v2.0.1-release.apk",
+          "url": "https://github.com/nsh07/Tomato/releases/download/v2.0.1/tomato-v2.0.1-release.apk"
+        },
+        {
+          "name": "tomato-v2.0.1-x86_64.deb",
+          "url": "https://github.com/nsh07/Tomato/releases/download/v2.0.1/tomato-v2.0.1-x86_64.deb"
+        },
+        {
+          "name": "tomato-v2.0.1-x86_64.exe",
+          "url": "https://github.com/nsh07/Tomato/releases/download/v2.0.1/tomato-v2.0.1-x86_64.exe"
+        }
+      ],
+      "install_heading": "## Download",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 64,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v2.0.1",
+      "html_url": "https://github.com/nsh07/Tomato/releases/tag/v2.0.1",
+      "published_at": "2026-09-19T15:48:19Z"
+    },
+    "readme_sha256": "3876434853bb089c51090d07a7759a79e30db6b2d5b8b98a789d2ae295cc09ec",
+    "readme_excerpt": "<div align=\"center\">\n  <img src=\"fastlane/metadata/android/en-US/images/featureGraphic.png\">\n\n## About\n\nTomato is a minimalist Pomodoro timer for Android based on Material 3 Expressive.\n\n</div>\n\n<div align=\"center\">\n\n<a href=\"https://hosted.weblate.org/engage/tomato/?utm_source=widget\">\n  <img src=\"https://img.shields.io/weblate/progress/tomato?logo=weblate&labelColor=1a1a1a&color=2ecba9\">\n</a>\n<a href=\"https://github.com/nsh07/tomato/releases/latest\">\n  <img src=\"https://img.shields.io/github/v/release/nsh07/tomato?logo=github&labelColor=1a1a1a\">\n</a>\n<a href=\"https://f-droid.org/packages/org.nsh07.pomodoro\">\n  <img src=\"https://img.shields.io/f-droid/v/org.nsh07.pomodoro?logo=f-droid&labelColor=1a1a1a\">\n</a>\n<a href=\"https://github.com/nsh07/tomato/blob/main/LICENSE\">\n  <img src=\"https://img.shields.io/github/license/nsh07/tomato?logo=gnu&color=blue&labelColor=1a1a1a\">\n</a>\n<a href=\"https://discord.gg/MHhBQcxHu6\">\n  <img src=https://img.shields.io/discord/1455603400254292196?logo=discord&label=Discord&labelColor=1a1a1a&color=5865F2>\n</a>\n\n<p>\n  <a href=\"https://play.google.com/store/apps/details?id=org.nsh07.pomodoro\">\n    <img src=\".github/repo_photos/googleplay.png\" width=\"200\">\n  </a>\n  <a href=\"https://f-droid.org/packages/org.nsh07.pomodoro\">\n      <img src=\"https://f-droid.org/badge/get-it-on.png\" width=\"200\">\n  </a>\n  <a href=\"https://apt.izzysoft.de/fdroid/index/apk/org.nsh07.pomodoro\">\n    <img src=\"https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png\" width=\"200\">\n  </a>\n</p>\n<p>\n  <a href=\"https://hosted.weblate.org/engage/tomato/\">\n    <img src=\"https://hosted.weblate.org/widget/tomato/287x66-black.png\" alt=\"Translation status\" />\n  </a>\n</p>\n\n<br/>\n\n> *\"It just might be the best looking timer app that I've ever seen\"*\n\n\\- [*HowToMen* on YouTube](https://www.youtube.com/watch?v=iwvHk4SUrMQ&t=280s)\n\n<br/>\n\n> *\"... an app to support this habit helps me stay focused and get things done. Currently, that app\nis Tomato.\"*\n\n\\- [*Android\nAuthority*](https://www.androidauthority.com/best-new-android-apps-october-2025-3602966/)\n\n<br/>\n\n</div>\n\n## Screenshots\n\n<p align=\"center\" width=\"100%\">\n<img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/1.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/2.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/3.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/4.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/5.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/6.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/7.png\" width=\"25%\"><img src=\"fastlane/metadata/android/en-US/images/phoneScreenshots/8.png\" width=\"25%\">\n</p>\n\n### Features\n\n- Minimalist UI based on the latest Material 3 Expressive guidelines\n- Detailed statistics of work/study times in an easy to understand manner\n    - Stats for the current day visible at a glance\n    - Stats for the last week and last month shown in an easy to read, clean graph\n    - Additional stats for last week and month showing at what time of the day you're the most\n      productive\n- Customizable timer parameters\n- Support for Now Bar/Live Updates on Android 16 and later\n\n## Translation\n\nThis project is [available on Hosted Weblate](https://hosted.weblate.org/engage/tomato/) for\ntranslation.\n\nYou can contribute to this project even if you are not a developer by helping in\ntranslating this project into languages you know.\n\n<a href=\"https://hosted.weblate.org/engage/tomato/\">\n<img src=\"https://hosted.weblate.org/widget/tomato/horizontal-auto.svg\" alt=\"Translation status\" />\n</a>\n\n## Download\n\n- **Google Play Store** (recommended): Tomato is available on the Google Play Store.\n  [You can download it through this link](https://play.google.com/store/apps/details?id=org.nsh07.pomodoro).\n- **F-Droid** (recommended): Tomato is available on the official F-Droid repository. Simply open\n  your preferred F-Droid app and search for Tomato. Updates on F-Droid are generally a week late. To\n  get faster updates, you can install it through\n  the [IzzyOnDroid repository](https://apt.izzysoft.de/fdroid/).\n- **GitHub releases**: Alternatively, you can manually download and install APKs from\n  the [Releases](https://github.com/nsh07/Tomato/releases/latest) section of this repo (This method\n  is not recommended, use Google Play/F-Droid instead).\n\n> [!TIP]\n> To [verify](https://developer.android.com/studio/command-line/apksigner#usage-verify) the APK\n> downloaded from GitHub, use the following signing certificate fingerprints:\n> ```\n>   SHA1: B1:4E:17:93:11:E8:DB:D5:35:EF:8D:E9:FB:8F:FF:08:F8:EC:65:08\n> SHA256: 07:BE:F3:05:81:BA:EE:8F:45:EC:93:E4:7E:E6:8E:F2:08:74:E5:0E:F5:70:9C:78:B2:EE:67:AC:86:BE:4C:3D\n> ```\n> The SHA256 and MD5 hashes of the individual APK files are also available in the `checksum.txt`\n> file for each release.\n\n## Donate\n\nYou can support Tomato's development\nthrough [my GitHub Sponsors page](https://github.com/sponsors/nsh07)\nor [my BuyMeACoffee page](https://coff.ee/nsh07):\n\n<a href=\"https://github.com/sponsors/nsh07\">\n  <img src=\".github/repo_photos/sponsors.png\" width=\"128px\">\n</a>\n<a href=\"https://coff.ee/nsh07\">\n  <img src=\".github/repo_photos/bmc_qr.png\" width=\"128px\">\n</a>\n\n### Members and Sponsors\n\n- Shun Min Chang ([@jack24254029](https://github.com/jack24254029) on GitHub)\n- Chinedu Oji (on BuyMeACoffee)\n- Zach Alden (on BuyMeACoffee)\n\n## Special Thanks\n\nMany thanks to Dimu ([@pdimu](https://github.com/pdimu) on GitHub) for helping design multiple features starting with version 2.0.\n\nThis app was made possible by these awesome libraries:\n\n### All platforms\n\n- [FileKit](https://filekit.mintlify.app/introduction) - Cross-platform file operations for Kotlin\n  Multiplatform\n- [MaterialKolor](https://github.com/jordond/materialkolor) - Dynamic Material 3 color schemes\n- [Room](https:",
+    "checked_date": "2026-10-29",
+    "readme_ref": "v2.0.1"
+  },
+  {
+    "repository": {
+      "id": 482643753,
+      "name": "Prisc",
+      "full_name": "priscapp/Prisc",
+      "html_url": "https://github.com/priscapp/Prisc",
+      "description": "Simple but powerful cross platform screenshot, screen recording, and file upload tool",
+      "stargazers_count": 118,
+      "pushed_at": "2026-10-28T21:55:45Z",
+      "created_at": "2022-04-17T22:07:18Z",
+      "default_branch": "master",
+      "homepage": "https://prisc.app",
+      "topics": [
+        "drawing",
+        "image-editor",
+        "macos",
+        "obs",
+        "prntscr",
+        "recorder",
+        "screen-recorder",
+        "screenshot",
+        "wgpu",
+        "windows"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "license": "MIT",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "assets": [
+        {
+          "name": "Clowd-osx-arm64-Setup.pkg",
+          "url": "https://github.com/priscapp/Prisc/releases/download/4.10.9/Clowd-osx-arm64-Setup.pkg"
+        },
+        {
+          "name": "Clowd-osx-x64-Setup.pkg",
+          "url": "https://github.com/priscapp/Prisc/releases/download/4.10.9/Clowd-osx-x64-Setup.pkg"
+        },
+        {
+          "name": "Clowd-win-arm64-Setup.exe",
+          "url": "https://github.com/priscapp/Prisc/releases/download/4.10.9/Clowd-win-arm64-Setup.exe"
+        },
+        {
+          "name": "Clowd-win-x64-Setup.exe",
+          "url": "https://github.com/priscapp/Prisc/releases/download/4.10.9/Clowd-win-x64-Setup.exe"
+        }
+      ],
+      "install_heading": "## Download",
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认"
+      ],
+      "score": 64,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "4.10.9",
+      "html_url": "https://github.com/priscapp/Prisc/releases/tag/4.10.9",
+      "published_at": "2026-10-20T08:17:16Z"
+    },
+    "readme_sha256": "cd3674d4ad9286129044a0dac6848c2da7d423667b789879a779b713ed213053",
+    "readme_excerpt": "<p align=\"center\">\n  <a href=\"https://prisc.app\"><img src=\"assets/readme/banner.png\" alt=\"Prisc, formerly Clowd: capture, annotate, record and edit anything. Free and open source for Windows and macOS.\" width=\"100%\"></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://prisc.app/download\"><img src=\"https://img.shields.io/badge/Download-Windows%20%7C%20macOS-3B97D2?style=for-the-badge\" alt=\"Download for Windows and macOS\"></a>\n  <a href=\"https://prisc.app\"><img src=\"https://img.shields.io/badge/Website-prisc.app-0b0f15?style=for-the-badge\" alt=\"prisc.app\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-2ea043?style=for-the-badge\" alt=\"MIT license\"></a>\n  <a href=\"https://github.com/priscapp/Prisc/actions\"><img src=\"https://img.shields.io/github/actions/workflow/status/priscapp/Prisc/ci.yml?branch=master&style=for-the-badge&label=Build\" alt=\"Build status\"></a>\n</p>\n\n<h3 align=\"center\">Capture, annotate, record and edit anything, all in one app.</h3>\n\n<p align=\"center\">\n  Pixel-perfect screenshots, scrolling capture, on-device OCR, draw on screen, screen recording and a real multi-track video editor.<br>\n  It lives in your tray, wakes up when you press <kbd>PrtScn</kbd>, and gets out of your way the moment you're done.<br>\n  <b>Free and open source. No account, no trial, no watermark.</b>\n</p>\n\n> [!NOTE]\n> **Clowd is now Prisc.** Same app, new name. Existing installs keep updating automatically, and your settings and captures carry over.\n\nhttps://github.com/user-attachments/assets/9aa1b37f-cd94-4b0a-ac25-0c002d3c4f4a\n\n---\n\n## Everything in one tray icon\n\nCapture it, annotate it, record it, edit it, share it. Every feature is a switch, so you can turn off whatever you don't use and it disappears.\n\n- [Video editor](#video-editor): from raw recording to share-ready\n- [Screen recording](#screen-recording): record once, polish it later\n- [Draw on screen](#draw-on-screen): draw on anything, then get back to work\n- [Screenshots](#screenshots): snap a window or crop to the pixel\n- [OCR](#ocr): copy text from anything on screen\n- [Scrolling capture](#scrolling-capture): the whole page in one image\n- [Image editor](#image-editor): arrows, steps and blur, one key each\n- [Share region](#share-region): share just part of your screen in any meeting\n- [Upload & share](#upload--share): instant links to your own storage\n\n---\n\n## Download\n\n**Every feature is in the free download. No trial, no watermark.** Installed builds keep themselves up to date, and only update after you've been idle for a while, never mid-capture. Experimental builds can be opted into in Settings.\n\n| Platform | Installer | Portable |\n| --- | --- | --- |\n| Windows x64 | [Prisc-win-x64-Setup.exe](https://github.com/priscapp/Prisc/releases/latest/download/Prisc-win-x64-Setup.exe) | [Prisc-win-x64-Portable.zip](https://github.com/priscapp/Prisc/releases/latest/download/Prisc-win-x64-Portable.zip) |\n| Windows arm64 | [Prisc-win-arm64-Setup.exe](https://github.com/priscapp/Prisc/releases/latest/download/Prisc-win-arm64-Setup.exe) | [Prisc-win-arm64-Portable.zip](https://github.com/priscapp/Prisc/releases/latest/download/Prisc-win-arm64-Portable.zip) |\n| macOS Apple Silicon | [Prisc-osx-arm64-Setup.pkg](https://github.com/priscapp/Prisc/releases/latest/download/Prisc-osx-arm64-Setup.pkg) | [Prisc-osx-arm64-Portable.zip](https://github.com/priscapp/Prisc/releases/latest/download/Prisc-osx-arm64-Portable.zip) |\n| macOS Intel | [Prisc-osx-x64-Setup.pkg](https://github.com/priscapp/Prisc/releases/latest/download/Prisc-osx-x64-Setup.pkg) | [Prisc-osx-x64-Portable.zip](https://github.com/priscapp/Prisc/releases/latest/download/Prisc-osx-x64-Portable.zip) |\n\nRequires Windows 10+ or macOS 13+.\n\n---\n\n## Video editor\n\n**A real timeline, not a trimmer.** Zoom in where attention should land, skip the waiting, restyle the cursor and drop it on a polished background. From raw recording to share-ready.\n\n<p align=\"center\"><a href=\"https://prisc.app/features/video-editor\"><img src=\"assets/readme/video-editor.webp\" alt=\"The video editor plays a recording through a 1.5× zoom and a 2× speed stretch\" width=\"720\"></a></p>\n\n- **Zoom and speed.** Zoom in where it matters, and skip the boring parts at up to 10×.\n- **Restyle it after you record.** Cursor packs, click effects and live keystroke overlays, all changeable later.\n- **Backgrounds in one click.** Rounded corners, shadow and a backdrop that makes any recording look finished.\n- **On-device AI.** The Speech Enhancer cleans up your voice and background removal cuts out your webcam, on your own GPU.\n- **What you see is what you get.** The preview and the export match frame for frame, and it saves as you go.\n\n<sub>AI effects need Windows or a Mac with Apple Silicon.</sub>\n\n**[Learn more about the video editor →](https://prisc.app/features/video-editor)**\n\n---\n\n## Screen recording\n\n**Record once, decide later.** Screen, webcam, microphone and system audio each land on their own track, so nothing is baked in until you say so.\n\n<p align=\"center\"><a href=\"https://prisc.app/features/screen-recording\"><img src=\"assets/readme/screen-recording.webp\" alt=\"The recording toolbar under a framed window: Start, the timer runs, the meters move\" width=\"720\"></a></p>\n\n- **Separate tracks.** Screen, webcam, mic and system audio, each on its own row in the editor.\n- **Cursor you can restyle.** The cursor, clicks and keystrokes are recorded as data, so you can change them after you stop.\n- **Up to 240 fps.** Smooth enough for fast-moving demos, with a live frame counter as you record.\n- **Crash-safe.** Hardware encoding when your GPU has it, and a power cut doesn't cost you the recording.\n\n**[Learn more about screen recording →](https://prisc.app/features/screen-recording)**\n\n---\n\n## Draw on screen\n\n**Draw on anything, then click straight through to your apps.** Walkthroughs, onboarding and code reviews that feel like you're sitting next to them.\n\n<p align=\"center\"><a href=\"https://prisc.app/features/draw-on-scr",
+    "checked_date": "2026-10-29"
+  }
+]
