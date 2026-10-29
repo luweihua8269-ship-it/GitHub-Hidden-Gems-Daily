@@ -33,6 +33,7 @@ class SMTP:
     def rcpt(self, *a): return 250, b'ok'
     def data(self, *a):
         self.data_calls += 1
+        self.wire_bytes = a[0]
         if self.disconnect: raise OSError('connection lost after DATA')
         return 250, b'accepted'
     def close(self): pass
@@ -125,6 +126,8 @@ class Safety(unittest.TestCase):
         fresh = Store(self.root, DAY)
         self.assertEqual(deliver(fresh, self.c, smtp_factory=lambda: client), 'blocked_duplicate_or_uncertain')
         self.assertEqual(client.data_calls, 1)
+        self.assertIn(b'\r\n', client.wire_bytes)
+        self.assertNotIn(b'\n', client.wire_bytes.replace(b'\r\n', b''))
         saved = self.store.path.read_text()
         self.assertNotIn('private@example.com', saved)
         self.assertNotIn('never-log-this', saved)
@@ -157,6 +160,16 @@ class Safety(unittest.TestCase):
         with patch.dict(os.environ, {'GITHUB_ACTIONS': 'true', 'GITHUB_REPOSITORY': 'a/b', 'RUNNER_OS': 'Linux'}):
             with patch.object(api, 'get', return_value={'visibility': 'private'}):
                 with self.assertRaises(StopCollection): cloud_check(api)
+
+    @patch.dict(os.environ, {'SMTP_USER': 'a@example.com', 'SMTP_PASSWORD': 'secret', 'MAIL_TO': 'b@example.com', 'SMTP_FREE_CONFIRMED': 'true'})
+    def test_connection_failure_reports_stage_without_secret(self):
+        import smtplib
+        self.outbox()
+        with self.assertRaises(RuntimeError):
+            deliver(self.store, self.c, checkpoint=self.store.save, smtp_factory=lambda: (_ for _ in ()).throw(smtplib.SMTPServerDisconnected('private server text')))
+        self.assertEqual(self.store.log['smtp_phase'], 'connect')
+        self.assertEqual(self.store.log['smtp_error_type'], 'SMTPServerDisconnected')
+        self.assertNotIn('private server text', self.store.path.read_text())
 
 
 if __name__ == '__main__': unittest.main()
