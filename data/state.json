@@ -278,7 +278,7 @@
     },
     "2026-10-30": {
       "date": "2026-10-30",
-      "github_api_requests": 38,
+      "github_api_requests": 39,
       "candidates": 60,
       "deep_checked": 10,
       "recommendations": 2,
@@ -287,18 +287,21 @@
       "llm_output_tokens": 0,
       "ai_cost_cny": 0,
       "ai_cost_basis": "程序没有模型接口或模型调用路径",
-      "program_seconds": 16.325000000000003,
+      "program_seconds": 16.693000000000005,
       "actions_job_seconds": null,
       "actions_billed_cost": null,
       "provider_remaining_quota": null,
       "cloud_runs": [
-        "40983007181"
+        "40983007181",
+        "41016828653"
       ],
       "email_result": "accepted",
       "smtp_attempts": 1,
       "retry_used": false,
       "over_budget": false,
-      "stops": [],
+      "stops": [
+        "run_error_RuntimeError"
+      ],
       "api_events": [
         {
           "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
@@ -524,6 +527,12 @@
           "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
           "status": 200,
           "remaining": 4979,
+          "truncated": false
+        },
+        {
+          "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+          "status": 200,
+          "remaining": 4999,
           "truncated": false
         }
       ],
