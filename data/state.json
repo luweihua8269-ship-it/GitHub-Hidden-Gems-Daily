@@ -275,6 +275,256 @@
       ],
       "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
       "smtp_error_type": "SMTPServerDisconnected"
+    },
+    "2026-10-30": {
+      "date": "2026-10-30",
+      "github_api_requests": 37,
+      "candidates": 60,
+      "deep_checked": 10,
+      "recommendations": 2,
+      "llm_calls": 0,
+      "llm_input_tokens": 0,
+      "llm_output_tokens": 0,
+      "ai_cost_cny": 0,
+      "ai_cost_basis": "程序没有模型接口或模型调用路径",
+      "program_seconds": 10.604,
+      "actions_job_seconds": null,
+      "actions_billed_cost": null,
+      "provider_remaining_quota": null,
+      "cloud_runs": [
+        "40983007181"
+      ],
+      "email_result": "not_configured",
+      "smtp_attempts": 0,
+      "retry_used": false,
+      "over_budget": false,
+      "stops": [],
+      "api_events": [
+        {
+          "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/rate_limit",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Awindow-manager+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 29,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Aphoto-management+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+          "status": 200,
+          "remaining": 29,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Ascreen-mirroring+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 28,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Aaudio-player+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+          "status": 200,
+          "remaining": 27,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Ae-ink+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 26,
+          "truncated": false
+        },
+        {
+          "path": "/repos/sidebandstudio/EternalMonitor",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/repos/sidebandstudio/EternalMonitor/releases/latest",
+          "status": 200,
+          "remaining": 4998,
+          "truncated": false
+        },
+        {
+          "path": "/repos/sidebandstudio/EternalMonitor/readme?ref=v0.3.3",
+          "status": 200,
+          "remaining": 4998,
+          "truncated": false
+        },
+        {
+          "path": "/repos/duartebarbosadev/PhotoSort",
+          "status": 200,
+          "remaining": 4997,
+          "truncated": false
+        },
+        {
+          "path": "/repos/duartebarbosadev/PhotoSort/releases/latest",
+          "status": 200,
+          "remaining": 4997,
+          "truncated": false
+        },
+        {
+          "path": "/repos/duartebarbosadev/PhotoSort/readme?ref=v2.1.0",
+          "status": 200,
+          "remaining": 4996,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Bitpainter75/FerrumPix",
+          "status": 200,
+          "remaining": 4995,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Bitpainter75/FerrumPix/releases/latest",
+          "status": 200,
+          "remaining": 4996,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Bitpainter75/FerrumPix/readme?ref=latest",
+          "status": 200,
+          "remaining": 4994,
+          "truncated": true
+        },
+        {
+          "path": "/repos/dmellok/tesserae",
+          "status": 200,
+          "remaining": 4993,
+          "truncated": false
+        },
+        {
+          "path": "/repos/dmellok/tesserae/releases/latest",
+          "status": 200,
+          "remaining": 4995,
+          "truncated": false
+        },
+        {
+          "path": "/repos/dmellok/tesserae/readme?ref=v0.480.0",
+          "status": 200,
+          "remaining": 4992,
+          "truncated": true
+        },
+        {
+          "path": "/repos/usetrmnl/trmnl-firmware",
+          "status": 200,
+          "remaining": 4991,
+          "truncated": false
+        },
+        {
+          "path": "/repos/usetrmnl/trmnl-firmware/releases/latest",
+          "status": 200,
+          "remaining": 4994,
+          "truncated": false
+        },
+        {
+          "path": "/repos/usetrmnl/trmnl-firmware/readme?ref=v1.8.17",
+          "status": 200,
+          "remaining": 4990,
+          "truncated": true
+        },
+        {
+          "path": "/repos/SylphxAI/Google-Photos-Delete-Tool",
+          "status": 200,
+          "remaining": 4989,
+          "truncated": false
+        },
+        {
+          "path": "/repos/SylphxAI/Google-Photos-Delete-Tool/releases/latest",
+          "status": 200,
+          "remaining": 4993,
+          "truncated": false
+        },
+        {
+          "path": "/repos/SylphxAI/Google-Photos-Delete-Tool/readme?ref=v3.5.1",
+          "status": 200,
+          "remaining": 4988,
+          "truncated": false
+        },
+        {
+          "path": "/repos/SolderedElectronics/Inkplate-Arduino-library",
+          "status": 200,
+          "remaining": 4987,
+          "truncated": false
+        },
+        {
+          "path": "/repos/SolderedElectronics/Inkplate-Arduino-library/releases/latest",
+          "status": 200,
+          "remaining": 4992,
+          "truncated": false
+        },
+        {
+          "path": "/repos/SolderedElectronics/Inkplate-Arduino-library/readme?ref=11.2.1",
+          "status": 200,
+          "remaining": 4986,
+          "truncated": false
+        },
+        {
+          "path": "/repos/rockbenben/scrcpy-helper",
+          "status": 200,
+          "remaining": 4985,
+          "truncated": false
+        },
+        {
+          "path": "/repos/rockbenben/scrcpy-helper/releases/latest",
+          "status": 200,
+          "remaining": 4991,
+          "truncated": false
+        },
+        {
+          "path": "/repos/rockbenben/scrcpy-helper/readme?ref=v1.6.1",
+          "status": 200,
+          "remaining": 4984,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ReKindleOS/ReKindle",
+          "status": 200,
+          "remaining": 4983,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ReKindleOS/ReKindle/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/ReKindleOS/ReKindle/readme?ref=main",
+          "status": 200,
+          "remaining": 4982,
+          "truncated": false
+        },
+        {
+          "path": "/repos/zeeyado/koassistant.koplugin",
+          "status": 200,
+          "remaining": 4981,
+          "truncated": false
+        },
+        {
+          "path": "/repos/zeeyado/koassistant.koplugin/releases/latest",
+          "status": 200,
+          "remaining": 4989,
+          "truncated": false
+        },
+        {
+          "path": "/repos/zeeyado/koassistant.koplugin/readme?ref=v0.24.1",
+          "status": 200,
+          "remaining": 4980,
+          "truncated": true
+        }
+      ],
+      "collection_started": true,
+      "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
+      "prepared": true,
+      "subject": "GitHub 冷门好物日报｜2026-10-30｜今天发现的2个有趣项目"
     }
   },
   "repositories": {
@@ -771,6 +1021,508 @@
         },
         "成本与上手难度": {
           "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1199998561": {
+      "repository_id": 1199998561,
+      "name": "sidebandstudio/EternalMonitor",
+      "url": "https://github.com/sidebandstudio/EternalMonitor",
+      "stars": 183,
+      "category": "跨设备",
+      "description": "Use your iPad as a second screen for Windows. Mirror or extend over Wi-Fi or USB, with touch, keyboard, Apple Pencil and PC audio.",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-30T00:24:04Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "sidebandstudio/EternalMonitor"
+      ],
+      "key_feature": "second screen",
+      "score": 64,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": true,
+      "recommended_date": "2026-10-30"
+    },
+    "985292600": {
+      "repository_id": 985292600,
+      "name": "duartebarbosadev/PhotoSort",
+      "url": "https://github.com/duartebarbosadev/PhotoSort",
+      "stars": 30,
+      "category": "桌面效率",
+      "description": "PhotoSort is a powerful desktop application designed to streamline the management of large photo libraries, making it easier than ever to sort, cull your images. ",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-30T00:17:09Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "duartebarbosadev/PhotoSort"
+      ],
+      "key_feature": "desktop app",
+      "score": 64,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": true,
+      "recommended_date": "2026-10-30"
+    },
+    "1289448348": {
+      "repository_id": 1289448348,
+      "name": "Bitpainter75/FerrumPix",
+      "url": "https://github.com/Bitpainter75/FerrumPix",
+      "stars": 743,
+      "category": "照片管理",
+      "description": "FerrumPix is a desktop photo management and editing application for Linux,  Windows and macOS.",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-29T22:35:01Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "Bitpainter75/FerrumPix"
+      ],
+      "key_feature": "photo management",
+      "score": 57,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 16,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 5,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1248940745": {
+      "repository_id": 1248940745,
+      "name": "dmellok/tesserae",
+      "url": "https://github.com/dmellok/tesserae",
+      "stars": 984,
+      "category": "旧设备改造",
+      "description": "E-ink dashboard companion. Compose dashboards in a browser, render server-side, and push to e-ink panels over REST or MQTT.",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-29T22:04:31Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "dmellok/tesserae"
+      ],
+      "key_feature": "E-ink",
+      "score": 49,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "742912310": {
+      "repository_id": 742912310,
+      "name": "usetrmnl/trmnl-firmware",
+      "url": "https://github.com/usetrmnl/trmnl-firmware",
+      "stars": 1200,
+      "category": "旧设备改造",
+      "description": "TRMNL ePaper device firmware",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-29T18:31:04Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "usetrmnl/trmnl-firmware"
+      ],
+      "key_feature": "e-ink",
+      "score": 49,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "749128988": {
+      "repository_id": 749128988,
+      "name": "SylphxAI/Google-Photos-Delete-Tool",
+      "url": "https://github.com/SylphxAI/Google-Photos-Delete-Tool",
+      "stars": 161,
+      "category": "文件整理",
+      "description": "Google Photos duplicate finder and bulk delete tool: find and delete duplicate photos, bulk delete safely with dry run and empty trash. Chrome extension + userscript, runs in your browser.",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-29T10:01:38Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "SylphxAI/Google-Photos-Delete-Tool"
+      ],
+      "key_feature": "duplicate finder",
+      "score": 49,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "228183400": {
+      "repository_id": 228183400,
+      "name": "SolderedElectronics/Inkplate-Arduino-library",
+      "url": "https://github.com/SolderedElectronics/Inkplate-Arduino-library",
+      "stars": 308,
+      "category": "旧设备改造",
+      "description": "Inkplate family Arduino library. The easiest way to add e-paper to your project. ",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-28T14:32:39Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "SolderedElectronics/Inkplate-Arduino-library"
+      ],
+      "key_feature": "e-ink",
+      "score": 42,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1280281715": {
+      "repository_id": 1280281715,
+      "name": "rockbenben/scrcpy-helper",
+      "url": "https://github.com/rockbenben/scrcpy-helper",
+      "stars": 117,
+      "category": "屏幕工具",
+      "description": "不用背 scrcpy 的命令行参数：勾几个选项就把安卓手机投屏到 Windows 电脑，还能无线投屏、录屏、把手机当摄像头。免安装，解压双击即用",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-27T07:07:21Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "rockbenben/scrcpy-helper"
+      ],
+      "key_feature": "录屏",
+      "score": 39,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1108054886": {
+      "repository_id": 1108054886,
+      "name": "ReKindleOS/ReKindle",
+      "url": "https://github.com/ReKindleOS/ReKindle",
+      "stars": 201,
+      "category": "旧设备改造",
+      "description": "Your Kindle Upgraded",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-27T02:47:30Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "ReKindleOS/ReKindle"
+      ],
+      "key_feature": "e-ink",
+      "score": 43,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1017556132": {
+      "repository_id": 1017556132,
+      "name": "zeeyado/koassistant.koplugin",
+      "url": "https://github.com/zeeyado/koassistant.koplugin",
+      "stars": 281,
+      "category": "旧设备改造",
+      "description": "A powerful AI assistant integrated into KOReader.",
+      "discovered_date": "2026-10-30",
+      "updated_date": "2026-10-26T18:48:48Z",
+      "checked_date": "2026-10-30",
+      "aliases": [
+        "zeeyado/koassistant.koplugin"
+      ],
+      "key_feature": "e-ink",
+      "score": 49,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
           "max": 10,
           "pending": 2,
           "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"

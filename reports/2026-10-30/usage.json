@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-30",
+  "github_api_requests": 37,
+  "candidates": 60,
+  "deep_checked": 10,
+  "recommendations": 2,
+  "llm_calls": 0,
+  "llm_input_tokens": 0,
+  "llm_output_tokens": 0,
+  "ai_cost_cny": 0,
+  "ai_cost_basis": "程序没有模型接口或模型调用路径",
+  "program_seconds": 10.604,
+  "actions_job_seconds": null,
+  "actions_billed_cost": null,
+  "provider_remaining_quota": null,
+  "cloud_runs": [
+    "40983007181"
+  ],
+  "email_result": "not_configured",
+  "smtp_attempts": 0,
+  "retry_used": false,
+  "over_budget": false,
+  "stops": [],
+  "api_events": [
+    {
+      "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/rate_limit",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Awindow-manager+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 29,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Aphoto-management+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+      "status": 200,
+      "remaining": 29,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Ascreen-mirroring+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 28,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Aaudio-player+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+      "status": 200,
+      "remaining": 27,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Ae-ink+stars%3A20..5000+pushed%3A%3E2026-05-03+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 26,
+      "truncated": false
+    },
+    {
+      "path": "/repos/sidebandstudio/EternalMonitor",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/repos/sidebandstudio/EternalMonitor/releases/latest",
+      "status": 200,
+      "remaining": 4998,
+      "truncated": false
+    },
+    {
+      "path": "/repos/sidebandstudio/EternalMonitor/readme?ref=v0.3.3",
+      "status": 200,
+      "remaining": 4998,
+      "truncated": false
+    },
+    {
+      "path": "/repos/duartebarbosadev/PhotoSort",
+      "status": 200,
+      "remaining": 4997,
+      "truncated": false
+    },
+    {
+      "path": "/repos/duartebarbosadev/PhotoSort/releases/latest",
+      "status": 200,
+      "remaining": 4997,
+      "truncated": false
+    },
+    {
+      "path": "/repos/duartebarbosadev/PhotoSort/readme?ref=v2.1.0",
+      "status": 200,
+      "remaining": 4996,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Bitpainter75/FerrumPix",
+      "status": 200,
+      "remaining": 4995,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Bitpainter75/FerrumPix/releases/latest",
+      "status": 200,
+      "remaining": 4996,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Bitpainter75/FerrumPix/readme?ref=latest",
+      "status": 200,
+      "remaining": 4994,
+      "truncated": true
+    },
+    {
+      "path": "/repos/dmellok/tesserae",
+      "status": 200,
+      "remaining": 4993,
+      "truncated": false
+    },
+    {
+      "path": "/repos/dmellok/tesserae/releases/latest",
+      "status": 200,
+      "remaining": 4995,
+      "truncated": false
+    },
+    {
+      "path": "/repos/dmellok/tesserae/readme?ref=v0.480.0",
+      "status": 200,
+      "remaining": 4992,
+      "truncated": true
+    },
+    {
+      "path": "/repos/usetrmnl/trmnl-firmware",
+      "status": 200,
+      "remaining": 4991,
+      "truncated": false
+    },
+    {
+      "path": "/repos/usetrmnl/trmnl-firmware/releases/latest",
+      "status": 200,
+      "remaining": 4994,
+      "truncated": false
+    },
+    {
+      "path": "/repos/usetrmnl/trmnl-firmware/readme?ref=v1.8.17",
+      "status": 200,
+      "remaining": 4990,
+      "truncated": true
+    },
+    {
+      "path": "/repos/SylphxAI/Google-Photos-Delete-Tool",
+      "status": 200,
+      "remaining": 4989,
+      "truncated": false
+    },
+    {
+      "path": "/repos/SylphxAI/Google-Photos-Delete-Tool/releases/latest",
+      "status": 200,
+      "remaining": 4993,
+      "truncated": false
+    },
+    {
+      "path": "/repos/SylphxAI/Google-Photos-Delete-Tool/readme?ref=v3.5.1",
+      "status": 200,
+      "remaining": 4988,
+      "truncated": false
+    },
+    {
+      "path": "/repos/SolderedElectronics/Inkplate-Arduino-library",
+      "status": 200,
+      "remaining": 4987,
+      "truncated": false
+    },
+    {
+      "path": "/repos/SolderedElectronics/Inkplate-Arduino-library/releases/latest",
+      "status": 200,
+      "remaining": 4992,
+      "truncated": false
+    },
+    {
+      "path": "/repos/SolderedElectronics/Inkplate-Arduino-library/readme?ref=11.2.1",
+      "status": 200,
+      "remaining": 4986,
+      "truncated": false
+    },
+    {
+      "path": "/repos/rockbenben/scrcpy-helper",
+      "status": 200,
+      "remaining": 4985,
+      "truncated": false
+    },
+    {
+      "path": "/repos/rockbenben/scrcpy-helper/releases/latest",
+      "status": 200,
+      "remaining": 4991,
+      "truncated": false
+    },
+    {
+      "path": "/repos/rockbenben/scrcpy-helper/readme?ref=v1.6.1",
+      "status": 200,
+      "remaining": 4984,
+      "truncated": false
+    },
+    {
+      "path": "/repos/ReKindleOS/ReKindle",
+      "status": 200,
+      "remaining": 4983,
+      "truncated": false
+    },
+    {
+      "path": "/repos/ReKindleOS/ReKindle/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/ReKindleOS/ReKindle/readme?ref=main",
+      "status": 200,
+      "remaining": 4982,
+      "truncated": false
+    },
+    {
+      "path": "/repos/zeeyado/koassistant.koplugin",
+      "status": 200,
+      "remaining": 4981,
+      "truncated": false
+    },
+    {
+      "path": "/repos/zeeyado/koassistant.koplugin/releases/latest",
+      "status": 200,
+      "remaining": 4989,
+      "truncated": false
+    },
+    {
+      "path": "/repos/zeeyado/koassistant.koplugin/readme?ref=v0.24.1",
+      "status": 200,
+      "remaining": 4980,
+      "truncated": true
+    }
+  ],
+  "collection_started": true,
+  "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
+  "prepared": true,
+  "subject": "GitHub 冷门好物日报｜2026-10-30｜今天发现的2个有趣项目"
+}

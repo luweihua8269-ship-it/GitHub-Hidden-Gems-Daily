@@ -1,0 +1,915 @@
+[
+  {
+    "repository": {
+      "id": 1199998561,
+      "name": "EternalMonitor",
+      "full_name": "sidebandstudio/EternalMonitor",
+      "html_url": "https://github.com/sidebandstudio/EternalMonitor",
+      "description": "Use your iPad as a second screen for Windows. Mirror or extend over Wi-Fi or USB, with touch, keyboard, Apple Pencil and PC audio.",
+      "stargazers_count": 183,
+      "pushed_at": "2026-10-30T00:24:04Z",
+      "created_at": "2026-04-02T23:43:30Z",
+      "default_branch": "main",
+      "homepage": "https://eternalmonitor.dev/",
+      "topics": [
+        "apple-pencil",
+        "extended-display",
+        "ipad",
+        "ipados",
+        "low-latency",
+        "nvenc",
+        "rust",
+        "screen-mirroring",
+        "second-monitor",
+        "second-screen",
+        "swift",
+        "video-streaming",
+        "virtual-display",
+        "windows"
+      ],
+      "_category": "跨设备"
+    },
+    "assessment": {
+      "accepted": true,
+      "category": "跨设备",
+      "audience": "需要在设备间传文件或共享屏幕的用户",
+      "feature_match": "second screen",
+      "documented_facts": [],
+      "license": "MIT",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "iOS"
+      ],
+      "assets": [
+        {
+          "name": "EternalMonitor-Setup.exe",
+          "url": "https://github.com/sidebandstudio/EternalMonitor/releases/download/v0.3.3/EternalMonitor-Setup.exe"
+        }
+      ],
+      "install_heading": "## Download",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 64,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v0.3.3",
+      "html_url": "https://github.com/sidebandstudio/EternalMonitor/releases/tag/v0.3.3",
+      "published_at": "2026-10-27T14:43:03Z"
+    },
+    "readme_sha256": "5e5af0a108c6eb8a3dc3891a9b73ae3df546cb6e92bbf27e95d7692a9a8b5d6a",
+    "readme_excerpt": "<div align=\"center\">\n\n<img src=\"docs/assets/icon.png\" width=\"88\" height=\"88\" alt=\"EternalMonitor logo\">\n\n# EternalMonitor\n\nMirror or extend your Windows desktop onto an iPad over Wi-Fi or USB,<br>\nand control the PC with touch, a keyboard or Apple Pencil.\n\n[![Release](https://img.shields.io/github/v/release/sidebandstudio/EternalMonitor?include_prereleases&label=release&labelColor=111&color=e8ff47)](https://github.com/sidebandstudio/EternalMonitor/releases)\n[![CI](https://img.shields.io/github/actions/workflow/status/sidebandstudio/EternalMonitor/ci.yml?branch=main&label=CI&labelColor=111)](https://github.com/sidebandstudio/EternalMonitor/actions/workflows/ci.yml)\n[![License: MIT](https://img.shields.io/badge/license-MIT-e8ff47?labelColor=111)](LICENSE)\n[![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20iPadOS-e8ff47?labelColor=111)](#download)\n[![Website](https://img.shields.io/badge/website-eternalmonitor.dev-e8ff47?labelColor=111)](https://eternalmonitor.dev)\n\n[Download](#download) · [Setup guide](SETUP.md) · [Known issues](https://eternalmonitor.dev/known-issues.html) · [Website](https://eternalmonitor.dev) · [Release notes](RELEASE_NOTES.md)\n\n</div>\n\n<p align=\"center\">\n  <img src=\"docs/assets/og.png\" width=\"860\" alt=\"The EternalMonitor Windows app streaming to an iPad, which shows the PC's picture\">\n</p>\n\nEternalMonitor streams your Windows desktop to an iPad and sends your input back.\nA small Windows app captures the screen and encodes it on your graphics card. The\niPad app decodes the video in hardware and draws it with Metal, and every tap,\nkeystroke and Pencil stroke travels back to the PC. It is free, open source under\nthe MIT license, and needs no account.\n\n## Features\n\n<img src=\"docs/assets/ipad-app.webp\" align=\"right\" width=\"270\" alt=\"The iPad app's connect screen with Connect, Scan QR code and Find PCs\">\n\n- **Extend or mirror.** Add the iPad as an extra display beside your monitor, or\n  mirror any screen you have. The extra display exists only while the iPad is\n  connected, so Windows never keeps a phantom monitor around.\n- **Wi-Fi or USB.** Stream over your home network, or plug in a cable for a\n  steadier picture that also charges the iPad. A cable takes over a running\n  Wi-Fi session, and unplugging it falls back to Wi-Fi.\n- **Touch, keyboard and pointer.** Tap to click, drag, scroll with two fingers and\n  hold to right-click. Hardware keyboards, trackpads and mice work too, with\n  sticky modifiers and middle-click.\n- **Apple Pencil as a real pen.** Windows receives Windows Ink pressure and tilt,\n  and the pen lands under the tip on any monitor layout. Drawing mode ignores your\n  palm on the canvas, and Clip Studio Paint works with its Tablet PC setting.\n- **Fit or fill.** Fit shows the whole PC picture, with bars where the shapes\n  differ. Fill uses the iPad's entire screen and trims the edges that don't fit.\n- **PC audio.** Sound plays on the iPad as Opus, with a jitter buffer and loss\n  concealment. You can mute it without stopping the video.\n- **Loss repair for real Wi-Fi.** When a packet goes missing, the iPad asks for\n  that fragment again right away, so one dropped packet rarely costs a frame. The\n  bitrate adapts between 4 and 50 Mbps.\n- **Your GPU does the work.** NVIDIA NVENC, AMD AMF or Intel Quick Sync encode\n  H.264 by default, or HEVC if you prefer it, at 30, 60, 90 or 120 fps.\n- **Pairing.** The first Wi-Fi connection asks for a six-digit code or a QR scan.\n  After that the iPad remembers the PC. USB needs no code.\n- **Recovers and explains.** The picture comes back by itself after the lock\n  screen, a display change or a stream restart. When something does go wrong,\n  both apps say what happened and what to do, and **Send feedback** writes an\n  email to the studio with your setup filled in.\n- **Updates in one click.** A popup tells you when a new version is out. On\n  Windows, **Update now** checks the download and installs it with one Windows\n  prompt; the iPad app opens TestFlight. The Windows app runs without a console\n  window.\n\n<br clear=\"right\">\n\n## Download\n\n| | Requirements | Get it |\n| --- | --- | --- |\n| **Windows** | Windows 10 version 1809 or later, or Windows 11, 64-bit, with NVIDIA, AMD or Intel graphics | [EternalMonitor-Setup.exe](https://github.com/sidebandstudio/EternalMonitor/releases/tag/v0.3.2) (v0.3.2 current stable) |\n| **iPad** | iPadOS 17 or later | [TestFlight v0.3.2, build 316](https://testflight.apple.com/join/ppc9QfXc). The public beta is open: install TestFlight, then open the link on your iPad. |\n\nInstall both apps from the same version. The older v0.1 releases use a different\nprotocol and cannot connect to the v0.3 iPad app.\n\nTesting it? Send bugs and feedback through the [form on the download page](https://eternalmonitor.dev/download.html#feedback),\nwhich emails hello@sideband.studio, or open a [GitHub issue](https://github.com/sidebandstudio/EternalMonitor/issues/new/choose).\n\nThe installer is not code-signed yet, so Windows SmartScreen asks before it runs.\nChoose **More info**, then **Run anyway**, only after checking that the file's\nSHA-256 matches the one on the [release page](https://github.com/sidebandstudio/EternalMonitor/releases).\n\nFor USB you also need Apple's free [Apple Devices](https://apps.microsoft.com/detail/9np83lwlpz9k)\napp, open while you stream. Windows can only reach an iPad over a cable through\nit, and EternalMonitor tells you when it is closed or missing. Apple Devices\nneeds Windows 10 version 22H2 (build 19045) or Windows 11, so on older Windows 10\nconnect over Wi-Fi.\n\n**Next, follow the [setup guide](SETUP.md).** It walks through installing both\napps, pairing, USB, the extended display and drawing, with the exact button names\nyou will see.\n\n## Status\n\nv0.3.2 places Apple Pencil correctly on PCs with more than one monitor, adds\nFill, plain-language messages, Send feedback and one-click Windows updates, and\nopens on graphics drivers that crashed 0.3.1 at startup. Install it with iPad",
+    "readme_ref": "v0.3.3",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 985292600,
+      "name": "PhotoSort",
+      "full_name": "duartebarbosadev/PhotoSort",
+      "html_url": "https://github.com/duartebarbosadev/PhotoSort",
+      "description": "PhotoSort is a powerful desktop application designed to streamline the management of large photo libraries, making it easier than ever to sort, cull your images. ",
+      "stargazers_count": 30,
+      "pushed_at": "2026-10-30T00:17:09Z",
+      "created_at": "2025-05-17T13:09:04Z",
+      "default_branch": "main",
+      "homepage": "",
+      "topics": [
+        "ai-photo-tool",
+        "auto-rotation",
+        "automation",
+        "batch-processing",
+        "cross-platform",
+        "desktop-app",
+        "duplicate-photo-finder",
+        "file-organisation",
+        "gui-tool",
+        "image-culling",
+        "image-processing",
+        "metadata-exif",
+        "open-source",
+        "photo-library",
+        "photo-management",
+        "photo-organizer",
+        "photo-sorting",
+        "pyqt",
+        "python",
+        "similarity-check"
+      ],
+      "_category": "桌面效率"
+    },
+    "assessment": {
+      "accepted": true,
+      "category": "桌面效率",
+      "audience": "希望改善桌面操作的用户",
+      "feature_match": "desktop app",
+      "documented_facts": [],
+      "license": "Apache-2.0",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "assets": [
+        {
+          "name": "PhotoSort-macOS-AppleSilicon.dmg",
+          "url": "https://github.com/duartebarbosadev/PhotoSort/releases/download/v2.1.0/PhotoSort-macOS-AppleSilicon.dmg"
+        }
+      ],
+      "install_heading": "## Download",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 64,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v2.1.0",
+      "html_url": "https://github.com/duartebarbosadev/PhotoSort/releases/tag/v2.1.0",
+      "published_at": "2026-09-13T11:23:12Z"
+    },
+    "readme_sha256": "08cfd03276b25077316a091762cbad515a33f8027ab23f7f0a6ebafbadea1755",
+    "readme_excerpt": "<h1 align=\"center\">PhotoSort</h1>\n\n<p align=\"center\">\n  <strong>Choose which photos to keep before you start editing.</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://www.python.org/downloads/\"><img src=\"https://img.shields.io/badge/Python-3.14-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white\" alt=\"Python 3.14\"></a>\n  <a href=\"https://www.riverbankcomputing.com/software/pyqt/\"><img src=\"https://img.shields.io/badge/PyQt-6-41CD52?style=flat-square&amp;logo=qt&amp;logoColor=white\" alt=\"PyQt 6\"></a>\n  <a href=\"https://github.com/duartebarbosadev/PhotoSort/releases\"><img src=\"https://img.shields.io/github/v/release/duartebarbosadev/PhotoSort?style=flat-square&amp;label=release\" alt=\"Latest release\"></a>\n  <a href=\"https://github.com/duartebarbosadev/PhotoSort/actions/workflows/ci.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/duartebarbosadev/PhotoSort/ci.yml?branch=main&amp;style=flat-square&amp;label=build\" alt=\"Build status\"></a>\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache%202.0-blue?style=flat-square\" alt=\"License: Apache 2.0\"></a>\n</p>\n\nPhotoSort helps you sort through a folder of photos and decide which ones to\nkeep. You can find blurry shots and duplicates, compare similar photos side by\nside, and organize your favorites into folders. Mark the photos you don’t want\nas you go, then review them before moving anything to Trash.\n\n[![PhotoSort showing a night photograph in Cull](assets/main-window-screenshot.webp)](assets/main-window-screenshot.webp)\n\n<p align=\"center\">\n  <a href=\"https://github.com/duartebarbosadev/PhotoSort/releases\">Download</a> ·\n  <a href=\"#supported-files\">Supported files</a> ·\n  <a href=\"#choose-your-workflow\">Workflows</a> ·\n  <a href=\"#useful-shortcuts\">Shortcuts</a> ·\n  <a href=\"#ai-usage\">AI Usage</a>\n</p>\n\n## Download\n\nDownload PhotoSort from the [Releases page](https://github.com/duartebarbosadev/PhotoSort/releases).\n\n## Supported files\n\nPhotoSort opens JPEG, PNG, TIFF, WebP, and many camera RAW formats. Star ratings\nand rotations are saved directly to EXIF and XMP metadata so they carry over to\nother photo editors. You can also browse and play common video formats, but\nratings and analysis only work with photos.\n\n## Choose your workflow\n\nThere are five steps along the bottom of the window. Use whichever ones you\nneed. You don't have to go through them all or follow a particular order.\n\n| Step | What it's for |\n| --- | --- |\n| **Organize** | Arrange photos into folders. |\n| **Easy Delete** | Find duplicates, blurry shots, and exposure problems. |\n| **Fix Rotation** | Correct sideways or upside-down photos. |\n| **Pick Best** | Choose favorites from similar shots. |\n| **Cull** | Review photos manually and choose what to keep. |\n\n### Organize\n\nArrange photos into folders and check the result before moving anything.\nRAW+JPEG pairs and XMP sidecars can move together.\n\n[![Organize previewing USA, Porto, and Australia folders](assets/organize-screenshot.webp)](assets/organize-screenshot.webp)\n\n### Easy Delete\n\nPhotoSort flags duplicates, blurry shots, and photos that may be too dark or\nbright. Compare them and decide which ones to keep.\n\n[![Easy Delete comparing a softer photo with a sharper version](assets/easy-delete-screenshot.webp)](assets/easy-delete-screenshot.webp)\n\n### Fix Rotation\n\nCheck the suggested rotation next to the original. Adjust it if needed, then\napply the changes.\n\n[![Fix Rotation showing the original and suggested correction](assets/fix-rotation-screenshot.webp)](assets/fix-rotation-screenshot.webp)\n\n### Pick Best\n\nCompare similar photos with suggestions based on image quality and faces.\nChoose your favorites, or keep them all.\n\n[![Pick Best comparing similar photos](assets/pick-best-screenshot.webp)](assets/pick-best-screenshot.webp)\n\n### Cull\n\nGo through your photos at your own pace. Compare shots side by side, give your\nfavorites a star rating, and mark the ones you don't want. Review your marks\nbefore sending anything to Trash.\n\n[![Cull showing a night photograph for review](assets/main-window-screenshot.webp)](assets/main-window-screenshot.webp)\n\n### Useful shortcuts\n\nSee the [complete keyboard guide](docs/keyboard-shortcuts.md) for separate maps\nand shortcut tables for all five workflows.\n\nHere are the most important shortcuts you should know:\n\n| What you want to do | Shortcut |\n| --- | --- |\n| Browse photos | Up / Down arrows |\n| Split view with multiple photos | Shift + Up / Down arrows |\n| Highlight a photo to quickly compare (when multiple are selected) | 1, 2, 3... |\n| Mark or unmark a photo for deletion | D |\n| Unmark all photos | Alt+D |\n| Review and apply your changes | Shift+Enter |\n| Send selected photos to Trash | Delete / Backspace |\n| Give a star rating, or clear it with 0 | Ctrl+0 to Ctrl+5 |\n| Show photo details | I |\n| Fit the photo / show actual size | 0 / A |\n| Show one photo / compare side by side | F1 / F2 |\n| Open Preferences | F10 |\n\n## AI Usage\n\nPhotoSort runs all AI models **100% locally on your computer**. No photos, data,\nor embeddings are ever sent to external servers or cloud APIs, and no accounts or\nAPI keys are required. You can also browse, organize, and cull photos manually\nwithout using any AI features.\n\n### Where AI is used\n\n- **Subject & similarity grouping (Cull & Pick Best):** Uses Meta's **DINOv2** (`facebook/dinov2-small`) vision transformer to cluster bursts and similar scenes based on visual content. You can also select `facebook/dinov2-base` in Preferences.\n- **Aesthetic quality scoring (Pick Best):** Uses **BeIT Aesthetic** (`cafeai/cafe_aesthetic`) to evaluate composition and lighting, alongside **MediaPipe / OpenCV** for face and open-eye detection.\n- **Orientation correction (Fix Rotation):** Uses an ONNX neural network ([deep-image-orientation-detection](https://github.com/duartebarbosadev/deep-image-orientation-detection)) to detect upside-down or sideways photos.\n- *(Note: Duplicate detection and blur analysis in Easy Delete",
+    "readme_ref": "v2.1.0",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 1289448348,
+      "name": "FerrumPix",
+      "full_name": "Bitpainter75/FerrumPix",
+      "html_url": "https://github.com/Bitpainter75/FerrumPix",
+      "description": "FerrumPix is a desktop photo management and editing application for Linux,  Windows and macOS.",
+      "stargazers_count": 743,
+      "pushed_at": "2026-10-29T22:35:01Z",
+      "created_at": "2026-07-04T19:05:32Z",
+      "default_branch": "main",
+      "homepage": "https://ferrumpix.app",
+      "topics": [
+        "appimage",
+        "avaloniaui",
+        "editor",
+        "gallery",
+        "image",
+        "immich",
+        "linux",
+        "macos",
+        "photo",
+        "photo-editing",
+        "photo-editor",
+        "photo-gallery",
+        "photo-management",
+        "photo-organizer",
+        "raw",
+        "raw-editor",
+        "raw-image",
+        "raw-processing",
+        "viewer",
+        "windows"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "照片管理",
+      "audience": "整理、浏览照片的用户",
+      "feature_match": "photo management",
+      "documented_facts": [],
+      "license": "GPL-3.0",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "assets": [
+        {
+          "name": "FerrumPix-0.9.72-2-amd64.deb",
+          "url": "https://github.com/Bitpainter75/FerrumPix/releases/download/latest/FerrumPix-0.9.72-2-amd64.deb"
+        },
+        {
+          "name": "FerrumPix-0.9.72-2-win-x64-Setup.exe",
+          "url": "https://github.com/Bitpainter75/FerrumPix/releases/download/latest/FerrumPix-0.9.72-2-win-x64-Setup.exe"
+        },
+        {
+          "name": "FerrumPix-0.9.72-2-x86_64.AppImage",
+          "url": "https://github.com/Bitpainter75/FerrumPix/releases/download/latest/FerrumPix-0.9.72-2-x86_64.AppImage"
+        }
+      ],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 57,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 16,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 5,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "latest",
+      "html_url": "https://github.com/Bitpainter75/FerrumPix/releases/tag/latest",
+      "published_at": "2026-10-28T23:44:51Z"
+    },
+    "readme_sha256": "ad21b4bc522ba692d3b5df629b41c0f178c343104f9e1520b0780bce725cc9c5",
+    "readme_excerpt": "<img src=\"Assets/FerrumPix_Settings_Dark.png\" />\n\n# FerrumPix\n\nFerrumPix is a desktop photo manager and image editor for Linux and Windows, with experimental ARM64 and macOS builds. Browse your folders, sort and rate what is in them, look at photos properly, and edit them - all in one application, all on your own machine. It can also connect to a self-hosted [Immich](https://immich.app/) or [Nextcloud](https://nextcloud.com/) server.\n\nIt is built with [Avalonia UI](https://avaloniaui.net/) and .NET 10, in VB.NET, which I still love even though it is rare nowadays. This started as a private project - an application built exactly the way I always wanted one to look and work - and it is free and open source for anyone who finds it useful.\n\nTo be transparent: yes, I use AI to support my development workflow. AI helps me also with translation. However, it still requires a massive amount of manual work, architecture planning, and debugging. I am currently investing a lot of time. A ton of passion, unique ideas, and genuine hard work went into this project.\n\n## Why FerrumPix?\n\nI wanted a fast, native desktop app for my whole photo workflow, without being locked into a big ecosystem or jumping between four programs.\n\nMost tools in this space are good at one thing. Photo library apps organise, rate and tag well but edit only a little. RAW converters are excellent at tone and colour, and stay purely parametric. Pixel editors can do almost anything to a single image but have no real library. Immich and Nextcloud store and share photos beautifully, but they live in the browser.\n\nFerrumPix closes those gaps. It puts photo management, non-destructive RAW development, pixel editing, local folders and direct access to Immich and Nextcloud into one native application. Browse, rate and tag your library, open a photo for non-destructive adjustments, go down to the pixel when you need to, and work with your own server alongside your local folders.\n\nIt runs on Windows, Linux and macOS, stays fast and local-first, and is built for hobby photographers and enthusiasts rather than studio pipelines. It does not care whether you feed it RAW files from a camera or JPEGs from your phone.\n\n## What you can do with it\n\n- Browse local photo folders with fast thumbnails, ratings, favourites, keywords and saved searches.\n- View photos and videos fullscreen, compare two side by side, and check metadata and histogram.\n- Edit: crop, resize, rotate and distort, exposure and colour, curves, filters, masks, retouching, text and shapes, layers.\n- Develop RAW files from the sensor data, with lens correction from measured data for more than 1500 lenses.\n- Run batch work over a whole selection: rename, convert, resize, watermark, filters, metadata, export.\n- Open JPEG, PNG, WEBP, JPEG XL, TIFF, BMP, GIF and RAW, plus HEIC/HEIF/AVIF read-only, and Photoshop files with their layers.\n- Hand a picture to another program with *Open with*, and pass it through G'MIC from the editor if you have it installed.\n- Find the people in your photos and search by them, and search by where a photo was taken - both entirely on your own machine. If you switch it on, a map shows where your photos were taken.\n- Connect to your own Immich or Nextcloud server for browsing, upload, download, editing and metadata sync.\n- Work in your own language: twenty-one are built in, and the symbol search finds shapes by their name in each of them.\n\nYour originals are never changed behind your back, and nothing at all is written until you save. Saving a RAW or a Photoshop file puts your edits in a small sidecar beside it, because those two are never written to; everything else is written the way you asked for it.\n\n## Gallery\n\n<img src=\"Screenshots/Gallery.jpg\" />\n\nFolder tree, grid, list, group view, photo wall and map view, fast thumbnails, file operations, ratings, favourites, keywords and saved searches. Search combines plain text with metadata such as camera, ISO, aperture, focal length, date taken and image size.\n\nThe group view puts a heading above each block of pictures, following whatever you sort by: one block per day when sorting by date, or by month or year, and by name, camera, file type or rating just as well. A circle in front of the heading selects a whole block at once.\n\nIf you switch it on in Settings, bursts and RAW+JPEG pairs are stacked: shots taken in quick succession, and the JPEG the camera wrote next to a RAW, show up as one thumbnail. A click on a burst shows just that burst, shot by shot, until you go back to the folder; that is also where its pictures are deleted, one at a time, never the whole burst at once. Within a burst the sharpest shot moves to the front and every shot gets a small sharpness bar, so culling a series is a matter of keeping the best and pressing SHIFT+X to reject the rest. Rejected pictures stay where they are, dimmed, until you hide them with the filter or delete them yourself.\n\nThe photo wall lays the pictures out edge to edge in their own proportions, without captions; its gap is adjustable, and rounded corners and frames can be turned off.\n\nA map view shows the pictures by where they were taken. It is off until you switch it on in Settings, because the map itself comes from a tile server on the internet, which learns which area you are looking at. The photos themselves never leave your machine, and map tiles you have seen are kept there until you clear them.\n\nRatings, colour labels, keywords and reject marks are read from the sidecars Lightroom, darktable or digiKam write, so a collection you tagged elsewhere arrives with its work intact. Keywords stored inside the picture itself, in its IPTC or XMP data, are picked up as well and can be searched like any other keyword.\n\nName the folders your photos live in and they appear at the top of the folder tree, one click away, and FerrumPix reads them in the background, subfolders included, so search and filters cover your whole collection instead of only the folders you happ",
+    "readme_ref": "latest",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 1248940745,
+      "name": "tesserae",
+      "full_name": "dmellok/tesserae",
+      "html_url": "https://github.com/dmellok/tesserae",
+      "description": "E-ink dashboard companion. Compose dashboards in a browser, render server-side, and push to e-ink panels over REST or MQTT.",
+      "stargazers_count": 984,
+      "pushed_at": "2026-10-29T22:04:31Z",
+      "created_at": "2026-05-25T07:37:15Z",
+      "default_branch": "main",
+      "homepage": "https://tesserae.ink",
+      "topics": [
+        "dashboard",
+        "e-ink",
+        "esp32",
+        "home-assistant",
+        "raspberry-pi",
+        "self-hosted",
+        "tesserae"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "旧设备改造",
+      "audience": "愿意动手改造闲置设备的用户",
+      "feature_match": "E-ink",
+      "documented_facts": [],
+      "license": "AGPL-3.0",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "assets": [],
+      "install_heading": "## Quick start",
+      "has_visual_markers": true,
+      "risks": [
+        "额外硬件、刷机兼容性与损坏成本需人工确认"
+      ],
+      "score": 49,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v0.480.0",
+      "html_url": "https://github.com/dmellok/tesserae/releases/tag/v0.480.0",
+      "published_at": "2026-10-26T09:04:07Z"
+    },
+    "readme_sha256": "2b09b2c911b3ee9cb2257a4150251ec0ab522c3beaa15206ad528ff77356b106",
+    "readme_excerpt": "<h1>\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/brand/wordmark-on-dark.svg\">\n    <img src=\"docs/assets/brand/wordmark.svg\" alt=\"Tesserae Server\" height=\"56\">\n  </picture>\n</h1>\n\n[![License](https://img.shields.io/badge/license-AGPL--3.0-blue?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0ibm9uZSIvPjxsaW5lIHgxPSIxMjgiIHkxPSI0MCIgeDI9IjEyOCIgeTI9IjIxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxNiIvPjxsaW5lIHgxPSIxMDQiIHkxPSIyMTYiIHgyPSIxNTIiIHkyPSIyMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMTYiLz48bGluZSB4MT0iNTYiIHkxPSI4OCIgeDI9IjIwMCIgeTI9IjU2IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjE2Ii8+PHBhdGggZD0iTTI0LDE2OGMwLDE3LjY3LDIwLDI0LDMyLDI0czMyLTYuMzMsMzItMjRMNTYsODhaIiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjE2Ii8+PHBhdGggZD0iTTE2OCwxMzZjMCwxNy42NywyMCwyNCwzMiwyNHMzMi02LjMzLDMyLTI0TDIwMCw1NloiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMTYiLz48L3N2Zz4=&logoColor=white)](LICENSE)\n[![Latest release](https://img.shields.io/github/v/release/dmellok/tesserae?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik00Mi4zNCwxMzguMzRBOCw4LDAsMCwxLDQwLDEzMi42OVY0MGg5Mi42OWE4LDgsMCwwLDEsNS42NSwyLjM0bDk5LjMyLDk5LjMyYTgsOCwwLDAsMSwwLDExLjMxTDE1MywyMzcuNjZhOCw4LDAsMCwxLTExLjMxLDBaIiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjE2Ii8+PGNpcmNsZSBjeD0iODQiIGN5PSI4NCIgcj0iMTIiLz48L3N2Zz4=&logoColor=white&color=8B5CF6)](https://github.com/dmellok/tesserae/releases/latest)\n[![CI](https://img.shields.io/github/actions/workflow/status/dmellok/tesserae/ci.yml?branch=main&style=for-the-badge&label=ci&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0ibm9uZSIvPjxwb2x5bGluZSBwb2ludHM9Ijg4IDEzNiAxMTIgMTYwIDE2OCAxMDQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMTYiLz48Y2lyY2xlIGN4PSIxMjgiIGN5PSIxMjgiIHI9Ijk2IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjE2Ii8+PC9zdmc+&logoColor=white)](https://github.com/dmellok/tesserae/actions/workflows/ci.yml)\n[![GitHub Discussions](https://img.shields.io/github/discussions/dmellok/tesserae?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0zMi41LDEzOEE3Miw3MiwwLDEsMSw2MiwxNjcuNWwtMjcuNzYsOC4xNmE4LDgsMCwwLDEtOS45My05LjkzWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxNiIvPjxwYXRoIGQ9Ik0xNjMuOTQsODAuMTFBNzIsNzIsMCwwLDEsMjIzLjUsMTg2bDguMTYsMjcuNzZhOCw4LDAsMCwxLTkuOTMsOS45M0wxOTQsMjE1LjVBNzIuMDUsNzIuMDUsMCwwLDEsOTIuMDYsMTc1Ljg5IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjE2Ii8+PC9zdmc+&logoColor=white&label=discussions)](https://github.com/dmellok/tesserae/discussions)\n[![Codespaces](https://img.shields.io/badge/codespaces-launch-24292e?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMTIsMjA4SDcyQTU2LDU2LDAsMSwxLDg1LjkyLDk3Ljc0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjE2Ii8+PHBvbHlsaW5lIHBvaW50cz0iMTIwIDE2MCAxNTIgMTI4IDE4NCAxNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMTYiLz48bGluZSB4MT0iMTUyIiB5MT0iMjA4IiB4Mj0iMTUyIiB5Mj0iMTI4IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjE2Ii8+PHBhdGggZD0iTTgwLDEyOGE4MCw4MCwwLDEsMSwxMTIsNzMuMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMTYiLz48L3N2Zz4=&logoColor=white)](https://codespaces.new/dmellok/tesserae?quickstart=1)\n[![Sponsor](https://img.shields.io/badge/sponsor-%E2%9D%A4-pink?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMjgsMjI0UzI0LDE2OCwyNCwxMDJBNTQsNTQsMCwwLDEsNzgsNDhjMjIuNTksMCw0MS45NCwxMi4zMSw1MCwzMiw4LjA2LTE5LjY5LDI3LjQxLTMyLDUwLTMyYTU0LDU0LDAsMCwxLDU0LDU0QzIzMiwxNjgsMTI4LDIyNCwxMjgsMjI0WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxNiIvPjwvc3ZnPg==&logoColor=white)](https://github.com/sponsors/dmellok)\n\n<p align=\"center\">\n  <a href=\"docs/screenshots/hero-rack.jpg\">\n    <img src=\"docs/screenshots/hero-rack.jpg\" alt=\"Nine e-ink panels arranged on a wooden dresser, each running a different Tesserae dashboard: a framed GitHub contribution graph, a Home Assistant sensor dashboard with cat litter tracking, a Hacker News feed with a word clock, a monthly calendar with a Spotify top arti",
+    "readme_ref": "v0.480.0",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 742912310,
+      "name": "trmnl-firmware",
+      "full_name": "usetrmnl/trmnl-firmware",
+      "html_url": "https://github.com/usetrmnl/trmnl-firmware",
+      "description": "TRMNL ePaper device firmware",
+      "stargazers_count": 1200,
+      "pushed_at": "2026-10-29T18:31:04Z",
+      "created_at": "2024-01-13T18:33:02Z",
+      "default_branch": "main",
+      "homepage": "https://docs.trmnl.com",
+      "topics": [
+        "e-ink",
+        "iot-device",
+        "trmnl"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "旧设备改造",
+      "audience": "愿意动手改造闲置设备的用户",
+      "feature_match": "e-ink",
+      "documented_facts": [],
+      "license": "GPL-3.0",
+      "platforms": [
+        "Windows"
+      ],
+      "assets": [],
+      "install_heading": "## **Uploading guide (ESP32 Flash Download",
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认",
+        "额外硬件、刷机兼容性与损坏成本需人工确认"
+      ],
+      "score": 49,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v1.8.17",
+      "html_url": "https://github.com/usetrmnl/trmnl-firmware/releases/tag/v1.8.17",
+      "published_at": "2026-10-02T19:11:02Z"
+    },
+    "readme_sha256": "981b421825074cef801759305571e5d1ce1092fc0419191012feb398a8967e42",
+    "readme_excerpt": "# TRMNL Firmware\n\ncreated for the [TRMNL](https://trmnl.com) e-ink display.\n\n> [!IMPORTANT]\n> the `main` branch is under constant development and may contain breaking changes. flash at your own risk.\n>\n> to access production-ready firmware, check out the [tagged releases](https://github.com/usetrmnl/trmnl-firmware/releases/)\n or use the [Flash Assistant](https://trmnl.com/flash).\n## **Algorithm block scheme**\n\n```mermaid\ngraph TB\n\n    Start([\"Start\"])\n    Init(\"Init peripherals\")\n    Start --> Init\n\n    IsLongRst{\"Reset button\n      pressed > 5000 ms?\"}\n    Init --> IsLongRst\n\n    ClearWifi(\"Wi-Fi credentials clear\")\n    IsLongRst -->|\"Yes\"| ClearWifi\n    DisplayInit(\"Display init\")\n    IsLongRst -->|\"No\"| DisplayInit\n    ClearWifi --> DisplayInit\n    WakeReason{\"Wake by\n      user or timer?\"}\n    DisplayInit --> WakeReason\n\n    ClearDisplay(\"Display clear\")\n    WakeReason -->|\"User\"| ClearDisplay\n    IsWiFiSetup{\"Wi-Fi saved?\"}\n    WakeReason -->|\"Timer\"| IsWiFiSetup\n    ClearDisplay --> IsWiFiSetup\n    NeedConfig(\"Show set-up message\")\n    IsWiFiSetup -->|\"No\"| NeedConfig\n\n    %% Config Wifi\n    RunSetup(\"Start config portal\")\n    NeedConfig --> RunSetup\n    IsReset1{\"Device\n      reset?\"}\n    RunSetup -->|\"Yes\"| IsReset1\n    WipeConfig1(\"API key, friendly ID and WiFi clear\")\n    IsReset1 -->|\"Yes\"| WipeConfig1\n    Reboot1([\"Reboot\"])\n    WipeConfig1 --> Reboot1\n    IsWifiConnect{\"WiFi\n      connected?\"}\n    IsReset1 -->|\"No\"| IsWifiConnect\n\n    %% Main Body\n    TryConnect{\"WiFi connected\n      (5tries)?\"}\n    IsWiFiSetup -->|\"Yes\"| TryConnect\n\n    ConnectError(\"Show connection error\")\n    IsWifiConnect -->|\"No\"| ConnectError\n    TryConnect -->|\"No\"| ConnectError\n    Sleep1([\"Sleep\"])\n    ConnectError --> Sleep1\n    ClockSync(\"Check synchronization\")\n    IsWifiConnect -->|\"Yes\"| ClockSync\n    TryConnect -->|\"Yes\"| ClockSync\n    IsApiSetup{\"API key and\n      friendly ID exist?\"}\n    ClockSync --> IsApiSetup\n\n    %% Setup\n    CallSetup(\"Ping /api/setup\")\n    IsApiSetup -->|\"No\"| CallSetup\n    IsSetupSuccess{\"Setup\n      success?\"}\n    CallSetup --> IsSetupSuccess\n    SetupError(\"Show setup error\")\n    IsSetupSuccess --> SetupError\n    Sleep2([\"Sleep\"])\n    SetupError --> Sleep2\n\n    %% Check update\n    PingServer{\"Ping server,\n      success?\"}\n    IsApiSetup -->|\"Yes\"| PingServer\n    IsSetupSuccess -->|\"Yes\"| PingServer\n    PingError(\"Show server error\")\n    PingServer -->|\"No\"| PingError\n    Sleep3([\"Sleep\"])\n    PingError --> Sleep3\n\n    %% Act on update\n    IsNeedReset{\"Need to reset\n     the device?\"}\n    PingServer -->|\"Yes\"| IsNeedReset\n    IsNeedReset -->|\"Yes\"| WipeConfig1\n    IsNeedUpdate{\"Need to update?\"}\n    IsNeedReset -->|\"No\"| IsNeedUpdate\n    IsNeedUpdate -->|\"No\"| Sleep3\n    Update(\"Download and update\")\n    IsNeedUpdate -->|\"Yes\"| Update\n    Update --> Sleep3\n```\n\n## **Web Server Endpoints**\n\nfollowing Wifi connection via the captive portal, device swaps its Mac Address for an API Key and Friendly ID from the server (which get saved on device).\n\n```curl\nGET /api/setup\n\nheaders = {\n  'ID' => 'XX:XX:XX:XX:XX' # mac address\n}\n\nresponse example (success):\n{ \"status\": 200, \"api_key\": \"2r--SahjsAKCFksVcped2Q\", \"friendly_id\": \"917F0B\", \"image_url\": \"https://trmnl.com/images/setup/setup-logo.bmp\", \"filename\": \"empty_state\" }\n\nresponse example (fail, device with this Mac Address not found)\n{ \"status\" => 404, \"api_key\" => nil, \"friendly_id\" => nil, \"image_url\" => nil, \"filename\" => nil }\n```\n\nassuming the Setup endpoint responded successfully, future requests are made solely for image / display content:\n\n```curl\nGET /api/display\n\nheaders = {\n  'ID' => 'XX:XX:XX:XX',\n  'Access-Token' => '2r--SahjsAKCFksVcped2Q',\n  'Refresh-Rate' => '1800',\n  'Battery-Voltage' => '4.1',\n  'FW-Version' => '2.1.3',\n  'RSSI' => '-69'\n}\n\nresponse example (success, device found with this access token):\n{\n  \"status\"=>0, # will be 202 if no user_id is attached to device\n  \"image_url\"=>\"https://trmnl.s3.us-east-2.amazonaws.com/path-to-img.bmp\",\n  \"filename\"=>\"2024-09-20T00:00:00\",\n  \"update_firmware\"=>false,\n  \"firmware_url\"=>nil,\n  \"refresh_rate\"=>\"1800\",\n  \"reset_firmware\"=>false\n}\n\nresponse example (success, device found AND needs soft reset):\n{\n \"status\"=>0,\n \"image_url\"=>\"https://trmnl.s3.us-east-2.amazonaws.com/path-to-img.bmp\",\n \"filename\"=>\"name-of-img.bmp\",\n \"update_firmware\"=>false,\n \"firmware_url\"=>nil,\n \"refresh_rate\"=>\"1800\",\n \"reset_firmware\"=>true\n}\n\nresponse example (success, device found AND needs firmware update):\n{\n \"status\"=>0,\n \"image_url\"=>\"https://trmnl.s3.us-east-2.amazonaws.com/path-to-img.bmp\",\n \"filename\"=>\"name-of-img.bmp\",\n \"update_firmware\"=>true,\n \"firmware_url\"=>\"https://trmnl.s3.us-east-2.amazonaws.com/path-to-firmware.bin\",\n \"refresh_rate\"=>\"1800\",\n \"reset_firmware\"=>false\n}\n\nresponse example (fail, device not found for this access token):\n{\"status\"=>500, \"error\"=>\"Device not found\"}\n\nif 'FW-Version' header != web server `Setting.firmware_download_url`, server will include absolute URL from which to download firmware.\n```\n\nif device detects an issue with response data from the `api/display` endpoint, logs are sent to server.\n\n```curl\nPOST /api/log\n\n# example request tbd\n```\n\n## **Power consumption**\n\nA bit of background first. The ESP32-C3 inside the TRMNL OG is one of Espressif's newer, more efficient microcontrollers. For battery powered applications, it's designed to be put to sleep to conserve power when your project doesn't need it to be active. There are two sleep modes - light and deep. Deep sleep conserves the most power, but at the cost of losing the contents of the main memory. The lowest possible power consumption is about 4uA @ 3V with a timed wakeup, but TRMNL needs to be able to wake up with a button press. Keeping the GPIO active during deep sleep (to detect the button press) uses about 100uA on average (see power profile below). This means that a 2500mAh battery could theoretically keep the TRMNL powered in this state for approximately 25,000 hours.\n\n![TRMN",
+    "readme_ref": "v1.8.17",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 749128988,
+      "name": "Google-Photos-Delete-Tool",
+      "full_name": "SylphxAI/Google-Photos-Delete-Tool",
+      "html_url": "https://github.com/SylphxAI/Google-Photos-Delete-Tool",
+      "description": "Google Photos duplicate finder and bulk delete tool: find and delete duplicate photos, bulk delete safely with dry run and empty trash. Chrome extension + userscript, runs in your browser.",
+      "stargazers_count": 161,
+      "pushed_at": "2026-10-29T10:01:38Z",
+      "created_at": "2024-01-27T17:03:01Z",
+      "default_branch": "master",
+      "homepage": "https://chromewebstore.google.com/detail/google-photos-delete-tool/jiahfbbfpacpolomdjlpdpiljllcdenb",
+      "topics": [
+        "bulk-delete",
+        "chrome-extension",
+        "delete-duplicates",
+        "delete-photos",
+        "duplicate-finder",
+        "duplicate-photos",
+        "firefox-extension",
+        "google-photos",
+        "google-photos-duplicate-finder",
+        "open-source",
+        "perceptual-hash",
+        "photo-management",
+        "privacy",
+        "productivity-tool",
+        "tampermonkey",
+        "typescript",
+        "userscript",
+        "violentmonkey"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "文件整理",
+      "audience": "需要整理文件的用户",
+      "feature_match": "duplicate finder",
+      "documented_facts": [],
+      "license": "MIT",
+      "platforms": [],
+      "assets": [],
+      "install_heading": "## Install",
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认"
+      ],
+      "score": 49,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v3.5.1",
+      "html_url": "https://github.com/SylphxAI/Google-Photos-Delete-Tool/releases/tag/v3.5.1",
+      "published_at": "2026-10-01T18:32:30Z"
+    },
+    "readme_sha256": "0203825211e40e01ab556636bc39b599b0411898b7f4577b24798c135aad70af",
+    "readme_excerpt": "# Google Photos Delete Tool – Duplicate Finder & Bulk Delete\n\nGoogle Photos Delete Tool finds and deletes duplicate photos in Google Photos,\nand bulk deletes safely: dry run first, batches of up to 500, optional empty\ntrash. Made by [Sylphx](https://sylphx.com).\n\nGet it on the [Chrome Web Store](https://chromewebstore.google.com/detail/google-photos-delete-tool/jiahfbbfpacpolomdjlpdpiljllcdenb)\nor as a userscript. It runs in your browser; nothing is uploaded.\n\n[![CI](https://github.com/SylphxAI/Google-Photos-Delete-Tool/actions/workflows/ci.yml/badge.svg)](https://github.com/SylphxAI/Google-Photos-Delete-Tool/actions/workflows/ci.yml)\n[![Release](https://github.com/SylphxAI/Google-Photos-Delete-Tool/actions/workflows/release.yml/badge.svg)](https://github.com/SylphxAI/Google-Photos-Delete-Tool/actions/workflows/release.yml)\n[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)\n[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/jiahfbbfpacpolomdjlpdpiljllcdenb?label=Chrome%20Web%20Store)](https://chromewebstore.google.com/detail/google-photos-delete-tool/jiahfbbfpacpolomdjlpdpiljllcdenb)\n\n## Find duplicates\n\nGoogle Photos only removes exact copies of the same file. Copies that were\nresized, re-saved, edited slightly, or uploaded twice from different apps\nstay in your library. **Find duplicates** finds them for you:\n\n1. Open the view you want to check (your library, an album, or a search).\n2. Click the extension icon, then **Find duplicates** (userscript: the\n   **Find duplicates** button in the floating panel), then **Scan this view**.\n3. The tool scrolls the view and compares small thumbnails on your computer.\n   Look-alike photos are shown in groups.\n4. In each group the best copy is kept (green) and the rest are marked for\n   Trash (red). The best copy is the largest one when the size is known,\n   otherwise the oldest. Click any photo to switch it. Each group always\n   keeps at least one photo.\n5. Use the **Similarity** slider: 95% finds near-identical copies; lower\n   values also group edits and burst shots, so check those groups.\n6. **Preview (dry run)** checks the chosen photos are still in the view\n   without changing anything. **Move to Trash** hands them to the same safe\n   delete flow as the rest of the tool: a one-time confirmation, batches,\n   Stop at any time, and 60 days in Trash to change your mind.\n7. **Pro review tools** (free review is unchanged; see [Pro](#pro)) save time on\n   big libraries: a keep rule for every group at once, auto-accept for\n   near-identical groups, and a CSV export of the groups.\n\n![Find duplicates reviewing look-alike groups on a test page](docs/images/find-duplicates.png)\n\n*Test page with generated images, not real photos\n([`scripts/dupes-demo.mjs`](scripts/dupes-demo.mjs)).*\n\n**Private by design.** Thumbnails are fetched only from Google's own image\nservers (the same ones the page already uses), turned into a 64-bit\nfingerprint in memory, and forgotten when you close the review. Nothing is\nuploaded; there is no server. Works for tens of thousands of photos: the\ncomparison runs in short slices so the tab stays responsive, with progress\nand Cancel throughout. Large views take a while because Google Photos loads\nthe grid only as you scroll.\n\n**Why not the Google Photos API?** Since 31 March 2025 Google no longer lets\napps read your whole library through the Photos API, so an external\nduplicate finder cannot see your photos. This tool works inside the Google\nPhotos page you already have open instead.\n\n## Bulk delete\n\nGoogle Photos has no \"delete all\". This tool runs the select, trash, confirm\nloop for you in batches of up to 500 until your current view is empty. It works\nin your browser by clicking the same controls a person would, because the\nGoogle Photos Library API has no delete endpoint.\n\n## Two surfaces, one engine\n\n| Surface | Get it | Includes |\n|---|---|---|\n| **Chrome / Firefox extension** | [Chrome Web Store](https://chromewebstore.google.com/detail/google-photos-delete-tool/jiahfbbfpacpolomdjlpdpiljllcdenb); Firefox zip on each release | Popup UI, badge, 9 languages, empty-trash flow |\n| **Userscript** (Tampermonkey, Violentmonkey, Greasemonkey) | `google-photos-delete.user.js` from the latest release | Same engine, floating panel, same safety model |\n\n## Built to be trusted\n\n- **Fail-closed matching.** Delete, confirm and empty-trash buttons are matched\n  by positive multilingual keywords on `aria-label`, tooltip or text. An unknown\n  UI stops the run with an error; it never clicks a guess.\n- **Consent gate.** The first real run asks you to acknowledge what will\n  happen. Nothing is scheduled or unattended.\n- **60-day Trash.** Deleted photos sit in Google Photos Trash for 60 days.\n  \"Empty trash afterwards\" is opt-in, permanent, and reported `done` only after\n  the trash is verified empty.\n- **Accurate numbers.** The progress bar is indeterminate while the total is\n  unknown; ETA appears once a dry run has established a total.\n- **No telemetry, no server.** Everything runs in your browser. Pro licence\n  verification is local (Ed25519).\n\n## Features\n\n- **Find duplicates:** scan the current view, group look-alike photos by\n  perceptual hash at an adjustable similarity, review which to keep, then move\n  the rest to Trash through the consent-gated flow. Pro adds keep rules,\n  auto-accept for confident groups and a CSV export of the groups.\n- **Batch delete:** up to 500 per batch (Google's selection cap); the engine\n  detects the cap, scrolls and flushes the final partial batch.\n- **Pause / Resume / Stop:** stop is instant; a stopped run never reports a\n  false error.\n- **Dry run:** scrolls and counts without clicking anything, and (with Pro)\n  returns a per-type breakdown.\n- **Empty trash (opt-in):** opens `/trash`, empties it and verifies the result.\n- **Type filters (Pro):** delete only screenshots, videos, animations, collages\n  or photos.\n- **Date filter (Pro):** delete only items before a date, after",
+    "readme_ref": "v3.5.1",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 228183400,
+      "name": "Inkplate-Arduino-library",
+      "full_name": "SolderedElectronics/Inkplate-Arduino-library",
+      "html_url": "https://github.com/SolderedElectronics/Inkplate-Arduino-library",
+      "description": "Inkplate family Arduino library. The easiest way to add e-paper to your project. ",
+      "stargazers_count": 308,
+      "pushed_at": "2026-10-28T14:32:39Z",
+      "created_at": "2019-12-15T12:50:26Z",
+      "default_branch": "master",
+      "homepage": "https://inkplate.readthedocs.io/en/latest/arduino.html",
+      "topics": [
+        "arduino",
+        "e-ink",
+        "e-paper"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "旧设备改造",
+      "audience": "愿意动手改造闲置设备的用户",
+      "feature_match": "e-ink",
+      "documented_facts": [],
+      "license": "LGPL-3.0",
+      "platforms": [
+        "macOS",
+        "Linux"
+      ],
+      "assets": [],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [
+        "额外硬件、刷机兼容性与损坏成本需人工确认"
+      ],
+      "score": 42,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "11.2.1",
+      "html_url": "https://github.com/SolderedElectronics/Inkplate-Arduino-library/releases/tag/11.2.1",
+      "published_at": "2026-10-20T13:46:29Z"
+    },
+    "readme_sha256": "c696d4d4ccd9055c909d1fe3a46f3b44947faa4850262a0e6ad94718c47fa89f",
+    "readme_excerpt": "# Soldered Inkplate Arduino library\n\n[![Compile Sketches](https://github.com/SolderedElectronics/Inkplate-Arduino-library/actions/workflows/compile.yml/badge.svg?branch=master)](https://github.com/SolderedElectronics/Inkplate-Arduino-library/actions/workflows/compile.yml)\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/SolderedElectronics/Inkplate-Arduino-library/master/extras/InkplateImage.jpg\">\n</p>\n\nThe Arduino library for the all-in-one e-paper display family named Inkplate can be found in this repo. Inkplate is a series of powerful, Wi-Fi and Bluetooth enabled, ESP32 based e-paper display products. Its main feature is simplicity. Just plug in a USB cable, open Arduino IDE, and change the contents of the screen with a few lines of code. Inkplate family currently includes Inkplate 10, Inkplate 6 and Inkplate 6PLUS, Inkplate 6COLOR and Inkplate 2. \nInkplate 6 was crowdfunded on [Crowd Supply](https://www.crowdsupply.com/e-radionica/inkplate-6), as well as [Inkplate 10](https://www.crowdsupply.com/e-radionica/inkplate-10), [Inkplate 6PLUS](https://www.crowdsupply.com/e-radionica/inkplate-6plus) and [Inkplate 6COLOR](https://www.crowdsupply.com/soldered/inkplate-6color). Inkplate 2 was funded on [Kickstarter](https://www.kickstarter.com/projects/solderedelectronics/inkplate-2-a-easy-to-use-arduino-compatible-e-paper). All available to purchase from [soldered.com](https://soldered.com/collections/inkplate-e-paper-displays). \n\n### Setting up Inkplate in Arduino IDE\n\nIn order to get started with any Inkplate, follow these steps:\n\n1. [Install Inkplate board definition](https://github.com/SolderedElectronics/Inkplate-Board-Definitions-for-Arduino-IDE) - add Inkplate 6/10/6PLUS/6COLOR/2 as a board into your Arduino IDE. Follow the instructions on the [link](https://soldered.com/learn/add-inkplate-6-board-definition-to-arduino-ide/).\n2. If you aren't using macOS, install CH340 drivers (in case you don't have them yet) - instructions [here](https://soldered.com/blogs/learn/ch340-driver-installation)\n3. Install Inkplate Arduino library - Install the library from the Arduino Library Manager (just type \"Inkplate\" and click \"Install\") or install it with this repo. If you don't know how, check our [tutorial](https://docs.soldered.com/inkplate/10/quick-start-guide/).\n4. You are ready to get started! Select Tools -> Board -> Inkplate Boards and then pick the correct one, as well as correct COM port and upload!\n\n### Code examples\n\nThere are many examples in the library that demonstrate how to use any of the Inkplate functionality. Use Basic folder to get familiar with principles of using the Inkplate, such as modes (BW and Gray), how to write graphics and text or just basic capabilities such as touchscreen or front lighting (if your Inkplate supports it). In Advanced folder, you'll learn how to make HTTP/HTTPS requests, utilise low power, use touchpads or SD card, read RTC, etc. Finally, get easily started on some projects. Some of the projects are Google calendar, Weather Station, Image Frame, Crypto Currency Tracker and more. Examples and projects are added regularly by us or from community contributions. There is also a diagnostics folder with all tools for more advanced users (such as VCOM programming, waveform selection, etc.).\n\n### Documentation\n\nFind Inkplate documentation [here](https://docs.soldered.com/inkplate). \n\n### Soldered Image Converter\n\nIn order to display an Image on Inkplate, you can use the Soldered Image Converter to convert from .png, .jpg, .bmp to .h files which can be easily added to your project. See the latest version [here](https://tools.soldered.com/tools/image-converter/).\n\n### Using Inkplate with another microcontroller - Peripheral mode\n\nInkplate screen contents can be updated using a 3rd controller (such as Raspberry Pi or another microcontroller). The Peripheral mode enables this. All brand new Inkplates come pre-programmed with peripheral mode and can be used right away.\n\nIt is based on UART (serial) communication - connect the Inkplate to \"Controller\" (\"Master\", if using old terminology) board either via USB cable or directly via ESP32 RX and TX pins. Using standard UART at 115200 baud, you can send commands to change screen contents. For example, send \\*#H(000,000,\"/img.bmp\")\\*\\* to show image img.bmp from SD card on the screen.\n### Battery power\n\nInkplate boards have two options for powering it. First one is obvious - USB port at side of the board. Just plug any micro USB cable and you are good to go. Second option is battery. Supported batteries are standard Li-Ion/Li-Poly batteries with 3.7V nominal voltage. The connector for the battery is a standard 2.00mm pitch JST connector (except on Inkplate 2, it uses SMD solder pads for battery terminals). The onboard charger will charge the battery with 500mA when USB is plugged at the same time. You can use battery of any size or capacity if you don't have a enclosure. If you are using our enclosure, battery size shouldn't exceed 90mm x 40mm (3.5 x 1.57 inch) and 5mm (0.19 inch) in height (excluding Inkplate 2, it uses [this battery](https://soldered.com/product/li-ion-baterija-600mah-3-7v/)). [This battery](https://soldered.com/product/li-ion-battery-1200mah-3-7v/) is a good fit for the Inkplate. Also, Inkplate's hardware is specially optimized for low power consumption in deep sleep mode, making it extremely suitable for battery applications.\n\n#### ⚠️ WARNING\nPlease check the polarity on the battery JST connector! Some batteries that can be purchased from the web have reversed polarity that can damage Inkplate board! You are safe if you are using the pouch battery from [soldered.com](https://soldered.com/collections/power-batteries) or Inkplate with the built-in battery. \n\n#### ℹ NOTE\nCR2032 battery is only for RTC backup. Inkplate cannot be powered with it.\n\n### Linux?\n\nRunning Linux? You'll need to run a few other lines from your Terminal:\n\n```\napt install python3-pip\npip3 install pyserial\napt insta",
+    "readme_ref": "11.2.1",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 1280281715,
+      "name": "scrcpy-helper",
+      "full_name": "rockbenben/scrcpy-helper",
+      "html_url": "https://github.com/rockbenben/scrcpy-helper",
+      "description": "不用背 scrcpy 的命令行参数：勾几个选项就把安卓手机投屏到 Windows 电脑，还能无线投屏、录屏、把手机当摄像头。免安装，解压双击即用",
+      "stargazers_count": 117,
+      "pushed_at": "2026-10-27T07:07:21Z",
+      "created_at": "2026-06-25T12:40:19Z",
+      "default_branch": "main",
+      "homepage": "https://github.com/rockbenben/scrcpy-helper/releases/latest",
+      "topics": [
+        "adb",
+        "android",
+        "gui",
+        "portable",
+        "powershell",
+        "scrcpy",
+        "scrcpy-gui",
+        "screen-mirroring",
+        "windows",
+        "winforms"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "录屏",
+      "documented_facts": [],
+      "license": "NOASSERTION",
+      "platforms": [
+        "Windows",
+        "Android"
+      ],
+      "assets": [],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 39,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v1.6.1",
+      "html_url": "https://github.com/rockbenben/scrcpy-helper/releases/tag/v1.6.1",
+      "published_at": "2026-10-08T07:33:42Z"
+    },
+    "readme_sha256": "5b95c16530476a0f506f459d19b02064f741bd9389e90ee6bab7d74eb72f1d5e",
+    "readme_excerpt": "# scrcpy 投屏助手\n\n> 不用背命令行参数，勾几个选项就把安卓手机投屏到电脑 —— 免安装，双击即用\n\n[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) [![365 开源计划 #019](https://img.shields.io/badge/365%20%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92-%23019-1f6feb)](https://github.com/rockbenben/365opensource)\n\n**[⬇ 下载最新版](https://github.com/rockbenben/scrcpy-helper/releases/latest)** · Windows 10 / 11 · 已内置 scrcpy\n\n![scrcpy 投屏助手：主界面与「手机当摄像头」面板](./assets/scrcpy-helper-hero.png)\n\n[scrcpy](https://github.com/Genymobile/scrcpy) 是口碑最好的安卓投屏工具之一，但它只有命令行。本项目用一个单文件 PowerShell 脚本给它套了层图形界面：`--video-codec=h265` 这类参数，变成了窗口里的下拉和勾选。想要功能完整、跨平台，[QtScrcpy](https://github.com/barry-ran/QtScrcpy) 和 [escrcpy](https://github.com/viarotel-org/escrcpy) 更成熟；这里走的是另一条路——一个绿色便携的小工具，全中文，拷进 U 盘也能跑。\n\n> [!TIP]\n> 全程本地直连（数据线，或同一个 Wi-Fi），画面不经过任何服务器；手机端不 root、不装 App，只需在开发者选项里打开调试开关（USB 调试或无线调试）。\n\n## 支持范围\n\n| 项目 | 支持情况 |\n| --- | --- |\n| 电脑 | Windows 10 / 11，用系统自带 PowerShell，无需 .NET 或其他运行库 |\n| 安装 | 不需要，解压双击即可；卸载 = 删掉文件夹 |\n| 手机 | Android 5.0 起可投屏、录屏；配对码无线连接与独立窗口需 11+，手机当摄像头需 12+ |\n| 连接 | 数据线，或无线（同一局域网），可同时连多台 |\n| 管理员权限 | 不需要，而且别用——会导致拖文件进投屏窗口失效 |\n\n## 能做什么\n\n- 🖥️ **有线 / 无线投屏**：无线有三种走法——插一次线自动切换（之后可拔线）、Android 11+ 用配对码全程免插线、或直接填 IP 保底。\n- 📷 **手机当摄像头**：分辨率按机型实测列表给，不会选到开不起来的档位；可变焦到超广角或长焦，倍率会记住；手机亮屏被系统抢走摄像头时自动重连。\n- 🎥 **录制屏幕**：边投边录，存 mp4 / mkv，文件名带时间戳不会覆盖上一次。\n- 🪟 **独立窗口**：在电脑上单开一块虚拟屏跑某个 App，手机照常用；可选竖屏·手机版面 / 横屏·平板版面 / 自定义比例。\n- 🗂️ **多设备**：连接与投屏分开，可同时投多台各开一窗；连过的设备自动记住，断线后点任意功能会先自动连回。\n- 📎 **拖拽即传**：文件拖进投屏窗口就传到手机，拖 APK 进去直接安装。\n- ⚙️ **全中文，改完就记**：每个设置悬停都有大白话说明；清晰度、编码、声音等选择自动记忆，下次沿用。\n\n| 设备管理：多设备切换 / 同时多投 | 设置：左侧分类，改完自动记忆 |\n| :---: | :---: |\n| ![设备管理](./assets/scrcpy-helper-devices.png) | ![设置](./assets/scrcpy-helper-settings.png) |\n\n## 快速开始\n\n1. 下载 [Releases](https://github.com/rockbenben/scrcpy-helper/releases/latest) 里的 zip，解压到任意文件夹。\n2. 手机开启「USB 调试」：设置 > 关于手机 > 连点 7 次版本号，返回设置进「开发者选项」打开。\n3. 双击 `投屏助手-双击运行.bat`，插上数据线，点「有线投屏」。\n\n首次连接时手机上会弹「允许 USB 调试」，点允许就好。逐项说明见随包的 `使用说明.txt`，也可看[图文教程](https://newzone.top/posts/2019-08-26-scrcpy_screen_projection.html)。\n\n## 已知限制\n\n- **以管理员身份运行时，拖文件进投屏窗口会显示禁止图标。** Windows 不允许普通权限的资源管理器向管理员权限的窗口拖放（UIPI 隔离）。助手本就无需管理员，正常双击 `.bat` 即恢复。\n- **电脑输入法的中文打不进投屏窗口**（只能 `Ctrl+V` 粘贴）。这是 scrcpy + Windows 输入法的固有限制，组词阶段的字捕获不到。彻底解决可给手机装 [ADBKeyboard](https://github.com/senzhk/ADBKeyBoard)，或键盘模式选「游戏模式」用手机自带输入法。\n- **应用双开 / 分身在独立窗口里黑屏。** 分身跑在另一个安卓用户身份下，且部分应用拒绝在虚拟屏渲染，scrcpy 无法定向过去；改用普通投屏在手机上开分身即可。\n\n## 许可证\n\n本仓库的三个文件（`scrcpy-helper.ps1`、`投屏助手-双击运行.bat`、`使用说明.txt`）以 [MIT](./LICENSE) 开源。\n\n发行包里除此之外的一切都来自 Genymobile 的 [scrcpy](https://github.com/Genymobile/scrcpy) 官方 win64 发行包，**原样转发、未作修改**，遵循其 Apache-2.0 许可，随包的 `LICENSE.txt` 即该许可全文。逐项清单见 [THIRD-PARTY-NOTICES.md](./THIRD-PARTY-NOTICES.md)。\n\n想自己打包发行版、或帮忙做界面多语言，见 [CONTRIBUTING.md](./CONTRIBUTING.md)。\n\n## 关于 365 开源计划\n\n[365 开源计划](https://github.com/rockbenben/365opensource) 的第 **#019** 个项目——一个人 + AI，一年 300+ 个开源项目。\n\n[提交你的需求 →](https://365.aishort.top/) · [Discord](https://discord.gg/PZTQfJ4GjX) · [Telegram](https://t.me/aishort_top)\n",
+    "readme_ref": "v1.6.1",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 1108054886,
+      "name": "ReKindle",
+      "full_name": "ReKindleOS/ReKindle",
+      "html_url": "https://github.com/ReKindleOS/ReKindle",
+      "description": "Your Kindle Upgraded",
+      "stargazers_count": 201,
+      "pushed_at": "2026-10-27T02:47:30Z",
+      "created_at": "2025-12-02T00:52:52Z",
+      "default_branch": "main",
+      "homepage": "http://rekindle.ink/",
+      "topics": [
+        "e-ink",
+        "kindle",
+        "kobo",
+        "os",
+        "productivity",
+        "retro",
+        "tablet",
+        "webapp",
+        "webapplication",
+        "website"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "旧设备改造",
+      "audience": "愿意动手改造闲置设备的用户",
+      "feature_match": "e-ink",
+      "documented_facts": [],
+      "license": "NOASSERTION",
+      "platforms": [],
+      "assets": [],
+      "install_heading": "## Setup & Install",
+      "has_visual_markers": true,
+      "risks": [
+        "发现高风险安装或设备权限提示，自动推荐排除",
+        "发现费用或 API Key 相关词，费用边界需人工确认",
+        "额外硬件、刷机兼容性与损坏成本需人工确认"
+      ],
+      "score": 43,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": null,
+    "readme_sha256": "8dadf5716b42d1253a61311ec63ff14b8f5ce2c0190f74403d88b752e4154327",
+    "readme_excerpt": "# ReKindle\n\n**Your E-Ink Device, Upgraded.**\n\nReKindle is a web-based dashboard for E-ink devices (Kindle, Kobo, Boox, etc.). It transforms your e-reader into a powerful productivity tool, gaming device, news hub & more.\n\n## Setup & Installation\n\nReKindle is a Progressive Web App (PWA). No \"installation\" or jailbreak is required.\n\n1.  Open the web browser on your E-ink device.\n2.  Navigate to `rekindle.ink`.\n3.  **Recommended:** Bookmark the page or add it to your device's home screen if supported.\n\n### Jailbroken Kindle: fullscreen (highly experimental)\n\n**Highly experimental:** this add-on is a community experiment, not a supported ReKindle feature. It changes how the Kindle starts its browser, it has very little real-device testing, and a failed launch can leave the device stuck until you reboot it. Do not install it on a Kindle you depend on; nothing in ReKindle requires it, and a bookmark works on every supported device.\n\nFirmware 5.16.4+ can run ReKindle with **no Kindle interface and no browser chrome**. The optional scriptlet mounts `chromium.sqsh`, stops the Kindle GUI, and launches Chromium as the `framework` user with Amazon’s own flags. ReKindle keeps its normal framed layout; the Kindle UI and browser chrome are removed and restored on exit. It changes nothing on the root filesystem.\n\n*   Step-by-step guide, including jailbreaking: [ReKindle for Kindle](kindle.html)\n*   Install over USB: download `downloads/ReKindle-Fullscreen.zip` and copy `documents/` to the Kindle. No computer? Install kterm with `;kpm install kterm`, then run `kpm add-repo https://rekindle.ink/downloads/kpm/repo.json`, `kpm update` and `kpm install rekindle` inside kterm. Do not run `;kpm add-repo` from the search bar: Amazon rejects `.` and `:` in `;` commands.\n*   The stock browser rejects direct `.sh`/`.txt` downloads as **Invalid file type**; KPM or USB is required.\n*   Source and recovery scripts: [`kindle/`](kindle/)\n\n## Gallery\n\n<p align=\"center\">\n  <img src=\"screenshots/ReKindle-1.png\" width=\"30%\" />\n  <img src=\"screenshots/ReKindle-2.png\" width=\"30%\" />\n  <img src=\"screenshots/ReKindle-3.png\" width=\"30%\" />\n</p>\n\n<p align=\"center\">\n  <img src=\"screenshots/ReKindle-4.png\" width=\"30%\" />\n  <img src=\"screenshots/ReKindle-5.png\" width=\"30%\" />\n  <img src=\"screenshots/ReKindle-6.png\" width=\"30%\" />\n</p>\n\n<p align=\"center\">\n  <img src=\"screenshots/ReKindle-7.png\" width=\"30%\" />\n  <img src=\"screenshots/ReKindle-8.png\" width=\"30%\" />\n  <img src=\"screenshots/ReKindle-9.png\" width=\"30%\" />\n</p>\n\n<p align=\"center\">\n  <img src=\"screenshots/ReKindle-10.png\" width=\"30%\" />\n  <img src=\"screenshots/ReKindle-11.png\" width=\"30%\" />\n</p>\n\n## Features\n\nReKindle operates in two modes: **Guest Mode** (all data stored locally on your device) and **Cloud Mode** (create an account to sync data across devices).\n\n### Help & Documentation\n*   **Help & FAQ:** An in-app guide to every app, game, account feature and setting, with search, an A-Z index and troubleshooting. Open it from the Help link in the top menu or the About panel.\n\n### Productivity & Organization\n*   **Quick ToDo⁺:** A unique task manager that uses **OCR (Handwriting Recognition)** to convert your handwriting into digital, sync-able tasks.\n*   **Google Integration:** Read/write sync for **Google Tasks** and **Google Calendar**, plus a read-only **Google Contacts** address-book import.\n*   **Mail⁺:** A fully functional email client for your E-ink device.\n*   **Universal Import:** Read-only **CalDAV / iCalendar** and **CardDAV / vCard** feeds for non-Google users.\n*   **Note Pad:** A clean, distraction-free writing environment.\n*   **Habit Tracker:** Keep your streaks alive with a visual weekly tracker.\n*   **Focus Timer:** A Pomodoro-style timer to boost productivity.\n*   **Decider:** A random decision engine for when you just can't choose.\n*   **Mindmap:** Visually organize your ideas and concepts.\n*   **Teleprompter:** Display notes line-by-line for speeches or practice.\n\n### Reading & News\n*   **Reader:** A fully functional EPUB reader powered by `epub.js` with library management.\n*   **Library Integration:** Built-in search and download for **Project Gutenberg**, **Standard Ebooks**, and **Libby**.\n*   **NetLite:** A lightweight, text-only web browser powered by **FrogFind**, optimizing the web for E-ink screens.\n*   **RSS Reader:** Follow your favorite feeds in a clean, readable format.\n*   **The Daily Kindling:** A daily newspaper aggregating top headlines from world news, tech, science, and more.\n*   **Reading Log & List:** Track your daily reading minutes and maintain a \"To-Read\" wish list with search integration.\n\n### Knowledge & Tools\n*   **Oracle AI⁺:** Chat with **Gemini 2.5**, optimized for text-based responses.\n*   **Atlas:** Global maps powered by OpenStreetMap.\n*   **Babel:** Text translator supporting multiple languages.\n*   **Wikipedia:** Search or read random entries from the free encyclopedia.\n*   **On This Day:** Discover historical events, births, and deaths for the current date.\n*   **Stocks:** Track your portfolio with real-time market data.\n*   **Weather:** Current conditions and 5-day forecasts.\n*   **Utilities:** Calculator, Unit Converter, Dictionary, World Clock, **AirType⁺** (Phone Typewriter), and Breathing Exercises.\n\n### Games Arcade\n**Single Player:**\n*   **Word Games:** Wordle, Spelling Bee, Connections, Crossword (NYT Archives), Anagrams, Hangman, Word Search.\n*   **Logic & Numbers:** Sudoku, Nerdle (Math Wordle), 2048, Minesweeper, Memory, Jigsaw Puzzles, Tower of Hanoi, Lights Out, Nonograms, Codebreaker.\n*   **Classic:** Solitaire, Tetris, Snake, Blackjack, Dino, Pet (Virtual Pet), Block Blast, Texas Hold'em (beta), DOOM (beta).\n\n**Multiplayer & Local:**\n*   **Words Online:** Play Scrabble-style games asynchronously against other ReKindle users.\n*   **Pass-and-Play:** Local 2-player versions of Chess, Checkers, Battleships, Connect 4, Tic-Tac-Toe, and 8 Ball.\n\n### Social & Creative\n*   **KindleChat:** An exclusive chat ",
+    "readme_ref": "main",
+    "checked_date": "2026-10-30"
+  },
+  {
+    "repository": {
+      "id": 1017556132,
+      "name": "koassistant.koplugin",
+      "full_name": "zeeyado/koassistant.koplugin",
+      "html_url": "https://github.com/zeeyado/koassistant.koplugin",
+      "description": "A powerful AI assistant integrated into KOReader.",
+      "stargazers_count": 281,
+      "pushed_at": "2026-10-26T18:48:48Z",
+      "created_at": "2025-07-10T18:04:19Z",
+      "default_branch": "main",
+      "homepage": "https://github.com/zeeyado/koassistant.koplugin",
+      "topics": [
+        "chatgpt-api",
+        "claude-ai",
+        "deepseek",
+        "e-ink",
+        "e-reader",
+        "ereader",
+        "gemini-api",
+        "koplugin",
+        "koreader",
+        "koreader-plugin",
+        "ollama-api"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "旧设备改造",
+      "audience": "愿意动手改造闲置设备的用户",
+      "feature_match": "e-ink",
+      "documented_facts": [],
+      "license": "GPL-3.0",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Android"
+      ],
+      "assets": [],
+      "install_heading": "### 1. Install",
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认",
+        "额外硬件、刷机兼容性与损坏成本需人工确认"
+      ],
+      "score": 49,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v0.24.1",
+      "html_url": "https://github.com/zeeyado/koassistant.koplugin/releases/tag/v0.24.1",
+      "published_at": "2026-10-20T19:05:16Z"
+    },
+    "readme_sha256": "c826044537eef5d0419c23e43fef6c706109d9e2038c6c287f3cfe44c615979a",
+    "readme_excerpt": "# KOAssistant\n\n[![GitHub Release](https://img.shields.io/github/v/release/zeeyado/koassistant.koplugin)](https://github.com/zeeyado/koassistant.koplugin/releases/latest)\n[![Wiki](https://img.shields.io/badge/docs-wiki-blue)](https://github.com/zeeyado/koassistant.koplugin/wiki)\n[![License: GPL-3.0](https://img.shields.io/github/license/zeeyado/koassistant.koplugin)](LICENSE)\n[![AI-translated](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhosted.weblate.org%2Fapi%2Fprojects%2Fkoassistant%2Fstatistics%2F&query=%24.fuzzy_percent&suffix=%25&label=AI-translated&color=8ab4f8&cacheSeconds=3600)](https://hosted.weblate.org/engage/koassistant/)\n[![Human-reviewed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhosted.weblate.org%2Fapi%2Fprojects%2Fkoassistant%2Fstatistics%2F&query=%24.translated_percent&suffix=%25&label=human-reviewed&color=brightgreen&cacheSeconds=3600)](https://hosted.weblate.org/engage/koassistant/)\n\n**Powerful, customizable AI assistant for KOReader.**\n\n**Documentation:** the [Wiki](https://github.com/zeeyado/koassistant.koplugin/wiki) has a page for every feature; the full list is at the [end of this page](#documentation).\n\n<p align=\"center\">\n  <a href=\"screenshots/ELI5highlightchat.png\"><img src=\"screenshots/ELI5highlightchat.png\" width=\"180\" alt=\"AI explains highlighted text\"></a>\n  <a href=\"screenshots/Xraybrowser.png\"><img src=\"screenshots/Xraybrowser.png\" width=\"180\" alt=\"X-Ray browser\"></a>\n  <a href=\"screenshots/compactdict.png\"><img src=\"screenshots/compactdict.png\" width=\"180\" alt=\"Dictionary integration\"></a>\n  <a href=\"screenshots/settingsui.png\"><img src=\"screenshots/settingsui.png\" width=\"180\" alt=\"Settings and menu\"></a>\n</p>\n\n## What it does\n\n- **Highlight text** → translate, explain, define words, analyze passages, connect ideas, and save the answer into KOReader's notes. [Contexts and Chat](https://github.com/zeeyado/koassistant.koplugin/wiki/Contexts-and-Chat)\n- **Short answers in a small popup** → Translate, Quick Define and Quick Explain land in a chrome-less popup at your selection when they fit; tap it to open the answer in the action's usual window. [Chat Windows](https://github.com/zeeyado/koassistant.koplugin/wiki/Chat-Windows)\n- **X-Ray** → a browsable guide to the book you are reading: people, places, ideas, terms and events, built from the text up to where you are and kept current by checkpoints as you read; known names are underlined in the text and open a card; section X-Rays for one chapter or part; a local, offline lookup; version history. [Using X-Ray](https://github.com/zeeyado/koassistant.koplugin/wiki/Using-X-Ray)\n- **Book Groups** → a series or a project as a named list of books (a series in reading order) with its own hub page and settings; what the other books' X-Rays know is carried in for free (in a series, from the earlier books only), and an AI merge can combine X-Rays on top. [Book Groups and Series](https://github.com/zeeyado/koassistant.koplugin/wiki/Book-Groups-and-Series)\n- **Book Hub** → one page per book gathering its artifacts, chats, notebook, group and settings. [Book Settings and Book Hub](https://github.com/zeeyado/koassistant.koplugin/wiki/Book-Settings-and-Book-Hub)\n- **Reading analysis** → recap, document summary and analysis, an About overview, notes analysis, discussion questions, chapter quizzes, an end-of-book suggestion. [Reading Analysis Actions](https://github.com/zeeyado/koassistant.koplugin/wiki/Reading-Analysis-Actions)\n- **Research Mode** → papers with a DOI get an academic X-Ray, research-aware prompts and, with web search on, web-enriched analysis, with no setup. [Research Mode](https://github.com/zeeyado/koassistant.koplugin/wiki/Research-Mode)\n- **Spoiler protection** → on by default: the AI stays behind your reading position, per book or for one chat. [Spoiler Protection](https://github.com/zeeyado/koassistant.koplugin/wiki/Spoiler-Protection)\n- **Session controls** → a chip row in the input dialog (Domain, Web, Tools, Quick, Scope, Attach, Spoiler); most chips are a tap for this chat and a hold for their default. [Contexts and Chat](https://github.com/zeeyado/koassistant.koplugin/wiki/Contexts-and-Chat)\n- **Dictionary and translation** → actions in KOReader's dictionary popup, a compact AI dictionary, bypass modes that skip the menus, and translate views. [Dictionary and Translation](https://github.com/zeeyado/koassistant.koplugin/wiki/Dictionary-and-Translation)\n- **Notebooks** → a markdown notebook per book, an optional one-tap Add to notebook button in the highlight menu, Obsidian vault integration. [Conversations, Notebooks and Export](https://github.com/zeeyado/koassistant.koplugin/wiki/Conversations-Notebooks-and-Export)\n- **Library** → what to read next, reading patterns, comparisons across books, collection analysis. [Contexts and Chat](https://github.com/zeeyado/koassistant.koplugin/wiki/Contexts-and-Chat)\n- **General chat** → the AI without book context.\n- **Web search** → current information from the providers that offer it, with a Show Sources viewer. [Reasoning, Web Search and Book Tools](https://github.com/zeeyado/koassistant.koplugin/wiki/Reasoning-Web-Search-and-Book-Tools)\n- **AI Book Tools** → the AI searches and reads the open book on demand to ground its answers. [Reasoning, Web Search and Book Tools](https://github.com/zeeyado/koassistant.koplugin/wiki/Reasoning-Web-Search-and-Book-Tools)\n- **Reasoning** → thinking configured per model, with a global stance. [Reasoning, Web Search and Book Tools](https://github.com/zeeyado/koassistant.koplugin/wiki/Reasoning-Web-Search-and-Book-Tools)\n- **Multilingual** → chat in any of 47 languages the AI understands; the plugin's UI in 26. [Languages](https://github.com/zeeyado/koassistant.koplugin/wiki/Languages)\n- **Generate images** → a highlight or an X-Ray entry becomes an image (OpenAI, xAI, Gemini or OpenRouter image models) in a style and shape you pick, its prompt written by your chat provider's fast model from",
+    "readme_ref": "v0.24.1",
+    "checked_date": "2026-10-30"
+  }
+]

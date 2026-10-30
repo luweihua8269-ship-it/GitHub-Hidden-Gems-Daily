@@ -1,10 +1,10 @@
 {
   "month": "2026-10",
   "smtp_accepted_reports": 0,
-  "github_api_requests": 40,
+  "github_api_requests": 77,
   "llm_tokens": 0,
   "confirmed_ai_cost_cny": 0,
-  "cloud_runs_observed": 1,
+  "cloud_runs_observed": 2,
   "actions_billed_cost": "不可获取；未把本机计时当作账单数据",
   "provider_remaining_quota": "不可获取",
   "scope": "仅本系统记录；不包含账号其他工作流、Git 传输或平台内部请求"
