@@ -5,7 +5,7 @@
 ## 当前交付状态
 
 已完成本地真实 GitHub 采集、规则筛选、Markdown / HTML 日报、JSON 持久化、资源日志与安全测试。
-已部署到公开 GitHub 仓库，首次云端解压、14项安全测试和源码提交均通过。真实邮件尚未发送；每日任务在 SMTP 授权与发信验收前保持关闭。
+已部署到公开 GitHub 仓库。2026-10-30 的126真实发信、状态持久化和15项安全测试通过，用户已确认收件及内容正常，每日任务已启用。日常零模型调用，Mac不用开机；北京时间09:00触发，GitHub可能延迟。当前运行使用 Repository Variables 中的 smtp.126.com:465，邮箱与授权码仅存入 Secrets。
 查看 `ACCEPTANCE.md` 中的最新核实状态。
 
 ## 一条命令运行
@@ -51,9 +51,9 @@ python3 -m unittest discover -s tests -v
 
 4. 在同一页面 **Variables** 填入：
 
-   | Variable | Gmail 值 |
+   | Variable | 当前默认 126 值 |
    |---|---|
-   | `SMTP_HOST` | `smtp.gmail.com` |
+   | `SMTP_HOST` | `smtp.126.com` |
    | `SMTP_PORT` | `465` |
    | `SMTP_FREE_CONFIRMED` | 确认自己的账号允许 SMTP 且没有超额收费后设为 `true` |
    | `DAILY_ENABLED` | 完成 Secrets 与免费条件核对后设为 `true` |
@@ -90,7 +90,7 @@ GitHub 官方文档确认：**公开仓库使用标准 GitHub-hosted runner** �
 
 每次请求前原子写入预算计数，中断也保留已预留的次数。达到预算就停止采集，用已核实项目输出部分日报；没有项目则输出简短失败 / 无推荐报告。HTTP 重定向不自动跟随，避免隐藏请求。仓库改名通过不变的 Repository ID 识别，搜索结果和当天已读取文档存入本地并随 Git 提交，同日不重复查询。没有 ETag 跨天缓存；这是按需读取而非重复全库扫描。
 
-邮件本地限制每天 1 封、每月 31 次 DATA 尝试。Google 官方对个人 Gmail 有每日发送限制；该账号的其他发信也会占用限制。本程序遇限额就停止，不切换收费邮件接口。没有 SMTP Key 时不产生邮件服务调用。
+邮件本地限制每天 1 封、每月 31 次 DATA 尝试。126 需要先开启 SMTP 并生成客户端授权码；账号实际剩余发送额度不可获取，其他发信也会占用服务商限制。本程序遇限额就停止，不切换收费邮件接口。没有 SMTP Key 时不产生邮件服务调用。
 
 ## 搜索与规则边界
 
@@ -121,6 +121,8 @@ Repository ID 去重 90 天，fork 排除，近期 7 天同类 / 高词汇相似
 调预算：修改 `config.json`。程序硬限制每日 REST ≤50、候选 ≤60、深查 ≤10、推荐 ≤3；只能降低这些上限，不能用手动重跑突破。调整 Stars、维护日期、同类去重窗口及评分阈值后，手动检查首期结果。`AI_EDITOR_ENABLED=false` 保持关闭。可选 AI 编辑尚未实现；设为 true 会直接报错，不会读取 OpenAI Key、计费或隐式回退。
 
 ## 官方依据（开发时核查，政策可能变化）
+
+- [网易126客户端授权码说明](https://help.mail.126.com/faqDetail.do?code=d7a5dc8471cd0c0e8b4b8f4f8e49998b374173cfe9171305fa1ce630d7f67ac286624f309a1a7089)
 
 - [GitHub Actions 计费](https://docs.github.com/en/billing/concepts/product-billing/github-actions)
 - [GitHub 定时触发与延迟限制](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
