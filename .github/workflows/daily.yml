@@ -1,15 +1,20 @@
 name: GitHub Hidden Gems Daily
+
 on:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 1 * * *' # UTC 01:00 = Asia/Shanghai 09:00; GitHub may delay/drop schedules.
   workflow_dispatch:
+
 permissions:
   contents: write
+
 concurrency:
   group: hidden-gems-daily
   cancel-in-progress: false
+
 jobs:
   daily:
+    # Fail closed: no runner starts for a private repo or before explicit activation.
     if: vars.DAILY_ENABLED == 'true' && github.event.repository.visibility == 'public' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -18,7 +23,7 @@ jobs:
       PERSIST_STATE: git
       AI_EDITOR_ENABLED: 'false'
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # official checkout v4.2.2
         with:
           ref: main
           fetch-depth: 1
@@ -41,7 +46,7 @@ jobs:
       - name: Deliver frozen outbox (one safe retry at most)
         if: steps.prepare.outcome == 'success' && steps.save.outcome == 'success'
         env:
-          SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.gmail.com' }}
+          SMTP_HOST: ${{ vars.SMTP_HOST || 'smtp.126.com' }}
           SMTP_PORT: ${{ vars.SMTP_PORT || '465' }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
