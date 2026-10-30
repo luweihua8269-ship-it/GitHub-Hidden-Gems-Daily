@@ -9,7 +9,7 @@
   "llm_output_tokens": 0,
   "ai_cost_cny": 0,
   "ai_cost_basis": "程序没有模型接口或模型调用路径",
-  "program_seconds": 10.604,
+  "program_seconds": 16.324,
   "actions_job_seconds": null,
   "actions_billed_cost": null,
   "provider_remaining_quota": null,
@@ -253,6 +253,6 @@
   "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
   "prepared": true,
   "subject": "GitHub 冷门好物日报｜2026-10-30｜今天发现的2个有趣项目",
-  "smtp_phase": "persist_result",
+  "smtp_phase": "completed",
   "smtp_data_attempts": 1
 }
