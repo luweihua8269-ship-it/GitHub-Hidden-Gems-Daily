@@ -278,7 +278,7 @@
     },
     "2026-10-30": {
       "date": "2026-10-30",
-      "github_api_requests": 37,
+      "github_api_requests": 38,
       "candidates": 60,
       "deep_checked": 10,
       "recommendations": 2,
@@ -294,8 +294,8 @@
       "cloud_runs": [
         "40983007181"
       ],
-      "email_result": "not_configured",
-      "smtp_attempts": 0,
+      "email_result": "sending",
+      "smtp_attempts": 1,
       "retry_used": false,
       "over_budget": false,
       "stops": [],
@@ -519,12 +519,20 @@
           "status": 200,
           "remaining": 4980,
           "truncated": true
+        },
+        {
+          "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+          "status": 200,
+          "remaining": 4979,
+          "truncated": false
         }
       ],
       "collection_started": true,
       "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
       "prepared": true,
-      "subject": "GitHub 冷门好物日报｜2026-10-30｜今天发现的2个有趣项目"
+      "subject": "GitHub 冷门好物日报｜2026-10-30｜今天发现的2个有趣项目",
+      "smtp_phase": "persist_intent",
+      "smtp_data_attempts": 1
     }
   },
   "repositories": {
