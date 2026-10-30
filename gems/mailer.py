@@ -38,7 +38,7 @@ def deliver(store, config, checkpoint=None, smtp_factory=None):
     log['smtp_attempts'] += 1
     store.save()
     checkpoint = checkpoint or store.checkpoint
-    host = os.getenv('SMTP_HOST', 'smtp.gmail.com')
+    host = os.getenv('SMTP_HOST', 'smtp.126.com')
     port = int(os.getenv('SMTP_PORT', '465'))
     if port not in (465, 587):
         raise ValueError('only_tls_smtp_465_or_587_supported')
