@@ -2,7 +2,21 @@
 
 核实日期：2026-10-29 12:07（北京时间）。
 
-**当前状态：本地 MVP 与云端源码部署均完成；真实邮件未发送，每日定时尚未启用。**
+**当前状态：2026-10-30 的126真实发信验收通过；用户确认收件且内容正常，每日任务已启用。**
+
+## 2026-10-30 成功验收补充
+
+- 成功运行：https://github.com/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily/actions/runs/40983007181
+- 云端15项安全测试、真实采集、准备与发送状态持久化、邮件发送均成功。SMTP结果accepted，阶段completed；用户明确回复“已收到，内容正常”。
+- 60个候选、深查10个、推荐2个：sidebandstudio/EternalMonitor、duartebarbosadev/PhotoSort。
+- 日常程序GitHub REST请求38次，SMTP尝试1次，没有触发重试，没有超预算。
+- LLM调用0、输入与输出Tokens均0、AI API费用0元。首次Codex开发/维护消耗不包含在这些日常程序计数里。
+- 邮箱与授权码仅在GitHub Secrets；运行时SMTP_HOST=smtp.126.com、SMTP_PORT=465。
+- DAILY_ENABLED=true，工作流已恢复；cron已核对为UTC 01:00，即北京时间09:00。下一次配置触发为2026-10-31 09:00，实际调度可能延迟，下一次自然定时触发尚未发生、未声称已实测。
+- 历史与最终accepted状态已从main读回确认，Mac不用开机。Actions完整job在UI显示22秒；平台最终账单和邮件服务剩余额度不可获取。
+- 失败通知到达、真实设备安装体验与跨邮件客户端外观未测试；不以SMTP成功代替这些测试。
+
+以下记录保留首次开发及Gmail失败的历史状态；涉及当前上线状态时，以本补充和最新usage.json为准。
 
 |验收项目|结果与证据|
 |---|---|
@@ -35,6 +49,8 @@
 - 私有仓库不启动工作流，避免在无法确认全账号余额时产生费用；未来GitHub免费政策变化需人工重新核查。
 
 ## 待完成
+
+最新测试：https://github.com/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily/actions/runs/40842575173 。云端离线测试通过，但SMTP连接在DATA之前断开，错误类型SMTPServerDisconnected；尝试2次后停止，未发送正文。程序REST累计40次、LLM调用0。仅凭现有日志不能判断密码是否正确。每日工作流已显示“This workflow was disabled manually”。本地邮件阶段诊断与CRLF编码修复的15项测试通过，修复和测试已同步仓库；未再次在线连接SMTP，没有清零重试记录。
 
 更新：下面第1、2项已于2026-10-29完成。公开仓库已创建；一次性云端任务校验压缩包、通过14项离线测试并成功推送源码和报告。真实邮件及每日触发仍待验收。部署记录：https://github.com/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily/actions/runs/40840971154
 
