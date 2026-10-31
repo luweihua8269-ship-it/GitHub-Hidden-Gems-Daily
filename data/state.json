@@ -561,7 +561,7 @@
       "cloud_runs": [
         "41177032113"
       ],
-      "email_result": "sending",
+      "email_result": "accepted",
       "smtp_attempts": 1,
       "retry_used": false,
       "over_budget": false,
@@ -790,7 +790,7 @@
       "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
       "prepared": true,
       "subject": "GitHub 冷门好物日报｜2026-10-31｜今天发现的2个有趣项目",
-      "smtp_phase": "persist_intent",
+      "smtp_phase": "persist_result",
       "smtp_data_attempts": 1
     }
   },
