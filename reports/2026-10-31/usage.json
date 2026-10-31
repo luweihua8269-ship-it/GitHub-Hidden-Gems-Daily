@@ -1,0 +1,242 @@
+{
+  "date": "2026-10-31",
+  "github_api_requests": 37,
+  "candidates": 59,
+  "deep_checked": 10,
+  "recommendations": 2,
+  "llm_calls": 0,
+  "llm_input_tokens": 0,
+  "llm_output_tokens": 0,
+  "ai_cost_cny": 0,
+  "ai_cost_basis": "程序没有模型接口或模型调用路径",
+  "program_seconds": 14.055,
+  "actions_job_seconds": null,
+  "actions_billed_cost": null,
+  "provider_remaining_quota": null,
+  "cloud_runs": [
+    "41177032113"
+  ],
+  "email_result": "not_configured",
+  "smtp_attempts": 0,
+  "retry_used": false,
+  "over_budget": false,
+  "stops": [],
+  "api_events": [
+    {
+      "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/rate_limit",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Aclipboard+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 29,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Aimage-processing+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+      "status": 200,
+      "remaining": 29,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Afile-transfer+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 28,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Avideo-editor+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+      "status": 200,
+      "remaining": 27,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Afile-organizer+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 26,
+      "truncated": false
+    },
+    {
+      "path": "/repos/jessolmstead/greycard",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/repos/jessolmstead/greycard/releases/latest",
+      "status": 200,
+      "remaining": 4998,
+      "truncated": false
+    },
+    {
+      "path": "/repos/jessolmstead/greycard/readme?ref=v0.9.0",
+      "status": 200,
+      "remaining": 4998,
+      "truncated": false
+    },
+    {
+      "path": "/repos/FileMintApp/FileMint",
+      "status": 200,
+      "remaining": 4997,
+      "truncated": false
+    },
+    {
+      "path": "/repos/FileMintApp/FileMint/releases/latest",
+      "status": 200,
+      "remaining": 4997,
+      "truncated": false
+    },
+    {
+      "path": "/repos/FileMintApp/FileMint/readme?ref=v0.8.1",
+      "status": 200,
+      "remaining": 4996,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Pixelgamer4k/graden",
+      "status": 200,
+      "remaining": 4995,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Pixelgamer4k/graden/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/Pixelgamer4k/graden/readme?ref=main",
+      "status": 200,
+      "remaining": 4994,
+      "truncated": false
+    },
+    {
+      "path": "/repos/VoylinsGamedevJourney/gozen",
+      "status": 200,
+      "remaining": 4993,
+      "truncated": false
+    },
+    {
+      "path": "/repos/VoylinsGamedevJourney/gozen/releases/latest",
+      "status": 200,
+      "remaining": 4995,
+      "truncated": false
+    },
+    {
+      "path": "/repos/VoylinsGamedevJourney/gozen/readme?ref=v0.18-beta",
+      "status": 200,
+      "remaining": 4992,
+      "truncated": false
+    },
+    {
+      "path": "/repos/JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide",
+      "status": 200,
+      "remaining": 4991,
+      "truncated": false
+    },
+    {
+      "path": "/repos/JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide/readme?ref=main",
+      "status": 200,
+      "remaining": 4990,
+      "truncated": true
+    },
+    {
+      "path": "/repos/peradmagroup/HitFilm-VFX-Workflow-Guide",
+      "status": 200,
+      "remaining": 4989,
+      "truncated": false
+    },
+    {
+      "path": "/repos/peradmagroup/HitFilm-VFX-Workflow-Guide/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/peradmagroup/HitFilm-VFX-Workflow-Guide/readme?ref=main",
+      "status": 200,
+      "remaining": 4988,
+      "truncated": true
+    },
+    {
+      "path": "/repos/msaguilm-sketch/Render-In-Setup-Guide",
+      "status": 200,
+      "remaining": 4987,
+      "truncated": false
+    },
+    {
+      "path": "/repos/msaguilm-sketch/Render-In-Setup-Guide/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/msaguilm-sketch/Render-In-Setup-Guide/readme?ref=main",
+      "status": 200,
+      "remaining": 4986,
+      "truncated": false
+    },
+    {
+      "path": "/repos/onblog/miaomiao-bar",
+      "status": 200,
+      "remaining": 4985,
+      "truncated": false
+    },
+    {
+      "path": "/repos/onblog/miaomiao-bar/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/onblog/miaomiao-bar/readme?ref=main",
+      "status": 200,
+      "remaining": 4984,
+      "truncated": false
+    },
+    {
+      "path": "/repos/hsr88/mouzi",
+      "status": 200,
+      "remaining": 4983,
+      "truncated": false
+    },
+    {
+      "path": "/repos/hsr88/mouzi/releases/latest",
+      "status": 200,
+      "remaining": 4990,
+      "truncated": false
+    },
+    {
+      "path": "/repos/hsr88/mouzi/readme?ref=v0.2.1",
+      "status": 200,
+      "remaining": 4982,
+      "truncated": false
+    },
+    {
+      "path": "/repos/ricardodantas/hazelnut",
+      "status": 200,
+      "remaining": 4981,
+      "truncated": false
+    },
+    {
+      "path": "/repos/ricardodantas/hazelnut/releases/latest",
+      "status": 200,
+      "remaining": 4989,
+      "truncated": false
+    },
+    {
+      "path": "/repos/ricardodantas/hazelnut/readme?ref=v0.3.0",
+      "status": 200,
+      "remaining": 4980,
+      "truncated": true
+    }
+  ],
+  "collection_started": true,
+  "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
+  "prepared": true,
+  "subject": "GitHub 冷门好物日报｜2026-10-31｜今天发现的2个有趣项目"
+}

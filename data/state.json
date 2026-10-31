@@ -542,6 +542,248 @@
       "subject": "GitHub 冷门好物日报｜2026-10-30｜今天发现的2个有趣项目",
       "smtp_phase": "completed",
       "smtp_data_attempts": 1
+    },
+    "2026-10-31": {
+      "date": "2026-10-31",
+      "github_api_requests": 37,
+      "candidates": 59,
+      "deep_checked": 10,
+      "recommendations": 2,
+      "llm_calls": 0,
+      "llm_input_tokens": 0,
+      "llm_output_tokens": 0,
+      "ai_cost_cny": 0,
+      "ai_cost_basis": "程序没有模型接口或模型调用路径",
+      "program_seconds": 14.055,
+      "actions_job_seconds": null,
+      "actions_billed_cost": null,
+      "provider_remaining_quota": null,
+      "cloud_runs": [
+        "41177032113"
+      ],
+      "email_result": "not_configured",
+      "smtp_attempts": 0,
+      "retry_used": false,
+      "over_budget": false,
+      "stops": [],
+      "api_events": [
+        {
+          "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/rate_limit",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Aclipboard+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 29,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Aimage-processing+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+          "status": 200,
+          "remaining": 29,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Afile-transfer+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 28,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Avideo-editor+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+          "status": 200,
+          "remaining": 27,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Afile-organizer+stars%3A20..5000+pushed%3A%3E2026-05-04+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 26,
+          "truncated": false
+        },
+        {
+          "path": "/repos/jessolmstead/greycard",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/repos/jessolmstead/greycard/releases/latest",
+          "status": 200,
+          "remaining": 4998,
+          "truncated": false
+        },
+        {
+          "path": "/repos/jessolmstead/greycard/readme?ref=v0.9.0",
+          "status": 200,
+          "remaining": 4998,
+          "truncated": false
+        },
+        {
+          "path": "/repos/FileMintApp/FileMint",
+          "status": 200,
+          "remaining": 4997,
+          "truncated": false
+        },
+        {
+          "path": "/repos/FileMintApp/FileMint/releases/latest",
+          "status": 200,
+          "remaining": 4997,
+          "truncated": false
+        },
+        {
+          "path": "/repos/FileMintApp/FileMint/readme?ref=v0.8.1",
+          "status": 200,
+          "remaining": 4996,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Pixelgamer4k/graden",
+          "status": 200,
+          "remaining": 4995,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Pixelgamer4k/graden/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/Pixelgamer4k/graden/readme?ref=main",
+          "status": 200,
+          "remaining": 4994,
+          "truncated": false
+        },
+        {
+          "path": "/repos/VoylinsGamedevJourney/gozen",
+          "status": 200,
+          "remaining": 4993,
+          "truncated": false
+        },
+        {
+          "path": "/repos/VoylinsGamedevJourney/gozen/releases/latest",
+          "status": 200,
+          "remaining": 4995,
+          "truncated": false
+        },
+        {
+          "path": "/repos/VoylinsGamedevJourney/gozen/readme?ref=v0.18-beta",
+          "status": 200,
+          "remaining": 4992,
+          "truncated": false
+        },
+        {
+          "path": "/repos/JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide",
+          "status": 200,
+          "remaining": 4991,
+          "truncated": false
+        },
+        {
+          "path": "/repos/JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide/readme?ref=main",
+          "status": 200,
+          "remaining": 4990,
+          "truncated": true
+        },
+        {
+          "path": "/repos/peradmagroup/HitFilm-VFX-Workflow-Guide",
+          "status": 200,
+          "remaining": 4989,
+          "truncated": false
+        },
+        {
+          "path": "/repos/peradmagroup/HitFilm-VFX-Workflow-Guide/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/peradmagroup/HitFilm-VFX-Workflow-Guide/readme?ref=main",
+          "status": 200,
+          "remaining": 4988,
+          "truncated": true
+        },
+        {
+          "path": "/repos/msaguilm-sketch/Render-In-Setup-Guide",
+          "status": 200,
+          "remaining": 4987,
+          "truncated": false
+        },
+        {
+          "path": "/repos/msaguilm-sketch/Render-In-Setup-Guide/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/msaguilm-sketch/Render-In-Setup-Guide/readme?ref=main",
+          "status": 200,
+          "remaining": 4986,
+          "truncated": false
+        },
+        {
+          "path": "/repos/onblog/miaomiao-bar",
+          "status": 200,
+          "remaining": 4985,
+          "truncated": false
+        },
+        {
+          "path": "/repos/onblog/miaomiao-bar/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/onblog/miaomiao-bar/readme?ref=main",
+          "status": 200,
+          "remaining": 4984,
+          "truncated": false
+        },
+        {
+          "path": "/repos/hsr88/mouzi",
+          "status": 200,
+          "remaining": 4983,
+          "truncated": false
+        },
+        {
+          "path": "/repos/hsr88/mouzi/releases/latest",
+          "status": 200,
+          "remaining": 4990,
+          "truncated": false
+        },
+        {
+          "path": "/repos/hsr88/mouzi/readme?ref=v0.2.1",
+          "status": 200,
+          "remaining": 4982,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ricardodantas/hazelnut",
+          "status": 200,
+          "remaining": 4981,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ricardodantas/hazelnut/releases/latest",
+          "status": 200,
+          "remaining": 4989,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ricardodantas/hazelnut/readme?ref=v0.3.0",
+          "status": 200,
+          "remaining": 4980,
+          "truncated": true
+        }
+      ],
+      "collection_started": true,
+      "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
+      "prepared": true,
+      "subject": "GitHub 冷门好物日报｜2026-10-31｜今天发现的2个有趣项目"
     }
   },
   "repositories": {
@@ -1512,6 +1754,508 @@
         "zeeyado/koassistant.koplugin"
       ],
       "key_feature": "e-ink",
+      "score": 49,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1380809756": {
+      "repository_id": 1380809756,
+      "name": "jessolmstead/greycard",
+      "url": "https://github.com/jessolmstead/greycard",
+      "stars": 81,
+      "category": "图片处理",
+      "description": "An intuitive, color-accurate, professional RAW photo editor.",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-31T04:49:51Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "jessolmstead/greycard"
+      ],
+      "key_feature": "photo editor",
+      "score": 64,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": true,
+      "recommended_date": "2026-10-31"
+    },
+    "1288827571": {
+      "repository_id": 1288827571,
+      "name": "FileMintApp/FileMint",
+      "url": "https://github.com/FileMintApp/FileMint",
+      "stars": 153,
+      "category": "图片处理",
+      "description": "Native macOS Finder extension for right-click file creation, templates, batch rename, checksums, image compression and OCR. Mac 右键新建文件、批量重命名、文件校验、图片压缩与文字识别。",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-31T04:00:09Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "FileMintApp/FileMint"
+      ],
+      "key_feature": "image compress",
+      "score": 61,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1421066736": {
+      "repository_id": 1421066736,
+      "name": "Pixelgamer4k/graden",
+      "url": "https://github.com/Pixelgamer4k/graden",
+      "stars": 34,
+      "category": "音视频",
+      "description": "Multi-layer video editor and colour grading app for Android — proxy editing, native-resolution preview, colour wheels and scopes, full-quality H.264/H.265 export. Beta.",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-31T03:49:46Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "Pixelgamer4k/graden"
+      ],
+      "key_feature": "video editor",
+      "score": 46,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "643359175": {
+      "repository_id": 643359175,
+      "name": "VoylinsGamedevJourney/gozen",
+      "url": "https://github.com/VoylinsGamedevJourney/gozen",
+      "stars": 466,
+      "category": "音视频",
+      "description": "This project moved to https://codeberg.org/gozen/gozen. The minimalistic video editor made with Godot.",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-31T02:32:55Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "VoylinsGamedevJourney/gozen"
+      ],
+      "key_feature": "video editor",
+      "score": 49,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1382279244": {
+      "repository_id": 1382279244,
+      "name": "JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide",
+      "url": "https://github.com/JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide",
+      "stars": 68,
+      "category": "音视频",
+      "description": "GOM Mix Max 2026 Windows 11 Video Editor Install Guide and Setup Tips",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-31T01:59:52Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "JoseEduardo-sudo/GOM-Mix-Max-Video-Editor-Setup-Guide"
+      ],
+      "key_feature": "Video Editor",
+      "score": 36,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1382282169": {
+      "repository_id": 1382282169,
+      "name": "peradmagroup/HitFilm-VFX-Workflow-Guide",
+      "url": "https://github.com/peradmagroup/HitFilm-VFX-Workflow-Guide",
+      "stars": 68,
+      "category": "音视频",
+      "description": "Best HitFilm Video Editor Setup Guide for Windows 11 and 10 in 2026",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-31T01:20:04Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "peradmagroup/HitFilm-VFX-Workflow-Guide"
+      ],
+      "key_feature": "Video Editor",
+      "score": 36,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1382337088": {
+      "repository_id": 1382337088,
+      "name": "msaguilm-sketch/Render-In-Setup-Guide",
+      "url": "https://github.com/msaguilm-sketch/Render-In-Setup-Guide",
+      "stars": 71,
+      "category": "音视频",
+      "description": "Render In 2026 Setup Guide for Windows 11 and 10 Video Editors",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-31T00:32:29Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "msaguilm-sketch/Render-In-Setup-Guide"
+      ],
+      "key_feature": "Video Editor",
+      "score": 43,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "231509982": {
+      "repository_id": 231509982,
+      "name": "onblog/miaomiao-bar",
+      "url": "https://github.com/onblog/miaomiao-bar",
+      "stars": 1968,
+      "category": "剪贴板",
+      "description": "A macOS clipboard workbench: text and pictures that land on the clipboard leave usable. 喵喵吧台：macOS 上的剪贴板工作台，文字和图片进了剪贴板就变成能直接用的样子。",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-30T13:49:33Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "onblog/miaomiao-bar"
+      ],
+      "key_feature": "剪贴板",
+      "score": 46,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1234008446": {
+      "repository_id": 1234008446,
+      "name": "hsr88/mouzi",
+      "url": "https://github.com/hsr88/mouzi",
+      "stars": 1119,
+      "category": "文件整理",
+      "description": "A free, privacy-first automatic file organizer that quietly sorts your Downloads folder from the system tray.",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-29T17:06:55Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "hsr88/mouzi"
+      ],
+      "key_feature": "file organizer",
+      "score": 64,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": true,
+      "recommended_date": "2026-10-31"
+    },
+    "1149608872": {
+      "repository_id": 1149608872,
+      "name": "ricardodantas/hazelnut",
+      "url": "https://github.com/ricardodantas/hazelnut",
+      "stars": 325,
+      "category": "文件整理",
+      "description": "🌰 Terminal-based automated file organizer inspired by Hazel. Watch folders and organize files with rules.",
+      "discovered_date": "2026-10-31",
+      "updated_date": "2026-10-28T22:31:28Z",
+      "checked_date": "2026-10-31",
+      "aliases": [
+        "ricardodantas/hazelnut"
+      ],
+      "key_feature": "file organizer",
       "score": 49,
       "score_basis": {
         "新意与惊喜感": {
