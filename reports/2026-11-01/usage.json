@@ -1,0 +1,246 @@
+{
+  "date": "2026-11-01",
+  "github_api_requests": 37,
+  "candidates": 59,
+  "deep_checked": 10,
+  "recommendations": 0,
+  "llm_calls": 0,
+  "llm_input_tokens": 0,
+  "llm_output_tokens": 0,
+  "ai_cost_cny": 0,
+  "ai_cost_basis": "程序没有模型接口或模型调用路径",
+  "program_seconds": 13.828,
+  "actions_job_seconds": null,
+  "actions_billed_cost": null,
+  "provider_remaining_quota": null,
+  "cloud_runs": [
+    "41283239062"
+  ],
+  "email_result": "not_configured",
+  "smtp_attempts": 0,
+  "retry_used": false,
+  "over_budget": false,
+  "stops": [],
+  "api_events": [
+    {
+      "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/rate_limit",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Amenubar+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 29,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Ascreenshot+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+      "status": 200,
+      "remaining": 29,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Afile-sharing+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 28,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Asubtitle+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+      "status": 200,
+      "remaining": 27,
+      "truncated": false
+    },
+    {
+      "path": "/search/repositories?q=topic%3Apomodoro+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+      "status": 200,
+      "remaining": 26,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Cerlancism/chatgpt-subtitle-translator",
+      "status": 200,
+      "remaining": 4999,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Cerlancism/chatgpt-subtitle-translator/releases/latest",
+      "status": 200,
+      "remaining": 4998,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Cerlancism/chatgpt-subtitle-translator/readme?ref=v3.3.2",
+      "status": 200,
+      "remaining": 4998,
+      "truncated": true
+    },
+    {
+      "path": "/repos/onmax/comark-ui",
+      "status": 200,
+      "remaining": 4997,
+      "truncated": false
+    },
+    {
+      "path": "/repos/onmax/comark-ui/releases/latest",
+      "status": 200,
+      "remaining": 4997,
+      "truncated": false
+    },
+    {
+      "path": "/repos/onmax/comark-ui/readme?ref=v0.8.0",
+      "status": 200,
+      "remaining": 4996,
+      "truncated": false
+    },
+    {
+      "path": "/repos/mangeshghodke/DreamPlayer",
+      "status": 200,
+      "remaining": 4995,
+      "truncated": false
+    },
+    {
+      "path": "/repos/mangeshghodke/DreamPlayer/releases/latest",
+      "status": 200,
+      "remaining": 4996,
+      "truncated": false
+    },
+    {
+      "path": "/repos/mangeshghodke/DreamPlayer/readme?ref=v0.5.4",
+      "status": 200,
+      "remaining": 4994,
+      "truncated": true
+    },
+    {
+      "path": "/repos/s-thom/howtoscreenshot",
+      "status": 200,
+      "remaining": 4993,
+      "truncated": false
+    },
+    {
+      "path": "/repos/s-thom/howtoscreenshot/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/s-thom/howtoscreenshot/readme?ref=main",
+      "status": 200,
+      "remaining": 4992,
+      "truncated": false
+    },
+    {
+      "path": "/repos/lzhgus/Capso",
+      "status": 200,
+      "remaining": 4991,
+      "truncated": false
+    },
+    {
+      "path": "/repos/lzhgus/Capso/releases/latest",
+      "status": 200,
+      "remaining": 4994,
+      "truncated": false
+    },
+    {
+      "path": "/repos/lzhgus/Capso/readme?ref=v1.2.7",
+      "status": 200,
+      "remaining": 4990,
+      "truncated": false
+    },
+    {
+      "path": "/repos/minghe36/haoone-app",
+      "status": 200,
+      "remaining": 4989,
+      "truncated": false
+    },
+    {
+      "path": "/repos/minghe36/haoone-app/releases/latest",
+      "status": 200,
+      "remaining": 4993,
+      "truncated": false
+    },
+    {
+      "path": "/repos/minghe36/haoone-app/readme?ref=V14.8.0",
+      "status": 200,
+      "remaining": 4988,
+      "truncated": false
+    },
+    {
+      "path": "/repos/flaco8991/EZtitles-Pro-Direct-Setup",
+      "status": 200,
+      "remaining": 4987,
+      "truncated": false
+    },
+    {
+      "path": "/repos/flaco8991/EZtitles-Pro-Direct-Setup/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/flaco8991/EZtitles-Pro-Direct-Setup/readme?ref=main",
+      "status": 200,
+      "remaining": 4986,
+      "truncated": false
+    },
+    {
+      "path": "/repos/tbee6061-ctrl/studio-live-window-capture",
+      "status": 200,
+      "remaining": 4985,
+      "truncated": false
+    },
+    {
+      "path": "/repos/tbee6061-ctrl/studio-live-window-capture/releases/latest",
+      "status": 404
+    },
+    {
+      "path": "/repos/tbee6061-ctrl/studio-live-window-capture/readme?ref=main",
+      "status": 200,
+      "remaining": 4984,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Horbin-Magician/rotor",
+      "status": 200,
+      "remaining": 4983,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Horbin-Magician/rotor/releases/latest",
+      "status": 200,
+      "remaining": 4990,
+      "truncated": false
+    },
+    {
+      "path": "/repos/Horbin-Magician/rotor/readme?ref=v3.1.4",
+      "status": 200,
+      "remaining": 4982,
+      "truncated": false
+    },
+    {
+      "path": "/repos/exuupery/island",
+      "status": 200,
+      "remaining": 4981,
+      "truncated": false
+    },
+    {
+      "path": "/repos/exuupery/island/releases/latest",
+      "status": 200,
+      "remaining": 4989,
+      "truncated": false
+    },
+    {
+      "path": "/repos/exuupery/island/readme?ref=v1.2.9",
+      "status": 200,
+      "remaining": 4980,
+      "truncated": true
+    }
+  ],
+  "collection_started": true,
+  "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
+  "prepared": true,
+  "subject": "GitHub 冷门好物日报｜2026-11-01｜今日暂无通过核查的项目"
+}

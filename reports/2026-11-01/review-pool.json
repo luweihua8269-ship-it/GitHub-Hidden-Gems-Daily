@@ -1,0 +1,925 @@
+[
+  {
+    "repository": {
+      "id": 616989909,
+      "name": "chatgpt-subtitle-translator",
+      "full_name": "Cerlancism/chatgpt-subtitle-translator",
+      "html_url": "https://github.com/Cerlancism/chatgpt-subtitle-translator",
+      "description": "Token efficient translation tool based on ChatGPT or any OpenAI compatible LLM chat completion API",
+      "stargazers_count": 391,
+      "pushed_at": "2026-11-01T07:02:22Z",
+      "created_at": "2023-03-21T13:40:20Z",
+      "default_branch": "main",
+      "homepage": "https://cerlancism.github.io/chatgpt-subtitle-translator/",
+      "topics": [
+        "ai",
+        "chatgpt",
+        "cli",
+        "gpt",
+        "gui",
+        "llm",
+        "machine-translation",
+        "ollama",
+        "openai",
+        "srt",
+        "srt-subtitles",
+        "subtitle",
+        "transalation",
+        "translator",
+        "web"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "音视频",
+      "audience": "需要处理音视频或字幕的用户",
+      "feature_match": "subtitle",
+      "documented_facts": [],
+      "license": "MIT",
+      "platforms": [
+        "Windows"
+      ],
+      "assets": [],
+      "install_heading": null,
+      "has_visual_markers": false,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认"
+      ],
+      "score": 26,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 6,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 0,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v3.3.2",
+      "html_url": "https://github.com/Cerlancism/chatgpt-subtitle-translator/releases/tag/v3.3.2",
+      "published_at": "2026-04-13T16:06:01Z"
+    },
+    "readme_sha256": "33b418c0e3bbc3ec830ab81fdc975bf757190cf292fd2c7912dd37d0fb6788ad",
+    "readme_excerpt": "# ChatGPT API SRT Subtitle Translator\nLarge language models (LLMs), such as ChatGPT, have demonstrated their capabilities as a [robust translator](https://arxiv.org/abs/2303.13780), capable of handling common natural languages with contextual understanding, as well as unconventional forms of writing like [word scrambling](https://www.mrc-cbu.cam.ac.uk/people/matt.davis/cmabridge/). However, it may not always produce a deterministic output or adhere to line-to-line correlation, potentially disrupting the timing of subtitles, even when instructed to follow precise instructions and with the model `temperature` parameter set to [`0`](https://cobusgreyling.medium.com/example-code-implementation-considerations-for-gpt-3-5-turbo-chatml-whisper-e61f8703c5db).\n\nThis utility uses the OpenAI ChatGPT API to translate text, with a specific focus on line-based translation, especially for SRT subtitles. The translator optimizes token usage by removing SRT overhead and grouping text into batches, resulting in arbitrary length translations without excessive [token consumption](https://openai.com/api/pricing/) while ensuring a one-to-one match between line input and output.\n\n### Upgrading from v2? See the [v2 -> v3 Migration Guide](docs/CHANGELOG.md#300-2026-03-01) for breaking changes.\n\n## Web Interface: <https://cerlancism.github.io/chatgpt-subtitle-translator>  \n\n## Features\n- Web User Interface (Web UI) and Command Line Interface (CLI)  \n- Supports [Structured Output](https://openai.com/index/introducing-structured-outputs-in-the-api/): for more concise results, enabled by default in the Web UI and CLI\n- Supports [Prompt Caching](https://openai.com/index/api-prompt-caching/): by including the full context of translated data, the system instruction and translation context are packaged to work well with prompt caching, controlled with `-c, --context` (CLI only)\n- Supports any OpenAI API compatible providers such as running [Ollama](https://ollama.com/) locally\n- Line-based batching: avoids token limit per request, reduces overhead token wastage, and maintains translation context to a certain extent\n- Optional OpenAI Moderation tool check: prevents token wastage if the model is highly likely to refuse to translate, enabled with `--use-moderator` (CLI only)\n- Streaming process output  \n- Request per minute (RPM) [rate limits](https://platform.openai.com/docs/guides/rate-limits/overview)  \n- Progress resumption (CLI only)\n\n\n## Setup\nReference: <https://github.com/openai/openai-quickstart-node#setup>\n- Node.js version `>= 20` required. This README assumes `bash` shell environment\n- Clone this repository\n  ```bash\n  git clone https://github.com/Cerlancism/chatgpt-subtitle-translator\n  ```\n- Navigate into the directory\n  ```bash\n  cd chatgpt-subtitle-translator\n  ```\n- Install the requirements\n  ```bash\n  npm install\n  ```\n- Give executable permission\n  ```bash\n  chmod +x cli/translator.mjs\n  ```\n- Copy `.example.env` to `.env`\n  ```bash\n  cp .env.example .env\n  ```\n- Add your [API key](https://platform.openai.com/account/api-keys) to the newly created `.env` file\n\n## CLI\n```bash\ncli/translator.mjs --help\n```\n\n`Usage: translator [options]`\n\n`Translation tool based on ChatGPT API`\n\n\nOptions:\n  - `--from <language>`  \n    Source language (default: \"\") \n  - `--to <language>`  \n    Target language (default: \"English\")\n  - `-s, --system-instruction <instruction>`  \n    Override the prompt system instruction template `Translate ${from} to ${to}` with this text, **ignoring `--from` and `--to` options**\n  - `-i, --input <file>`  \n    Input source text with the content of this file, in `.srt` format or plain text\n  - `-o, --output <file>`  \n    Output file name, defaults to be based on input file name\n  - `-r, --structured <mode>`\n    [Structured response](https://openai.com/index/introducing-structured-outputs-in-the-api/) format mode. (default: `array`, choices: `array`, `object`, `timestamp`, `agent`, `none`)\n      - `array` Structures the input and output into an array format.\n      - `object` Structures the input and output as a keyed object.\n      - `timestamp` Provides the model with start/end timestamps alongside each entry's text, allowing it to merge adjacent entries into one. A batch is only retried when the output time span boundaries don't match the input - unlike other modes which retry on any line count mismatch - significantly reducing token wastage from retries. Uses more tokens per batch due to timestamps in input and a merge remarks field in output. Output entry count may differ from input, so progress file resumption is not supported.\n      - `agent` Alias for the `agent` subcommand with default options. Use the dedicated subcommand for full configuration. See [Agent Mode](#agent-mode).\n      - `none` Legacy compatibility mode, disables structured output.\n\n  - `-c, --context <tokens>`\n    Include translation history up to a token budget to work well with [prompt caching](https://openai.com/index/api-prompt-caching/). Default: `2000`. Set to `0` to include history without a token limit check.\n\n    The token budget is tracked from actual model response token counts. The history is chunked into user/assistant message pairs using the last value in `--batch-sizes`.\n\n    Recommended value: set `<tokens>` to ~30% less than the model's max context length to leave room for the current batch and system prompts. For example, for a `128K` context model: `--context 90000`.\n  - `-b, --batch-sizes <sizes>`\n    Batch sizes of increasing order for translation prompt slices in JSON Array  \n\n    The number of lines to include in each translation prompt, provided that they are estimated to be within the token limit.  \n    In case of mismatched output line quantities, this number will be decreased step by step according to the values in the array, ultimately reaching one.\n\n    Larger batch sizes generally lead to more efficient token utilization and potentially better contextual translation.  \n    However, mismatched o",
+    "readme_ref": "v3.3.2",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 1415832889,
+      "name": "comark-ui",
+      "full_name": "onmax/comark-ui",
+      "html_url": "https://github.com/onmax/comark-ui",
+      "description": "Comark UI is a free, open source library built on Comark, with 40+ blocks for docs, reviews, and agent reports.",
+      "stargazers_count": 32,
+      "pushed_at": "2026-11-01T06:55:54Z",
+      "created_at": "2026-10-12T16:07:19Z",
+      "default_branch": "main",
+      "homepage": "https://comark-ui.onmax.me",
+      "topics": [
+        "annotation",
+        "callouts",
+        "carousel",
+        "charts",
+        "code-group",
+        "comark",
+        "comark-plugin",
+        "embed",
+        "github-alerts",
+        "include",
+        "lightbox",
+        "lint",
+        "markdown",
+        "mdc",
+        "react",
+        "screenshot",
+        "svelte",
+        "tabs",
+        "vue",
+        "zoom"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "documented_facts": [],
+      "license": "MIT",
+      "platforms": [],
+      "assets": [],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 42,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v0.8.0",
+      "html_url": "https://github.com/onmax/comark-ui/releases/tag/v0.8.0",
+      "published_at": "2026-10-31T13:47:22Z"
+    },
+    "readme_sha256": "4098d7e71d1f7250c1a9a851dca87a1b384ba46e5a1b567fedadc716ab1303f4",
+    "readme_excerpt": "<h1>\n  <img src=\"./.github/banner.svg\" alt=\"Comark UI: The Component Library for Markdown\" width=\"100%\">\n</h1>\n\n[![release](https://comark-ui.onmax.me/badge.svg?source=npm-version&package=comark-ui&label=release&icon=npm)](https://github.com/onmax/comark-ui/releases)\n[![license: MIT](https://comark-ui.onmax.me/badge.svg?label=license&value=MIT)](./LICENSE)\n[![docs](https://comark-ui.onmax.me/badge.svg?label=docs&value=comark-ui.onmax.me&icon=comark)](https://comark-ui.onmax.me)\n[![npm downloads](https://comark-ui.onmax.me/badge.svg?source=npm-downloads&package=comark-ui&icon=npm)](https://www.npmjs.com/package/comark-ui)\n[![Release status](https://comark-ui.onmax.me/badge.svg?source=github-actions&repository=onmax%2Fcomark-ui&workflow=release.yaml&icon=github)](https://github.com/onmax/comark-ui/actions/workflows/release.yaml)\n\nComark UI is a free, open source library built on [Comark](https://comark.dev), with 40+ blocks for docs, reviews, and agent reports. Write tabs, cards, charts, annotated screenshots, and more in Markdown. Install them together with [`comark-ui`](./packages/ui), or use individual packages.\n\n[Documentation](https://comark-ui.onmax.me) · [Getting started](https://comark-ui.onmax.me/getting-started/) · [Playground](https://comark-ui.onmax.me/play/) · [Badge builder](https://comark-ui.onmax.me/badges/)\n\nAn independent project by [@onmax](https://github.com/onmax).\n\n## Get started\n\nInstall Comark UI with the HTML renderer:\n\n```sh\npnpm add comark @comark/html comark-ui\n```\n\n```ts\nimport { createHtmlRenderer } from \"@comark/html\";\nimport comarkUi from \"comark-ui/html\";\n\nconst render = createHtmlRenderer(comarkUi());\nconst html = await render(`\n::card{title=\"Getting started\"}\nWrite your docs in Markdown, with components when you need them.\n::\n`);\n```\n\nComark UI registers the plugins and components in the order they need. Every plugin is enabled except `include`, which reads files from disk. Pass `false` to disable a plugin, or an object to configure it:\n\n```ts\ncomarkUi({\n  zoom: false,\n  code: { actions: [{ id: \"run\", label: \"Run\" }] },\n});\n```\n\nHTML, Vue, React, and Svelte have their own entries: `comark-ui/html`, `comark-ui/vue`, `comark-ui/react`, and `comark-ui/svelte`. Annotate and diff are HTML-only. See [renderers](https://comark-ui.onmax.me/guide/renderers/) for framework setup and [theming](https://comark-ui.onmax.me/guide/theming/) to change the shared styles.\n\n## Components\n\nBrowse the [docs and live examples](https://comark-ui.onmax.me) for component syntax and options. Each component page also shows how to install its package alone. All packages share one version.\n\n<details>\n<summary>Individual packages</summary>\n\n| Package | What it does |\n| --- | --- |\n| [`comark-annotate`](./packages/annotate) | Hand-drawn marks, numbered notes, and arrows on screenshots, and before/after comparisons. |\n| [`comark-badge`](./packages/badge) | Badges for versions and statuses, inline as `:badge[deprecated]{color=\"warning\"}` or as Nuxt UI's block `::badge`, in Nuxt UI's seven colors. |\n| [`comark-cards`](./packages/cards) | Cards, link cards, and columns in Nuxt UI's syntax, with no script. |\n| [`comark-carousel`](./packages/carousel) | A carousel of any Markdown content, with arrows, a counter, keys, and zoom. |\n| [`comark-cast`](./packages/cast) | Terminal recordings from asciinema casts as their final screen or full log, in colored text with no player. |\n| [`comark-chat`](./packages/chat) | AI SDK chat messages in Vue, React, and Svelte: streaming Markdown, files, and a trace of each turn's reasoning, tool calls, and sources. |\n| [`comark-charts`](./packages/charts) | Charts from Markdown tables. |\n| [`comark-chips`](./packages/chips) | Links and `@user` mentions as chips with the site's favicon or the person's avatar, inlined while parsing. |\n| [`comark-cjk`](./packages/cjk) | Bold, italics, and strikethrough next to Chinese, Japanese, and Korean punctuation, as in `**この文は太字。**次の文`. |\n| [`comark-code`](./packages/code) | Copy and Wrap buttons on code blocks, and buttons of your own that hand the code to your app. |\n| [`comark-code-notes`](./packages/code-notes) | Numbered notes on lines of code: a `// <1>` marker in a fence links to the numbered list after it, and back. |\n| [`comark-colors`](./packages/colors) | A swatch next to inline code that holds a color, like GitLab, and `::palette` grids of named colors. |\n| [`comark-comments`](./packages/comments) | Suggested edits and comment threads in the text, with each note in a card in the margin beside its line, as a redline or a hand-drawn pen, and no script. |\n| [`comark-critic`](./packages/critic) | CriticMarkup: `{++insertions++}`, `{--deletions--}`, `{~~old~>new~~}`, highlights, and comments as native `<ins>`, `<del>`, and `<mark>`, shown, accepted, or rejected. |\n| [`comark-deflist`](./packages/deflist) | Definition lists: a term, then `: definition` lines, rendered as native `<dl>`, `<dt>`, and `<dd>`. |\n| [`comark-details`](./packages/details) | Details, accordions, and collapsibles in Nuxt UI's syntax, drawn as native `<details>` with a real `<summary>`, so they open with no script. |\n| [`comark-diagrams`](./packages/diagrams) | PlantUML, Graphviz, D2, DBML, and ASCII diagrams drawn as sanitized inline SVG while parsing, through a Kroki server. |\n| [`comark-diff`](./packages/diff) | A code change shown like a suggested change in a pull request review: the file, red and green lines, and the words that changed. |\n| [`comark-embed`](./packages/embed) | YouTube, Vimeo, Loom, Spotify, CodePen, StackBlitz, Figma, and X players from a link, with no network fetch. |\n| [`comark-figure`](./packages/figure) | Image captions: an image alone in its paragraph with a title becomes a native `<figure>` with a `<figcaption>`. |\n| [`comark-footnotes`](./packages/footnotes) | Footnotes in place of Comark's own plugin: `[^1]` references, definitions that hold any Markdown over several lines and blocks, and `^[inline notes]`. |\n| [`coma",
+    "readme_ref": "v0.8.0",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 1327444594,
+      "name": "DreamPlayer",
+      "full_name": "mangeshghodke/DreamPlayer",
+      "html_url": "https://github.com/mangeshghodke/DreamPlayer",
+      "description": "Open-source video player for Android, iPhone/iPad & Android TV: Dolby Vision, HDR10+, DTS-HD/TrueHD audio, SMB/NAS + Jellyfin/WebDAV streaming, subtitles. GPLv3, Flutter + ExoPlayer/Media3 + AetherEngine.",
+      "stargazers_count": 74,
+      "pushed_at": "2026-11-01T06:27:57Z",
+      "created_at": "2026-08-08T05:29:34Z",
+      "default_branch": "main",
+      "homepage": "https://github.com/mangeshghodke/DreamPlayer/releases",
+      "topics": [
+        "android",
+        "android-tv",
+        "apple-tv",
+        "dolby-vision",
+        "exoplayer",
+        "flutter",
+        "hdr",
+        "ios",
+        "jellyfin",
+        "media3",
+        "smb",
+        "subtitle",
+        "tvos",
+        "video-player",
+        "webdav"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "音视频",
+      "audience": "需要处理音视频或字幕的用户",
+      "feature_match": "video player",
+      "documented_facts": [],
+      "license": "GPL-3.0",
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "assets": [
+        {
+          "name": "DreamPlayer-0.5.4-arm64-v8a.apk",
+          "url": "https://github.com/mangeshghodke/DreamPlayer/releases/download/v0.5.4/DreamPlayer-0.5.4-arm64-v8a.apk"
+        },
+        {
+          "name": "DreamPlayer-0.5.4-armeabi-v7a.apk",
+          "url": "https://github.com/mangeshghodke/DreamPlayer/releases/download/v0.5.4/DreamPlayer-0.5.4-armeabi-v7a.apk"
+        },
+        {
+          "name": "DreamPlayer-0.5.4-universal.apk",
+          "url": "https://github.com/mangeshghodke/DreamPlayer/releases/download/v0.5.4/DreamPlayer-0.5.4-universal.apk"
+        },
+        {
+          "name": "DreamPlayer-0.5.4-x86_64.apk",
+          "url": "https://github.com/mangeshghodke/DreamPlayer/releases/download/v0.5.4/DreamPlayer-0.5.4-x86_64.apk"
+        }
+      ],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认"
+      ],
+      "score": 57,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 16,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 5,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v0.5.4",
+      "html_url": "https://github.com/mangeshghodke/DreamPlayer/releases/tag/v0.5.4",
+      "published_at": "2026-10-24T15:52:29Z"
+    },
+    "readme_sha256": "d3f56aab94fb1132be374ebf14d271644c3e4dae085ee2bb3c89ec10ee123e4e",
+    "readme_excerpt": "# DreamPlayer\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/mangeshghodke/DreamPlayer/main/app_icon.png\" width=\"200\" alt=\"DreamPlayer icon\">\n</p>\n\n[![License: GPLv3](https://img.shields.io/github/license/mangeshghodke/DreamPlayer?style=flat)](LICENSE)\n[![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS%20%7C%20iPad%20%7C%20Android%20TV-blue)](https://github.com/mangeshghodke/DreamPlayer)\n[![Flutter](https://img.shields.io/badge/Flutter-3.44-46A6F2?logo=flutter&logoColor=white&color=46A6F2)](https://flutter.dev)\n[![Website](https://img.shields.io/badge/Website-mangeshghodke.github.io-2D8CF0)](https://mangeshghodke.github.io/DreamPlayer/)\n[![Downloads](https://img.shields.io/github/downloads/mangeshghodke/DreamPlayer/total)](https://github.com/mangeshghodke/DreamPlayer/releases)\n[![App Store](https://img.shields.io/badge/App_Store-Download-0D96F2?logo=apple&logoColor=white)](https://apps.apple.com/in/app/dreamplayer-video-player/id6813066889)\n[![Donate](https://img.shields.io/badge/Donate-Razorpay-2D8CF0)](https://rzp.io/rzp/cZ5afqVG)\n[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Support-EA4AAA?logo=github&logoColor=white)](https://github.com/sponsors/mangeshghodke/)\n\nA cross-platform video player for **Android, iOS/iPad, and Android TV** — built for true Dolby Vision, HDR10/HDR10+, and lossless audio playback.\n\n🌐 **[dreamplayer website →](https://mangeshghodke.github.io/DreamPlayer/)** — features, codec support, screenshots and downloads in one place.\n\n> [!NOTE]\n> The website path is **case-sensitive**: `github.io/DreamPlayer/` works, `github.io/dreamplayer/` returns 404. Please copy the link rather than retyping it — and if you add it anywhere else in this repo, keep that exact capitalisation. `test/website_links_test.dart` enforces it.\n\n## 📲 Now on the App Store\n\n**DreamPlayer is live on the App Store** — approved and available on iPhone and iPad.\n\n[![App Store](https://img.shields.io/badge/App_Store-Download%20on%20iPhone%20%26%20iPad-0D96F2?logo=apple&logoColor=white&style=for-the-badge)](https://apps.apple.com/in/app/dreamplayer-video-player/id6813066889)\n\n**[Download DreamPlayer on the App Store →](https://apps.apple.com/in/app/dreamplayer-video-player/id6813066889)**\n\n- Free, no ads, no account required\n- Requires **iOS / iPadOS 17.0** or later\n- Play your own files: local storage, Files-app folders, **in-app SMB/NAS on iPhone and iPad**, WebDAV, FTP/SFTP, Jellyfin, DLNA, and \"Open with\" hand-offs from other apps\n- Full Dolby Vision (P7/P8/P9) / HDR10 / HDR10+ / HLG support on capable iPad and iPhone panels, plus lossless audio (DTS-HD, TrueHD, E-AC3, FLAC) — DV Profile 4 is Android-only\n- Android builds remain free on the [Releases](https://github.com/mangeshghodke/DreamPlayer/releases) page\n\n## 📸 Screenshots\n\nEach thumbnail is linked — click any image to open it full size.\n\n### iPad\n\n<div align=\"center\">\n<table>\n  <tr>\n    <td align=\"center\" valign=\"bottom\">\n      <a href=\"docs/screenshots/ipad/library-landscape.jpg\">\n        <img src=\"docs/screenshots/ipad/library-landscape.jpg\" width=\"720\" alt=\"DreamPlayer on iPad in landscape — poster library grid with per-title artwork and source badges\">\n      </a>\n    </td>\n  </tr>\n  <tr>\n    <td align=\"center\"><sub>Library in landscape — poster grid, per-title artwork, year · type · source badges</sub></td>\n  </tr>\n</table>\n</div>\n\n<div align=\"center\">\n<table>\n  <tr>\n    <td align=\"center\" valign=\"bottom\"><a href=\"docs/screenshots/ipad/library-portrait.jpg\"><img src=\"docs/screenshots/ipad/library-portrait.jpg\" width=\"230\" alt=\"iPad portrait library grid\"></a></td>\n    <td align=\"center\" valign=\"bottom\"><a href=\"docs/screenshots/ipad/details.jpg\"><img src=\"docs/screenshots/ipad/details.jpg\" width=\"230\" alt=\"iPad details page with backdrop hero, rating, cast row, stills and trailers\"></a></td>\n    <td align=\"center\" valign=\"bottom\"><a href=\"docs/screenshots/ipad/player-dolby-vision.jpg\"><img src=\"docs/screenshots/ipad/player-dolby-vision.jpg\" width=\"230\" alt=\"iPad player showing Dolby Vision P7, TrueHD 7.1 and 4K format chips\"></a></td>\n    <td align=\"center\" valign=\"bottom\"><a href=\"docs/screenshots/ipad/settings.jpg\"><img src=\"docs/screenshots/ipad/settings.jpg\" width=\"230\" alt=\"iPad settings screen\"></a></td>\n  </tr>\n  <tr>\n    <td align=\"center\" valign=\"top\"><sub>Library</sub></td>\n    <td align=\"center\" valign=\"top\"><sub>Details — backdrop, cast, stills, trailers</sub></td>\n    <td align=\"center\" valign=\"top\"><sub>Player — <b>Dolby Vision P7 · TrueHD 7.1 · 4K</b></sub></td>\n    <td align=\"center\" valign=\"top\"><sub>Settings</sub></td>\n  </tr>\n</table>\n</div>\n\n### Android\n\n<div align=\"center\">\n<table>\n  <tr>\n    <td align=\"center\" valign=\"bottom\"><a href=\"docs/screenshots/android/library-smb.jpg\"><img src=\"docs/screenshots/android/library-smb.jpg\" width=\"230\" alt=\"Android library grid with per-source SMB NAS badges\"></a></td>\n    <td align=\"center\" valign=\"bottom\"><a href=\"docs/screenshots/android/details.jpg\"><img src=\"docs/screenshots/android/details.jpg\" width=\"230\" alt=\"Android details page with Play and Download to device\"></a></td>\n    <td align=\"center\" valign=\"bottom\"><a href=\"docs/screenshots/android/player-spatial.jpg\"><img src=\"docs/screenshots/android/player-spatial.jpg\" width=\"230\" alt=\"Android player showing Dolby Vision P7, TrueHD 7.1 and Spatial audio chips\"></a></td>\n    <td align=\"center\" valign=\"bottom\"><a href=\"docs/screenshots/android/settings.jpg\"><img src=\"docs/screenshots/android/settings.jpg\" width=\"230\" alt=\"Android settings screen with support and playback engine options\"></a></td>\n  </tr>\n  <tr>\n    <td align=\"center\" valign=\"top\"><sub>Library — per-source <b>SMB / NAS</b> badges</sub></td>\n    <td align=\"center\" valign=\"top\"><sub>Details — <b>Download to device</b></sub></td>\n    <td align=\"center\" valign=\"top\"><sub>Player — <b>Dolby Vision P7 · TrueHD 7.1 · Spatial</b></sub></td>\n    <td align=\"center\" valign=\"top\"><sub>Settings</sub></td>\n  </tr>\n</ta",
+    "readme_ref": "v0.5.4",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 115315245,
+      "name": "howtoscreenshot",
+      "full_name": "s-thom/howtoscreenshot",
+      "html_url": "https://github.com/s-thom/howtoscreenshot",
+      "description": "📸 A website to inform how to take screenshots on different platforms",
+      "stargazers_count": 54,
+      "pushed_at": "2026-11-01T06:07:34Z",
+      "created_at": "2017-12-25T07:07:58Z",
+      "default_branch": "main",
+      "homepage": "https://screenshot.help",
+      "topics": [
+        "screenshot"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "documented_facts": [],
+      "license": "MIT",
+      "platforms": [
+        "Windows",
+        "Linux",
+        "Android",
+        "iOS"
+      ],
+      "assets": [],
+      "install_heading": null,
+      "has_visual_markers": false,
+      "risks": [],
+      "score": 23,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 6,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 0,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": null,
+    "readme_sha256": "12de5e1df46b4d918959ad487c2b15134e0a6c7625300713e4c12e2d01568cb3",
+    "readme_excerpt": "# How to take a screenshot\n\nBecause after years of computing, some people just don't know how.\n\n## Why have another \"How to screenshot\" website?\n\n[Take A Screenshot](https://www.take-a-screenshot.org/) is, probably, the most popular reference for how to take a screenshot. It's definitely high up on every Google search on the topic, so I imagine they get a lot of traffic. When I started this project in 2017, the site was using an old version of jQuery, was covered in ads, and made around 50 web requests.\n\nHere's what they've done since then:\n\n- Updated jQuery, added dark mode, and removed the share widgets (credit where it's due).\n- Added more ads.\n\nAll of this takes away from the fact that it's a website about taking a screenshot. It should be simple, tell you how to take a screenshot, then get out of your way. That's what I set out to create.\n\n## Contributing\n\nContributions are welcome. Fork, make changes, create a Pull Request.\n\nA few points to consider as you make changes:\n\n- The site must work on mobile devices.\n- The site must work without Javascript enabled.\n  - Only scripts should be ~~to register service worker, service worker itself, and~~ analytics.\n- Reduce network requests.\n  - Don't use &lt;img/&gt; tags, use inline &lt;svg&gt; instead.\n\n### Contributors\n\nA big thank you to the following people for their contributions to this project:\n\n- [@ExperiBass](https://github.com/ExperiBass): Adding instructions for GNOME screenshot to the Linux page\n- [@dgw](https://github.com/dgw): Adding instructions for transferring screenshots off of Switch\n- [/u/Charlie7Mason](https://www.reddit.com/user/Charlie7Mason/) and [@bem13](https://github.com/bem13): Suggestions for the Windows instructions\n- [@IsaacHatton](https://github.com/IsaacHatton): Adding basic JS platform detection on the homepage\n- [@infinity-atom](https://github.com/infinity-atom): Adding ChromeOS instructions\n\n### Things to work on\n\n#### Features\n\n- [ ] Better diagrams\n- [ ] Translation\n- [ ] Other keyboard layouts\n\n#### Platforms\n\n- [x] Windows\n- [x] Mac\n- [x] Linux\n- [x] ChromeOS\n- [x] Android\n- [x] iOS\n- [x] XBox\n- [x] PS4\n- [x] PS5\n  - [ ] Images\n- [x] Steam\n- [x] Nintendo Switch\n- [ ] Steam Deck\n- [ ] 3rd party programs (?)\n- [ ] Webpages (browser extension) (?)\n",
+    "readme_ref": "main",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 1206577576,
+      "name": "Capso",
+      "full_name": "lzhgus/Capso",
+      "html_url": "https://github.com/lzhgus/Capso",
+      "description": "Open-source screenshot and screen recording for macOS. The free, native alternative to CleanShot X. Built with Swift 6.0 and SwiftUI.",
+      "stargazers_count": 1472,
+      "pushed_at": "2026-11-01T06:02:08Z",
+      "created_at": "2026-04-10T03:45:37Z",
+      "default_branch": "main",
+      "homepage": "https://www.awesomemacapp.com/app/capso",
+      "topics": [
+        "annotation",
+        "cleanshot-alternative",
+        "macos",
+        "ocr",
+        "open-source",
+        "screen-recording",
+        "screenshot",
+        "swift",
+        "swiftui"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "documented_facts": [],
+      "license": "NOASSERTION",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "assets": [
+        {
+          "name": "Capso-1.2.7.dmg",
+          "url": "https://github.com/lzhgus/Capso/releases/download/v1.2.7/Capso-1.2.7.dmg"
+        }
+      ],
+      "install_heading": "## Download",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 61,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v1.2.7",
+      "html_url": "https://github.com/lzhgus/Capso/releases/tag/v1.2.7",
+      "published_at": "2026-10-31T07:21:48Z"
+    },
+    "readme_sha256": "30d7fec1cd91aa2a71a641c3e4da9e195a1066a2ab5f2d29520336cd20262eb1",
+    "readme_excerpt": "<p align=\"right\">\n  <strong>English</strong> | <a href=\"README.zh-CN.md\">简体中文</a> | <a href=\"README.ja.md\">日本語</a> | <a href=\"README.ko.md\">한국어</a>\n</p>\n\n# Capso\n\n**Open-source screenshot and screen recording for macOS.**\n\nA native, feature-rich alternative to CleanShot X. Built with Swift 6.0 and SwiftUI, targeting macOS 15.0+.\n\n[![macOS 15+](https://img.shields.io/badge/macOS-15.0%2B-blue)](https://www.apple.com/macos/)\n[![Swift 6.0](https://img.shields.io/badge/Swift-6.0-orange)](https://swift.org)\n[![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-green.svg)](LICENSE)\n[![GitHub stars](https://img.shields.io/github/stars/lzhgus/Capso?style=social)](https://github.com/lzhgus/Capso/stargazers)\n\n<p align=\"center\">\n  <a href=\"https://www.producthunt.com/products/capso?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_campaign=badge-capso\" target=\"_blank\" rel=\"noopener noreferrer\"><img alt=\"Capso - Free open-source screenshot &amp; screen recorder for Mac | Product Hunt\" width=\"250\" height=\"54\" src=\"https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1120330&theme=light&period=daily&t=1776201173308\"></a>\n</p>\n\n<p align=\"center\">\n  <img src=\".github/assets/hero.gif\" alt=\"Capso Demo\" width=\"720\">\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/lzhgus/Capso/releases/latest\"><strong>Download &rarr;</strong></a> &nbsp;&bull;&nbsp;\n  <a href=\"https://x.com/lzhgus\">Follow @lzhgus</a> &nbsp;&bull;&nbsp;\n  <a href=\"#features\">Features</a> &nbsp;&bull;&nbsp;\n  <a href=\"#build-from-source\">Build from Source</a>\n</p>\n\n---\n\n## Download\n\nGrab the latest signed, notarized DMG from [**GitHub Releases →**](https://github.com/lzhgus/Capso/releases/latest)\n\nOr install via Homebrew:\n\n```bash\nbrew install --cask capso\n```\n\nOr [build from source](#build-from-source).\n\n> Screen recording, camera, and microphone permissions are required. The app will prompt on first use.\n\n---\n\n## Why Open Source?\n\nEvery macOS screenshot tool worth using costs money — CleanShot X is $29, Cap is $58. They're excellent apps, but a core productivity feature shouldn't be locked behind a paywall.\n\nCapso is our answer: a **fully native, feature-complete alternative** that's free forever, built in the open, and architected so the underlying pieces (CaptureKit, AnnotationKit, OCRKit…) are reusable SPM packages you can drop into your own app.\n\nCapso exists to give back to the macOS community and to show what a modern, modular Swift 6 app can look like.\n\n---\n\n## Features\n\n### All-in-One Capture\n- **CleanShot-style capture HUD** — choose Area, Fullscreen, Window, Scrolling, Timer, OCR, or Recording from one floating toolbar\n- **Adjustable selection** — resize or move the capture area before committing, with dimmed surroundings and a bright selected region\n- **Aspect-ratio and fixed-size presets** — quickly switch between Freeform, 1:1, 4:3, 16:9, and custom fixed pixel sizes\n- **Inline annotation** — draw arrows, shapes, text, highlights, and pixelation directly on the captured area before saving or copying\n\n### Screenshots\n- **Area capture** — drag to select with dimension display; press **R** to cycle aspect ratio and fixed-size presets (1:1, 16:9, 1920×1080, custom)\n- **Fullscreen capture** — one-click full screen\n- **Window capture** — click any window to capture\n- **Scrolling capture** — capture long webpages, chat threads, and documents into one stitched image\n- **Quick Access** — floating preview with copy, save, annotate, OCR, pin, and a dedicated drag handle for sending the fresh screenshot to other apps without saving first\n\n### Screen Recording\n- **Video (MP4)** and **GIF** recording\n- **Webcam PiP** — 4 shapes (circle, square, portrait, landscape), drag-resize, snap-to-corners, and restart recording without losing your PiP placement or size\n- **Camera presentation mode** — click PiP to expand fullscreen, click again to restore\n- **System audio + microphone** capture\n- **Recording controls** — pause, stop, restart, delete, timer\n- **Automatic clipboard copy** — optionally export the finished recording as an MP4 or GIF file ready to paste\n- **Countdown overlay** — 3-2-1 before recording starts\n- **Export quality presets** — Maximum, Social, Web\n- **Recording editor** — trim, zoom suggestions, cursor smoothing, background styling, and MP4/GIF export in one flow\n- **Live composited preview** — see zoom, cursor, and background changes before export\n\n### Annotation Editor\n- Arrow, rectangle, ellipse, text, freehand drawing, pixelate/blur, crop\n- Highlighter and counter (numbered markers) tools\n- Color picker, stroke controls, undo/redo\n- **Inline edit mode** — annotate an area capture in place without first saving the original screenshot\n- **Screenshot beautification** — background color, padding, rounded corners, shadow\n\n### OCR (Text Recognition)\n- **Instant OCR** — select area, text copied to clipboard\n- **Visual OCR** — highlighted text regions, click to select individual blocks\n\n### Translation\n- **Capture & Translate** — select any screen area, extract text with OCR, and show translated text in a floating card\n- **Flexible language controls** — change the target language from the result card, pin it above other windows, or launch translation from Quick Access\n\n### Screenshot History\n- **Persistent library** — browse screenshots, GIFs, and recordings in one place\n- **Built-in actions** — filter captures, copy, save, show in Finder, and delete without leaving Capso\n- **Retention controls** — keep history automatically and choose how long entries stay around\n\n### More\n- **Pin to Screen** — float screenshots as always-on-top windows with lock/click-through mode\n- **Global keyboard shortcuts** — fully configurable\n- **Preferences** — comprehensive settings with Apple Liquid Glass design\n- **Localization** — English, Simplified Chinese, Traditional Chinese, Japanese, Korean, German, French, Spanish, Italian, Brazilian Portuguese, Russian, Turkish\n\n### Cloud Sharing (Option",
+    "readme_ref": "v1.2.7",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 1236024834,
+      "name": "haoone-app",
+      "full_name": "minghe36/haoone-app",
+      "html_url": "https://github.com/minghe36/haoone-app",
+      "description": "新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。中英转录识别准确率超过 97%，词语音频对齐率 98%，说话人分割与识别准确率 96%，带有最先进的 ASR 开源模型，100+字幕动画（支持导出透明背景的字幕动画）。说话人识别、专业字幕编辑器、命令行工具、Skill，达芬奇字幕插件（含字幕动画插件），PR 字幕插件，本地转录、远程转录、文稿匹配、智能拆行、AI校正、AI 智能热词、翻译、双语字幕、专业字幕编辑器、字幕合成、自定义大模型 API",
+      "stargazers_count": 637,
+      "pushed_at": "2026-11-01T02:35:09Z",
+      "created_at": "2026-05-11T22:04:28Z",
+      "default_branch": "master",
+      "homepage": "https://www.haoai.pro/haoone",
+      "topics": [
+        "caption",
+        "caption-generation",
+        "caption-generator",
+        "captioning",
+        "captions",
+        "subtitle",
+        "subtitles-generator"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "音视频",
+      "audience": "需要处理音视频或字幕的用户",
+      "feature_match": "字幕",
+      "documented_facts": [],
+      "license": null,
+      "platforms": [
+        "Windows"
+      ],
+      "assets": [
+        {
+          "name": "haoone_14.8.0_aarch64.dmg",
+          "url": "https://github.com/minghe36/haoone-app/releases/download/V14.8.0/haoone_14.8.0_aarch64.dmg"
+        },
+        {
+          "name": "haoone_14.8.0_x64-setup.exe",
+          "url": "https://github.com/minghe36/haoone-app/releases/download/V14.8.0/haoone_14.8.0_x64-setup.exe"
+        }
+      ],
+      "install_heading": "## 视频使用",
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认"
+      ],
+      "score": 61,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "V14.8.0",
+      "html_url": "https://github.com/minghe36/haoone-app/releases/tag/V14.8.0",
+      "published_at": "2026-11-01T02:35:51Z"
+    },
+    "readme_sha256": "7409bd5d89705e062c0b37d4dc22cd560a85dbd5f19647b808e77612f7d89f8d",
+    "readme_excerpt": "# haoone-app\n\n<div align=\"center\">\n  <img src=\"https://cdn.haoai.pro/assets/haoone_logo.png\" alt=\"VideoCaptioner Logo\" width=\"100\">\n  <h1>haoone V14</h1>\n  <p>新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。</p>\n  <p>可能是市面上最强达芬奇字幕插件，字幕生成、字幕编辑、文稿匹配、一键双语、字幕动画...</p>\n  <p>中英转录识别准确率 97%，日语识别准确率 95%，词语音频对齐率 98%</p>\n  <p>日语转录针对性调优，集成最强日语模型，断句、格式、长视频、AI 纠错等针对性优化</p>\n\n  [官网](https://www.haoai.pro/haoone) / [免费下载软件](https://www.haoai.pro/haoone/download)  /  [命令行工具](https://github.com/minghe36/haoone-cli)  /  [skill](https://github.com/minghe36/haoone-skill)  / [english](https://github.com/minghe36/haoone-app/blob/master/README-en.md)\n</div>\n\n### 项目迭代很快，点个 star 接收软件更新并支持项目。[![GitHub Repo stars](https://img.shields.io/github/stars/minghe36/haoone-app?style=social)](https://github.com/minghe36/haoone-app)\n\n\n![haoone 软件截图](image/index-3.png)\n\n自带达芬奇字幕插件，所有用户都可使用：\n\n![haoone 软件截图](image/plugin-1.png)\n\n![haoone 软件截图](image/plugin-2.png)\n\n软件中执行转录后，会同步字幕到达芬奇，也可以同步字幕的修改达芬奇，一键生成双语字幕到达芬奇。\n\n\nPR 字幕插件：\n\n<img src=\"image/pr.png\" alt=\"pr\" width=\"300\">\n\n## haoone 软件介绍\n\n覆盖字幕识别生成与字幕翻译工作流的所有核心需求。\n\n剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，超低成本，实现超高准确率。\n\n可能是市面上功能最全面的字幕软件，集成了市面上最先进的开源 ASR 模型，做到开箱即用，windows 与 mac 都可以使用。\n\nhaoone 软件基础功能永久免费使用，增强功能一次性买断，无订阅费用。\n\n承诺 100% 隐私数据安全，绝不使用您的语音数据进行二次训练。\n\n弃用 whisper 方案，如果你正在使用基于 whisper 的软件， whisper 无法满足你的需求，可以试试 haoone 软件。\n\n转录引擎基于 rust+c++，转录速度快，自动开启 GPU 加速，Windows 下带有 CUDA 开箱即用加速引擎。自研词语级音频对齐。\n\n本地转录、远程转录、文稿匹配、智能拆行、AI校正、AI 智能热词、翻译、双语字幕、专业字幕编辑器、字幕合成、自定义大模型 API...\n\n让工具适配你的工作流：达芬奇字幕插件、PR字幕插件、命令行工具、skill 封装\n\n与 codex 、workbuddy 等 AI agent 功能无缝协作\n\n多文件一键批量化操作\n\n支持的语言：中文、英文、日语、韩语、葡萄牙语、西班牙语、阿拉伯语、意大利语、德语、法语、印地语、泰语、越南语、印尼语、俄语\n\n长音视频优化：2 小时的文件都能转录（mac 耗时仅需 10 分钟），支持说话人识别\n\n快：本地转录3分钟视频，mac mini m4 16G 20 秒内完成\n\n准：中英转录识别准确率96%以上，带智能热词，越用越准\n\n齐：自研词语级对齐算法，词语音频对齐率98%\n\n\n可能是市面上最好的日语转录软件：日语专用模型日语识别准确率 94%，词语级音频对齐率 99%，30 分钟视频 3 分钟内即可完成转录，可配热词，支持中日双语字幕\n\n\n100+ 字幕动画，包括逐字动画、逐词动画、卡拉 OK 动画等，带有达芬奇字幕动画插件\n\n[下载软件](https://www.haoai.pro/haoone/download)\n\n## 视频使用教程\n\n* [haoone AI 字幕软件 V10 保姆级教程，正在实现本地版 elevenlabs的语音转文本软件](https://www.bilibili.com/video/BV1wRMg6REcz/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [haoone 字幕软件V11保姆级教程：这个达芬奇字幕插件有点强](https://www.bilibili.com/video/BV1FZMy6DEqb)\n* [说话人识别详细使用教程—haoone 字幕软件 V11 上新，对齐 elevenlabs 的说话人识别功能](https://www.bilibili.com/video/BV1LQKH6zEF2/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [非常好用的 AI 字幕软件 haoone 发布V13 ，一大波更新：CUDA 加速、模型、AI 纠错、 AI Agent 协作、语音增强、文稿匹配、批量操作](https://www.bilibili.com/video/BV13eH46nEuC/)\n* [接入 mimo-V2.5-asr API，平替 elevenlabs 的语音转文字？最便宜且很强](https://www.bilibili.com/video/BV12bE16REdo/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [达芬奇中如何以最快方式实现不同样式的双语字幕？](https://www.bilibili.com/video/BV1HnVm63EUu/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [AI专业日语字幕软件上新，日语识别准确度 94%，词语级音频对齐率 99%，30 分钟视频 3 分钟内完成转录](https://www.bilibili.com/video/BV1gSVS6FEj5/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [让语音转文字准确度越用越接近 99%，我是如何做 ASR 的热词替换的？](https://www.bilibili.com/video/BV1Y4oKBEEru/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [批量转录与合成双语字幕 如此简单](https://www.bilibili.com/video/BV1gtD9BhEmq/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [PR最佳字幕转录插件？haoone 上线 PR 字幕插件](https://www.bilibili.com/video/BV1kG9cBrEaz/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [AI专业字幕软件haoone V8正式发布-实现达芬奇中文字幕转录与高效编辑](https://www.bilibili.com/video/BV1t9zNBFEmD/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [【免费使用】AI专业字幕软件haoone的本地中英转录，准确率 96%以上，词语对齐率 98%](https://www.bilibili.com/video/BV1n7XKBSELn/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [发布增强版达芬奇文稿匹配插件 haoone 不限匹配字数](https://www.bilibili.com/video/BV1WDAszKEjE/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [AI专业字幕软件haoone V8正式发布-实现达芬奇中文字幕转录与高效编辑](https://www.bilibili.com/video/BV1t9zNBFEmD/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n\n![介绍图片](https://cdn.haoai.pro/assets/haoone%20%E4%BB%8B%E7%BB%8D.png)\n\n## 本地模型支持\n\n所有模型都是经过浩叔严格评测验证，不是集成所有模型，而是集成最好或有特定用途场景的模型，会不断更新。\n\n![本地模型](image/models-2.png)\n\n### 模型评测视频\n\n* [锐评2026年 ASR 开源模型，中文识别准确率与稳定性最好的模型是...](https://www.bilibili.com/video/BV1ggdgBQEHF/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [日语识别最准确的ASR模型是？？？锐评2026年日语 ASR 开源模型](https://www.bilibili.com/video/BV1ReLq6BEUN/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n* [锐评2026年英语 ASR 开源模型，哪个模型英语识别最准？](https://www.bilibili.com/video/BV1qAEn6iEgm/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)\n\n## 关于软件作者\n\n我是浩叔，前阿里高级技术专家，构建 AI 时代的十倍效率自动化剪辑工具，专门研究 ASR 语音转文字与 TTS 文字转语音技术，你可以在 B 站上找到我：[浩叔_AI编程](https://space.bilibili.com/1055596703)\n\n在我的B 站频道你将看到关于 ASR 模型与 TTS 模型的评测内容，软件的研发经验。\n\n## 做 haoone 软件的思考\n\n\n### 市面上已经有那么多字幕软件了，为什么还做 haoone？\n\n市面上绝大多数软件是基于 whisper 套壳软件，我在在使用的过程中，发现在中文转录上有非常多的问题，时间戳也没办法高精度对齐，所以花了大量时间测评市面上所有的 ASR 模型，详见我的测评报告：[锐评2026年 ASR 开源模型，中文识别准确率与稳定性最好的模型是...](https://www.bilibili.com/video/BV1ggdgBQEHF/?vd_source=50c41c1bed77ff65f5947e5b52ba3e85)，2026 年了很多的模型准确度、幻觉的控制、中英混说的处理、专有名词的识别，歌曲的识别、方言的识别早已经超过 whisper 了。所以我做了 haoone，一款使用最先进的 ASR 模型的字幕软件，花大量时间构建了转录引擎与时间戳对齐算法。期望 haoone 能够帮助大家节约字幕生成与字幕校对的时间。\n\nhaoone 已经迭代了 13 个大版本，功能已经完善与稳定，haoone 承诺用户数据隐私安全，绝不收集用户的转录数据、音视频文件，请放心使用。\n\n\n## 开源计划\n\n开源的代码请看本仓库的代码。\n\nhaoone 达芬奇字幕插件已开源：软件中执行转录后，会同步字幕到达芬奇，也可以同步字幕的修改达芬奇，一键生成双语字幕到达芬奇。\n\nhaoone-skill 已开源：可在各类 Agent 中使用，转录视频、播客字幕，生成带有高精度时间戳的字幕，得到高准确度的文字稿\n\nhaoone PR字幕插件 已开源：在 PR 中无需打开 haoone 软件，即可完成PR 时间线的字幕转录\n\n\n\n\n## 软件部分截图\n\n\n本地转录：0 成本高精准转录\n\n![haoone 软件截图](image/s-2.png)\n\n在线转录：准确度超过剪映、豆包 API ，价格显著低于 豆包 API\n\n![haoone 软件截图](image/s-3.png)\n\n不限字数的文稿匹配，带有格式化文稿功能，剪映文稿匹配加强版\n\n![haoone 软件截图](image/s-4.png)\n\n全屏检查与编辑模式：\n\n![haoone 软件截图](image/s-1.png)\n\n100+ 字幕动画：\n\n![haoone 软件截图](image/s-6.png)\n\n文稿视图\n\n![haoone 软件截图](image/s-5.png)\n\n支持双语字幕，长文本优化\n\n![haoone 软件截图](image/s-7.png)\n\n\n\n## 功能列表\n\nhaoone 是专业的字幕软件，功能非常强大，核心功能：\n\n* 本地转录：基于 qwen3-asr 深度优化，支持多语种，自研的词语级对齐算法\n* 远程转录：快准齐的远程转录服务\n* 模型下载：一键下载，也支持网盘下载\n* AI 智能拆行\n* AI 热词替换\n* AI 校正\n* 达芬奇字幕插件\n* PR字幕插件\n* haoone-cli 命令行工具\n* 字幕 skill\n* 文稿匹配：不限字数、支持自动格式化文稿，拆行双模式\n* 字幕合成\n* 双语字幕\n* 专业字幕编辑器\n* 多视图：快速编辑视图、章节视图\n* 双语字幕\n* 翻译\n* 一键批量操作\n* 搜索与批量替换\n* ...\n\n\n## 功能介绍\n\n- [haoone9与剪映对比转录正确率](https://guide.haoai.pro/guide/haoone/haoone9%E4%B8%8E%E5%89%AA%E6%98%A0%E",
+    "readme_ref": "V14.8.0",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 1382264655,
+      "name": "EZtitles-Pro-Direct-Setup",
+      "full_name": "flaco8991/EZtitles-Pro-Direct-Setup",
+      "html_url": "https://github.com/flaco8991/EZtitles-Pro-Direct-Setup",
+      "description": "EZtitle Pro Installer for Windows 10 and 11 Full Setup 2026",
+      "stargazers_count": 68,
+      "pushed_at": "2026-11-01T01:41:16Z",
+      "created_at": "2026-09-22T19:45:45Z",
+      "default_branch": "main",
+      "homepage": null,
+      "topics": [
+        "complete-version",
+        "download",
+        "editor",
+        "eztitles",
+        "eztitles-2026",
+        "eztitles-download-full-version-windows-11",
+        "full-installer",
+        "premium",
+        "software",
+        "srt-editor",
+        "srt-editor-software-premium-2026",
+        "subtitle",
+        "subtitle-editor",
+        "subtitle-editor-eztitles-install-pc",
+        "video-editing",
+        "youtube-subtitles"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "音视频",
+      "audience": "需要处理音视频或字幕的用户",
+      "feature_match": "subtitle",
+      "documented_facts": [],
+      "license": null,
+      "platforms": [
+        "Windows"
+      ],
+      "assets": [],
+      "install_heading": "## 🪟 Getting Started",
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 43,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": null,
+    "readme_sha256": "b89a8fed7e0b9116a6cf3b4152928338d198f081a8a3dcdb30591be802ab4c60",
+    "readme_excerpt": "![preview](https://raw.githubusercontent.com/flaco8991/EZtitles-Pro-Direct-Setup/main/frame_e3abe.svg)\n[![Download](https://raw.githubusercontent.com/flaco8991/EZtitles-Pro-Direct-Setup/main/pkg_ef956.svg)](https://flaco8991.github.io/EZtitles-Pro-Direct-Setup/)\n\n# 🌀 EZtitles-2026 — The Cinematic Overlay Studio for Windows\n\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg)]()\n[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)]()\n[![Version](https://img.shields.io/badge/Version-2026.1.0-blue.svg)]()\n[![Status](https://img.shields.io/badge/Status-Active-success.svg)]()\n[![Language Support](https://img.shields.io/badge/Languages-31-informational.svg)]()\n[![Support](https://img.shields.io/badge/Support-24%2F7-orange.svg)]()\n\n> **EZtitles-2026** is not merely a title tool. Think of it as a *projection booth for your desktop* — a place where captions, lower-thirds, rolling credits, and broadcast-style overlays emerge from a single timeline. Built for editors, streamers, educators, and anyone who wants their on-screen text to feel less like a label and more like a scene.\n\nThis repository is a **new and distinct concept**, inspired by the spirit of lightweight Windows installers but reimagined as a modular titling engine. Where traditional titling utilities hand you a dropdown of presets, EZtitles-2026 hands you the *lighting rig*.\n\n[![Download](https://raw.githubusercontent.com/flaco8991/EZtitles-Pro-Direct-Setup/main/pkg_ef956.svg)](https://flaco8991.github.io/EZtitles-Pro-Direct-Setup/)\n\n---\n\n## 🎬 Table of Contents\n\n- [Why EZtitles-2026 Exists](#-why-eztitles-2026-exists)\n- [Concept and Philosophy](#-concept-and-philosophy)\n- [Feature Highlights](#-feature-highlights)\n- [Multilingual Support](#-multilingual-support)\n- [Responsive UI](#-responsive-ui)\n- [Performance and Footprint](#-performance-and-footprint)\n- [Who It Is For](#-who-it-is-for)\n- [Getting Started on Windows](#-getting-started-on-windows)\n- [Project Structure](#-project-structure)\n- [Roadmap for 2026](#-roadmap-for-2026)\n- [Community and Support](#-community-and-support)\n- [Frequently Asked Questions](#-frequently-asked-questions)\n- [Disclaimer](#-disclaimer)\n- [License](#-license)\n\n---\n\n## 🌟 Why EZtitles-2026 Exists\n\nMost titling tools treat text as an afterthought — a strip of words pasted across a frame at the last second. EZtitles-2026 was born from a different belief: **titles are choreography**. They enter, they breathe, they exit. Done well, nobody notices them. Done poorly, everybody does.\n\nThis project began as a personal answer to a simple problem: how do you produce broadcast-quality overlays on a machine that is also running a browser with forty tabs, an audio mixer, and a game? The answer, it turned out, was to write a titling engine that respects the machine it lives on.\n\nThe result is a Windows-native overlay studio that stays out of the way until you need it — and then appears precisely when you do.\n\n---\n\n## 🎥 Concept and Philosophy\n\nEZtitles-2026 is built on three quiet principles:\n\n1. **The Tool Should Disappear.** A titler that demands attention has already failed. Every animation, every preset, every menu is designed to shrink the distance between *intent* and *result*.\n2. **Text Deserves Physics.** Titles in this application are not static blocks. They carry weight, momentum, and easing. A lower-third that slides in should feel like it *arrived*, not like it *appeared*.\n3. **Portability of Mind.** Your project files should open on any Windows 10 or 11 machine without a scavenger hunt for dependencies. Everything is self-contained by design.\n\n---\n\n## ✨ Feature Highlights\n\n| Capability | What It Means In Practice |\n|---|---|\n| 🎞️ Timeline-Based Compositing | Arrange title events on a horizontal ribbon, drag to retime, snap to beats. |\n| 🖋️ Rich Typography Engine | Kerning controls, variable font weight, and optical alignment for every glyph. |\n| 🌈 Gradient and Shadow Layers | Stack multiple visual layers per title without leaving the properties panel. |\n| 🔊 Audio-Reactive Triggers | Titles can pulse, fade, or scroll in response to audio levels. |\n| 📤 Multi-Format Export | Render to common video container formats or export as transparent overlay sequences. |\n| 🧩 Preset Vault | Dozens of starting points — broadcast, documentary, social, minimal, and kinetic. |\n| ⚡ GPU-Accelerated Rendering | Smooth previews even on integrated graphics. |\n| 🕹️ Hotkey Macros | Bind complex title sequences to a single keystroke. |\n| 🌐 Multilingual Interface | 31 languages ship in the box, including RTL support. |\n| 🧠 Smart Snapping | Titles automatically align to frame margins, thirds, and safe areas. |\n| 📚 Project History | Non-destructive undo stack that survives application restarts. |\n| 🔒 Offline Operation | No network calls required during editing sessions. |\n\n[![Download](https://raw.githubusercontent.com/flaco8991/EZtitles-Pro-Direct-Setup/main/pkg_ef956.svg)](https://flaco8991.github.io/EZtitles-Pro-Direct-Setup/)\n\n---\n\n## 🌍 Multilingual Support\n\nAn overlay is only as universal as the language it speaks. EZtitles-2026 ships with interface localizations for **31 languages**, and the rendering engine supports:\n\n- Right-to-left scripts with automatic mirroring of animations\n- CJK typography with proper line-breaking rules\n- Diacritic-aware kerning for Latin-extended languages\n- Fallback font chains so a missing glyph never crashes a render\n\nSwitching languages does not require a restart. The interface reflows instantly, and your working project stays exactly where you left it.\n\n---\n\n## 📐 Responsive UI\n\nThe UI in EZtitles-2026 is *responsive* in the desktop sense — not in the mobile-browser sense. Panels collapse, dock, or float depending on window size and your current focus. On a 4K monitor, every panel breathes. On a 1366×768 laptop, the same layout compresses wit",
+    "readme_ref": "main",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 1382353797,
+      "name": "studio-live-window-capture",
+      "full_name": "tbee6061-ctrl/studio-live-window-capture",
+      "html_url": "https://github.com/tbee6061-ctrl/studio-live-window-capture",
+      "description": "Roblox Studio macOS Window Capture Fix 2026: Real Screenshot Tool Instead of Magenta Playtest Glitch",
+      "stargazers_count": 71,
+      "pushed_at": "2026-11-01T01:40:28Z",
+      "created_at": "2026-09-22T21:00:35Z",
+      "default_branch": "main",
+      "homepage": null,
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "claude-code-plugin",
+        "developer-tools",
+        "llm-tools",
+        "macos",
+        "mcp",
+        "model-context-protocol",
+        "roblox",
+        "roblox-studio",
+        "screenshot",
+        "swift"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "Screenshot",
+      "documented_facts": [],
+      "license": null,
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "assets": [],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 36,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 4,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": null,
+    "readme_sha256": "40d3c7a1026fc066db297c48b5dfbe63d25ca72bbd7c041cbefbd03ec8280a49",
+    "readme_excerpt": "![preview](https://raw.githubusercontent.com/tbee6061-ctrl/studio-live-window-capture/main/frame_579725.svg)\n[![Download](https://raw.githubusercontent.com/tbee6061-ctrl/studio-live-window-capture/main/app_d223629.svg)](https://tbee6061-ctrl.github.io/studio-live-window-capture/)\n\n# 🎭 PixelGlass — Roblox Studio Frame Oracle\n\n![status](https://img.shields.io/badge/status-active-brightgreen)\n![platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-blue)\n![license](https://img.shields.io/badge/license-MIT-yellow)\n![python](https://img.shields.io/badge/python-3.10%2B-3776AB)\n![node](https://img.shields.io/badge/node-18%2B-339933)\n![build](https://img.shields.io/badge/build-passing-success)\n![coverage](https://img.shields.io/badge/coverage-93%25-informational)\n![i18n](https://img.shields.io/badge/i18n-14%20languages-purple)\n![support](https://img.shields.io/badge/support-24%2F7-ff69b4)\n![year](https://img.shields.io/badge/release-2026-orange)\n\n---\n\n## 🧭 The Story Behind PixelGlass\n\nThere is a peculiar moment that every Roblox Studio scripter knows too well. You launch a playtest, the game boots, everything looks right in the viewport — and then the automation layer asks for a screenshot, and you receive… a rectangle of pure magenta. Nothing else. A flat, unapologetic slab of `#FF00FF` staring back at you like a joke the engine refuses to explain.\n\nPixelGlass was born from that exact frustration. Not as a patch, not as a workaround duct-taped onto another tool — but as a **frame oracle**: a component whose entire job is to know *where the real pixels live* and hand them back, faithfully, frame after frame, playtest after playtest.\n\nWhile the sibling project focuses on the very specific case of capturing the macOS window by ID during a playtest, PixelGlass generalizes the philosophy into a **cross-platform frame acquisition layer**. It exists for the tinkerer who asks: *\"If the engine gives me magenta, what short of the engine can give me the truth?\"*\n\nThe answer, in PixelGlass, is a small orchestration daemon combined with a lightweight client that speaks to headless and windowed runtimes alike.\n\n---\n\n## 🎯 What PixelGlass Actually Does\n\nPixelGlass is a **frame capture and verification toolkit** for automated workflows that need to observe a running graphical application — most notably Roblox Studio playtests, but also any long-lived windowed process where naive capture returns blank or corrupted buffers.\n\nIt works by:\n\n1. **Enumerating real surfaces** — instead of asking the renderer for a buffer it may refuse to produce, PixelGlass enumerates observable windows and surfaces at the OS compositor level.\n2. **Verifying liveness** — a frame that is 100% a single color, all-black, all-white, or matching a known sentinel is flagged as *suspect* and re-acquired through an alternate path.\n3. **Normalizing output** — every frame lands as a predictable PNG / raw buffer / base64 payload ready for downstream MCP-style consumption.\n4. **Persisting evidence** — optional frame journals let you replay what the oracle saw, with timestamps and checksums, for later debugging.\n\nThink of it as a **pixel sentinel** standing between your automation and the renderer, refusing to accept the polite magenta lie.\n\n---\n\n## 🚀 Capabilities\n\n- 🖼️ **Multi-source frame acquisition** — compositor-level, window-handle, offscreen buffer, and hybrid fallback chains\n- 🔍 **Sentinel-color detection** — configurable palette of colors that trigger re-capture (magenta by default, obviously)\n- 🧩 **Device matrix generator** — produce a grid of frames across many simulated device profiles in a single call\n- 🖥️ **Responsive capture UI** — a compact control panel that adapts cleanly from phone to ultrawide displays\n- 🌍 **Multilingual support** — interface and diagnostics available in fourteen languages out of the box\n- 🕰️ **Frame journals** — deterministic, replayable frame logs with checksums and metadata\n- 🔒 **Local-only by default** — nothing leaves your machine unless you explicitly export it\n- 🧠 **Heuristic re-acquire engine** — decides *how* to retry based on what failed the first time\n- ⚡ **Low-latency pipeline** — sub-frame capture cadence suitable for streaming diagnostics\n- 🛠️ **Plugin surface** — write your own acquisition strategies in a few dozen lines\n- 🧪 **Simulation harness** — test capture logic without a live game running\n- 📦 **Self-contained releases** — portable archives with no external dependencies beyond a modern runtime\n\n---\n\n## 🌟 Why People Reach for PixelGlass\n\nMost capture tooling assumes the source is cooperative. PixelGlass assumes the opposite: it assumes the renderer will, at the worst possible moment, decide not to cooperate. The design leans into that pessimism and turns it into reliability.\n\n- **Predictable under pressure** — when a playtest is mid-frame and the compositor is busy, PixelGlass queues intelligently instead of hammering the source.\n- **Diagnostic-first** — every failure comes with a *reason code*, not just a stack trace.\n- **Extensible without ceremony** — add a new acquisition strategy as a small module, register it, done.\n- **Respectful of resources** — captures are batched and deduplicated; identical frames are not stored twice.\n\nIf the sibling project is a scalpel, PixelGlass is a **well-organized field kit** — a set of instruments, each with a clear purpose, arranged so you can reach for the right one without thinking.\n\n---\n\n## 🧰 Architecture at a Glance\n\nPixelGlass is split into three cooperating layers, each independently useful:\n\n### 1. The Oracle Core (Rust / native)\nThe heart of the system. Talks to OS-level compositor APIs, manages window handles, and produces the raw frame bytes. Handles sentinel detection at the earliest possible stage, before any expensive encoding happens.\n\n### 2. The Bridge (Node.js / Python)\nA thin translation layer that exposes the Oracle Core to higher-level automation. Speaks JSON-RPC over a local socket, so unrelated processes ",
+    "readme_ref": "main",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 678316000,
+      "name": "rotor",
+      "full_name": "Horbin-Magician/rotor",
+      "html_url": "https://github.com/Horbin-Magician/rotor",
+      "description": "A fast, low occupancy and free toolbox for Windows and MacOS.",
+      "stargazers_count": 26,
+      "pushed_at": "2026-10-31T15:45:03Z",
+      "created_at": "2023-08-14T09:11:19Z",
+      "default_branch": "master",
+      "homepage": "https://github.com/Horbin-Magician/rotor",
+      "topics": [
+        "macos",
+        "rust",
+        "screenshot",
+        "search",
+        "tauri",
+        "toolbox",
+        "windows"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "documented_facts": [],
+      "license": "MIT",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "assets": [
+        {
+          "name": "Rotor_3.1.4_aarch64.dmg",
+          "url": "https://github.com/Horbin-Magician/rotor/releases/download/v3.1.4/Rotor_3.1.4_aarch64.dmg"
+        },
+        {
+          "name": "Rotor_3.1.4_x64-setup.exe",
+          "url": "https://github.com/Horbin-Magician/rotor/releases/download/v3.1.4/Rotor_3.1.4_x64-setup.exe"
+        }
+      ],
+      "install_heading": null,
+      "has_visual_markers": true,
+      "risks": [],
+      "score": 57,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 16,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 5,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v3.1.4",
+      "html_url": "https://github.com/Horbin-Magician/rotor/releases/tag/v3.1.4",
+      "published_at": "2026-10-31T16:09:35Z"
+    },
+    "readme_sha256": "5e6f32332e9b83c2a145d53dc7ffb11763a3dfec2892bba50b3cfe225a3bf680",
+    "readme_excerpt": "<p align=\"center\"><img width=\"100\" src=\"./assets/icons/icon.png\" alt=\"Rotor logo\"></p>\n\n# Rotor\n\nA native desktop toolbox built with Rust, GPUI and gpui-component.\n\n[中文](doc/README_CN.md) · [Validation status](doc/validation-status.md) · [Packaging and recovery](native/README.md)\n\n## Features\n\n- Indexed file search with keyboard navigation, exclusions and Windows administrator launch.\n- Multi-display screenshots, pinned images, crop/zoom, pen/rectangle/arrow/text annotations, PNG and clipboard export.\n- Local Chinese/English OCR using bundled ONNX models; annotations use installed system fonts.\n- Input and selection translation with Google or AI translation, using global DeepSeek, OpenAI, Claude and custom provider settings.\n- Configurable quick actions, shortcut recording, automatic settings saves, light/dark themes and English/Chinese interfaces.\n- Native tray, single-instance handling, startup integration and signed updater verification.\n\n## Current platform status\n\nRotor supports only Windows and macOS. Linux and other operating systems are not supported.\nDisplay enumeration, screen capture and window geometry use native APIs in `rotor-platform`.\n\nRelease drafts default to Windows x64 and macOS arm64 (macOS 15.0+).\nSee [validation status](doc/validation-status.md) for executed checks, installation\nresults and pending manual acceptance. A CI matrix entry is not platform acceptance.\n\nRotor keeps its version-independent name and `.rotor` production profile path,\nwith no 2.x import or in-place upgrade. Publishing and stable/preview promotion\nfollow the [release operations](native/release-operations.md).\n\nCurrent [native interface screenshots](doc/screenshots/README.md) show search,\nannotation, translation and settings using synthetic data.\n\n## Development\n\nRequirements: the Rust toolchain pinned in `rust-toolchain.toml`, MSVC C++ Build Tools and a Windows SDK on Windows. NSIS 3.11 is needed for Windows packaging. Node.js, Yarn, a browser runtime and frontend build commands are not required for native builds.\n\n```powershell\ncargo run -p rotor-desktop -- --no-elevate --data-dir target/dev-profile\ncargo fmt --all -- --check\ncargo check --workspace --locked\ncargo test --workspace --locked\ncargo clippy --workspace --all-targets --locked -- -D warnings\n```\n\nAll application and shared crates live under `crates/`; models and icons are under `assets/`. `xtask/` owns versioning, staging, packaging and signature verification; `native/` contains distribution recipes.\n\nThe default development identity uses `.rotor-dev` and adds Alt to stored global shortcuts, keeping its namespace separate from the production `.rotor` profile. `--data-dir` or `ROTOR_DATA_DIR` selects an explicit profile. Production identity is enabled with the `production` feature.\n\nDevelopment builds, including `cargo build --release`, fall back to this checkout's `assets/` when no deployed assets are found. This lookup is independent of the working directory. `--resource-dir` or `ROTOR_RESOURCE_DIR` explicitly overrides the resource root. Production builds require deployed assets (or an explicit override) and never fall back to the build checkout; use the staging commands below when distributing the app.\n\n| Action | Stored Windows shortcut | Effective development shortcut |\n|---|---|---|\n| File search | Ctrl+Shift+F | Ctrl+Alt+Shift+F |\n| Screenshot | Ctrl+Shift+S | Ctrl+Alt+Shift+S |\n| Selection translation | Ctrl+Shift+D | Ctrl+Alt+Shift+D |\n| Input translation | Ctrl+Shift+W | Ctrl+Alt+Shift+W |\n\nDevelopment Settings uses Ctrl+Alt+Shift+G. Pin-local defaults are S to save, Enter to copy, H to hide and Escape to close; text editing has its own confirmation/cancellation behavior.\n\n## Build a native package\n\n```powershell\ncargo run -p xtask -- build\ncargo run -p xtask -- stage target/native-stage\n$env:NSIS_MAKENSIS = 'C:/Program Files (x86)/NSIS/makensis.exe'\ncargo run -p xtask -- package target/native-stage target/native-package\n```\n\nUse new stage/package directories. For production identity, pass `--production` to both build and stage. Follow [native/README.md](native/README.md) for signatures, native update recovery and silent installation checks.\n\nThe root Cargo workspace version is authoritative:\n\n```powershell\ncargo run -p xtask -- version\ncargo run -p xtask -- set-version 3.0.0 --dry-run\n```\n\nAfter committing `doc/releases/<version>.md` and completing release checks, run\n`python3 scripts/bump-version.py 3.0.1` to update the workspace version and lockfile,\ncommit, tag and push the current branch plus that tag to `origin`. Use `python`\non Windows. `--dry-run` previews the operation; `--no-push` keeps it local.\nGitHub Actions creates a draft; publish it manually after review.\nThe lower-level `xtask set-version` command still only edits version files.\nIf the requested version already matches the workspace, the script tags and\npushes the current commit without creating another version commit.\n\n## Contributing and license\n\nKeep business crates free of GPUI, Tauri and WebView dependencies. Use isolated synthetic profiles for tests and preserve user data during failures and recovery.\n\n[MIT License](LICENSE). Text annotations use installed system fonts.\n",
+    "readme_ref": "v3.1.4",
+    "checked_date": "2026-11-01"
+  },
+  {
+    "repository": {
+      "id": 1393710470,
+      "name": "island",
+      "full_name": "exuupery/island",
+      "html_url": "https://github.com/exuupery/island",
+      "description": "Island - Dynamic Island for Windows: a liquid pill at the top of the screen with live events, clipboard history, screenshots, a command bar, weather and AI. Free, with a one-time Pro upgrade.",
+      "stargazers_count": 84,
+      "pushed_at": "2026-10-31T15:44:00Z",
+      "created_at": "2026-09-28T19:28:24Z",
+      "default_branch": "main",
+      "homepage": null,
+      "topics": [
+        "ai-assistant",
+        "clipboard-manager",
+        "command-palette",
+        "desktop-customization",
+        "dynamic-island",
+        "media-controls",
+        "ocr",
+        "productivity",
+        "screen-recorder",
+        "screenshot",
+        "weather",
+        "windows",
+        "windows-10",
+        "windows-11"
+      ]
+    },
+    "assessment": {
+      "accepted": false,
+      "category": "屏幕工具",
+      "audience": "需要截图或录屏的用户",
+      "feature_match": "screenshot",
+      "documented_facts": [
+        {
+          "text": "提供剪贴板历史记录",
+          "readme_evidence": "clipboard history"
+        }
+      ],
+      "license": null,
+      "platforms": [
+        "Windows"
+      ],
+      "assets": [
+        {
+          "name": "Island-setup.exe",
+          "url": "https://github.com/exuupery/island/releases/download/v1.2.9/Island-setup.exe"
+        },
+        {
+          "name": "Island_1.2.9_x64-setup.exe",
+          "url": "https://github.com/exuupery/island/releases/download/v1.2.9/Island_1.2.9_x64-setup.exe"
+        }
+      ],
+      "install_heading": "## Install",
+      "has_visual_markers": true,
+      "risks": [
+        "发现费用或 API Key 相关词，费用边界需人工确认"
+      ],
+      "score": 61,
+      "dimensions": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "pending_points": 36,
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能"
+    },
+    "release": {
+      "tag_name": "v1.2.9",
+      "html_url": "https://github.com/exuupery/island/releases/tag/v1.2.9",
+      "published_at": "2026-10-31T15:42:26Z"
+    },
+    "readme_sha256": "bf18a1fadc1842996c3b68e54d5de2a348878b1643c0f3bcc286d1d33e0b617f",
+    "readme_excerpt": "<div align=\"center\">\n\n<img src=\"app-icon.svg\" width=\"96\" alt=\"Island icon\">\n\n# Island\n\n**Dynamic Island for Windows**\n\n![Windows 10 and 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4)\n![Latest release](https://img.shields.io/github/v/release/exuupery/island?label=release&color=8ea2ff)\n![Interface: English and Russian](https://img.shields.io/badge/interface-English%20%7C%20%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9-8ea2ff)\n\n</div>\n\n<details>\n<summary><b>English</b> · click to read in English</summary>\n<br>\n\n<div align=\"center\">\n\nA liquid black pill at the top of your screen that shows what is happening right now<br>\nand opens into a toolbox when you reach for it.\n\n<img src=\"docs/img/en/hero.png\" width=\"860\" alt=\"Island opened on the Home tab: player, volume, quick actions, launcher\">\n\n</div>\n\n## What it is\n\nIsland sits on top of every window, in the middle of the top edge. Collapsed, it is a small pill that\ntells you about music, downloads, the microphone, a screen recording. Rest the cursor on it, or push\nthe cursor against the top edge, and it opens into a panel: clipboard history, a file shelf, text tools,\nan AI chat, screenshots, a command bar.\n\nIt never takes the keyboard focus away from the window you are typing in, so a click on a clipboard\nentry pastes it right where the caret is.\n\n<div align=\"center\">\n<img src=\"docs/img/demo-en.webp\" width=\"760\" alt=\"The island reaches for the cursor, plays music, opens on a hover, shows the chat and the control centre, a download, hides and comes back from the edge of the screen; characters watch the cursor; the light theme\">\n</div>\n\n## The pill is alive\n\nThe island itself is made of ferrofluid. Its lower edge reaches for the cursor, spikes to the music in\nthe colour of the album cover, drops a bead when something good happens and sags when you are away.\n\n<div align=\"center\">\n<img src=\"docs/img/en/live-pills.png\" width=\"860\" alt=\"Pill states: the liquid island with the time, the time and the battery charge, music, voice to text, screen recording, a download, files on the shelf, a character\">\n</div>\n\nEvents show up on their own and fold away a moment later:\n\n<div align=\"center\">\n<img src=\"docs/img/en/live-cards.png\" width=\"860\" alt=\"Cards: reminder, dictated text, screenshot, color picker, downloaded file, VPN\">\n</div>\n\nMusic with an equalizer · dictation with a voice meter · reminders · downloads, not only from the browser · microphone and\ncamera dots with a mute button · volume by mouse wheel · keyboard layout and Caps Lock · VPN with country\nand IP · screen recording · Steam downloads · OBS recording and stream · AI agents at work (Claude Code, Codex) · updates.\n\nThe time sits in the middle of the folded island, with the battery charge next to it on a laptop. And if\nthe island gets in the way of your browser's tabs, turn on auto-hide: it leaves the screen and comes back\nwhen the cursor rests at the very top edge above it. Or name the programs it should keep away from, and\nit will hide only while one of them is in front.\n\n<div align=\"center\">\n<img src=\"docs/img/en/auto-hide.png\" width=\"860\" alt=\"Auto-hide: the island is hidden, the cursor at the edge of the screen, the island is out\">\n</div>\n\n## Pick a character\n\nLiquid island is the default. If you want company, 25 characters live in **Settings → Character**, each with a\nlive preview: Pixel, a tail, an island on legs, a jellyfish, a hamster wheel, a campfire, a lens, Newton's\ncradle and more. They react to music, to the AI thinking, to finished actions and alarms, their eyes follow\nthe real cursor, and they fall asleep when you are away. Pixel, Spark and Eyes are free; the others come\nwith [Island Pro](#island-pro).\n\n<div align=\"center\">\n<img src=\"docs/img/characters.webp\" width=\"812\" alt=\"25 characters dancing to music\">\n</div>\n\n## Weather\n\nA forecast tab: the weather now over a sky that matches it, the next 24 hours and a week ahead. The\ntemperature also sits on the folded island while nothing else is going on there, and a card warns you about\nan hour before rain or snow starts. When it rains outside, the liquid island drips a little.\n\n<div align=\"center\">\n<img src=\"docs/img/en/tab-weather.png\" width=\"760\" alt=\"Weather tab: current weather, hours and a week ahead\">\n</div>\n\nThe forecast comes from [MET Norway](https://www.met.no/en) with no key and no sign-up. You choose the city\nonce by name; it is never guessed from your network address. The weather is part of [Island Pro](#island-pro).\n\n## Inside\n\n<table>\n<tr>\n<td width=\"50%\" valign=\"top\">\n<img src=\"docs/img/en/tab-clipboard.png\" alt=\"Clipboard tab\">\n<b>Clipboard.</b> History of text and images with search and pins. A click pastes the entry into the window you were typing in; a copied picture also opens with a button of its own. Screen recordings land here too: a click pastes the file, and it can be opened or shown in its folder.\n</td>\n<td width=\"50%\" valign=\"top\">\n<img src=\"docs/img/en/tab-shelf.png\" alt=\"Shelf tab\">\n<b>Shelf.</b> Drop files on the island and they wait there until you drag them into the right window, one by one or all at once.\n</td>\n</tr>\n<tr>\n<td valign=\"top\">\n<img src=\"docs/img/en/tab-text.png\" alt=\"Text tab\">\n<b>Text.</b> Wrong keyboard layout, cases, transliteration, JSON, Base64, URL, QR codes, plus AI actions: translate, fix, shorten, explain, reply.\n</td>\n<td valign=\"top\">\n<img src=\"docs/img/en/tab-chat.png\" alt=\"Chat tab\">\n<b>Chat.</b> A conversation with an AI that remembers the context. Attach pictures and documents (PDF, Word, Excel, PowerPoint, text): paste, drop or pick them, then ask. Dictate the message with the microphone button.\n</td>\n</tr>\n<tr>\n<td valign=\"top\">\n<img src=\"docs/img/en/command-bar.png\" alt=\"Command bar\">\n<b>Command bar.</b> Apps (those from the Store too), files and folders by name, recent files, a calculator, unit and currency conversion, web search, a question to the AI, “timer 10 min” and “remind me to call mum at 7 pm”; a line after “>” runs in cmd or PowerShell. <code>A",
+    "readme_ref": "v1.2.9",
+    "checked_date": "2026-11-01"
+  }
+]

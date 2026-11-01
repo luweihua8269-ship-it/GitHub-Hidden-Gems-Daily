@@ -792,6 +792,252 @@
       "subject": "GitHub 冷门好物日报｜2026-10-31｜今天发现的2个有趣项目",
       "smtp_phase": "completed",
       "smtp_data_attempts": 1
+    },
+    "2026-11-01": {
+      "date": "2026-11-01",
+      "github_api_requests": 37,
+      "candidates": 59,
+      "deep_checked": 10,
+      "recommendations": 0,
+      "llm_calls": 0,
+      "llm_input_tokens": 0,
+      "llm_output_tokens": 0,
+      "ai_cost_cny": 0,
+      "ai_cost_basis": "程序没有模型接口或模型调用路径",
+      "program_seconds": 13.828,
+      "actions_job_seconds": null,
+      "actions_billed_cost": null,
+      "provider_remaining_quota": null,
+      "cloud_runs": [
+        "41283239062"
+      ],
+      "email_result": "not_configured",
+      "smtp_attempts": 0,
+      "retry_used": false,
+      "over_budget": false,
+      "stops": [],
+      "api_events": [
+        {
+          "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/rate_limit",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Amenubar+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 29,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Ascreenshot+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+          "status": 200,
+          "remaining": 29,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Afile-sharing+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 28,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Asubtitle+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+          "status": 200,
+          "remaining": 27,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Apomodoro+stars%3A20..5000+pushed%3A%3E2026-05-05+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 26,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Cerlancism/chatgpt-subtitle-translator",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Cerlancism/chatgpt-subtitle-translator/releases/latest",
+          "status": 200,
+          "remaining": 4998,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Cerlancism/chatgpt-subtitle-translator/readme?ref=v3.3.2",
+          "status": 200,
+          "remaining": 4998,
+          "truncated": true
+        },
+        {
+          "path": "/repos/onmax/comark-ui",
+          "status": 200,
+          "remaining": 4997,
+          "truncated": false
+        },
+        {
+          "path": "/repos/onmax/comark-ui/releases/latest",
+          "status": 200,
+          "remaining": 4997,
+          "truncated": false
+        },
+        {
+          "path": "/repos/onmax/comark-ui/readme?ref=v0.8.0",
+          "status": 200,
+          "remaining": 4996,
+          "truncated": false
+        },
+        {
+          "path": "/repos/mangeshghodke/DreamPlayer",
+          "status": 200,
+          "remaining": 4995,
+          "truncated": false
+        },
+        {
+          "path": "/repos/mangeshghodke/DreamPlayer/releases/latest",
+          "status": 200,
+          "remaining": 4996,
+          "truncated": false
+        },
+        {
+          "path": "/repos/mangeshghodke/DreamPlayer/readme?ref=v0.5.4",
+          "status": 200,
+          "remaining": 4994,
+          "truncated": true
+        },
+        {
+          "path": "/repos/s-thom/howtoscreenshot",
+          "status": 200,
+          "remaining": 4993,
+          "truncated": false
+        },
+        {
+          "path": "/repos/s-thom/howtoscreenshot/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/s-thom/howtoscreenshot/readme?ref=main",
+          "status": 200,
+          "remaining": 4992,
+          "truncated": false
+        },
+        {
+          "path": "/repos/lzhgus/Capso",
+          "status": 200,
+          "remaining": 4991,
+          "truncated": false
+        },
+        {
+          "path": "/repos/lzhgus/Capso/releases/latest",
+          "status": 200,
+          "remaining": 4994,
+          "truncated": false
+        },
+        {
+          "path": "/repos/lzhgus/Capso/readme?ref=v1.2.7",
+          "status": 200,
+          "remaining": 4990,
+          "truncated": false
+        },
+        {
+          "path": "/repos/minghe36/haoone-app",
+          "status": 200,
+          "remaining": 4989,
+          "truncated": false
+        },
+        {
+          "path": "/repos/minghe36/haoone-app/releases/latest",
+          "status": 200,
+          "remaining": 4993,
+          "truncated": false
+        },
+        {
+          "path": "/repos/minghe36/haoone-app/readme?ref=V14.8.0",
+          "status": 200,
+          "remaining": 4988,
+          "truncated": false
+        },
+        {
+          "path": "/repos/flaco8991/EZtitles-Pro-Direct-Setup",
+          "status": 200,
+          "remaining": 4987,
+          "truncated": false
+        },
+        {
+          "path": "/repos/flaco8991/EZtitles-Pro-Direct-Setup/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/flaco8991/EZtitles-Pro-Direct-Setup/readme?ref=main",
+          "status": 200,
+          "remaining": 4986,
+          "truncated": false
+        },
+        {
+          "path": "/repos/tbee6061-ctrl/studio-live-window-capture",
+          "status": 200,
+          "remaining": 4985,
+          "truncated": false
+        },
+        {
+          "path": "/repos/tbee6061-ctrl/studio-live-window-capture/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/tbee6061-ctrl/studio-live-window-capture/readme?ref=main",
+          "status": 200,
+          "remaining": 4984,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Horbin-Magician/rotor",
+          "status": 200,
+          "remaining": 4983,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Horbin-Magician/rotor/releases/latest",
+          "status": 200,
+          "remaining": 4990,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Horbin-Magician/rotor/readme?ref=v3.1.4",
+          "status": 200,
+          "remaining": 4982,
+          "truncated": false
+        },
+        {
+          "path": "/repos/exuupery/island",
+          "status": 200,
+          "remaining": 4981,
+          "truncated": false
+        },
+        {
+          "path": "/repos/exuupery/island/releases/latest",
+          "status": 200,
+          "remaining": 4989,
+          "truncated": false
+        },
+        {
+          "path": "/repos/exuupery/island/readme?ref=v1.2.9",
+          "status": 200,
+          "remaining": 4980,
+          "truncated": true
+        }
+      ],
+      "collection_started": true,
+      "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
+      "prepared": true,
+      "subject": "GitHub 冷门好物日报｜2026-11-01｜今日暂无通过核查的项目"
     }
   },
   "repositories": {
@@ -899,12 +1145,12 @@
       "repository_id": 1236024834,
       "name": "minghe36/haoone-app",
       "url": "https://github.com/minghe36/haoone-app",
-      "stars": 632,
+      "stars": 637,
       "category": "音视频",
       "description": "新一代 AI 专业字幕软件，剪映字幕、elevenlabs 语音转文本的最佳本地版平替之一，也是加强版。中英转录识别准确率超过 97%，词语音频对齐率 98%，说话人分割与识别准确率 96%，带有最先进的 ASR 开源模型，100+字幕动画（支持导出透明背景的字幕动画）。说话人识别、专业字幕编辑器、命令行工具、Skill，达芬奇字幕插件（含字幕动画插件），PR 字幕插件，本地转录、远程转录、文稿匹配、智能拆行、AI校正、AI 智能热词、翻译、双语字幕、专业字幕编辑器、字幕合成、自定义大模型 API",
       "discovered_date": "2026-10-29",
-      "updated_date": "2026-10-29T03:38:07Z",
-      "checked_date": "2026-10-29",
+      "updated_date": "2026-11-01T02:35:09Z",
+      "checked_date": "2026-11-01",
       "aliases": [
         "minghe36/haoone-app"
       ],
@@ -1003,8 +1249,8 @@
       "category": "音视频",
       "description": "EZtitle Pro Installer for Windows 10 and 11 Full Setup 2026",
       "discovered_date": "2026-10-29",
-      "updated_date": "2026-10-29T01:25:04Z",
-      "checked_date": "2026-10-29",
+      "updated_date": "2026-11-01T01:41:16Z",
+      "checked_date": "2026-11-01",
       "aliases": [
         "flaco8991/EZtitles-Pro-Direct-Setup"
       ],
@@ -1053,8 +1299,8 @@
       "category": "屏幕工具",
       "description": "Roblox Studio macOS Window Capture Fix 2026: Real Screenshot Tool Instead of Magenta Playtest Glitch",
       "discovered_date": "2026-10-29",
-      "updated_date": "2026-10-29T01:24:25Z",
-      "checked_date": "2026-10-29",
+      "updated_date": "2026-11-01T01:40:28Z",
+      "checked_date": "2026-11-01",
       "aliases": [
         "tbee6061-ctrl/studio-live-window-capture"
       ],
@@ -2292,6 +2538,356 @@
         },
         "成本与上手难度": {
           "earned": 3,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "616989909": {
+      "repository_id": 616989909,
+      "name": "Cerlancism/chatgpt-subtitle-translator",
+      "url": "https://github.com/Cerlancism/chatgpt-subtitle-translator",
+      "stars": 391,
+      "category": "音视频",
+      "description": "Token efficient translation tool based on ChatGPT or any OpenAI compatible LLM chat completion API",
+      "discovered_date": "2026-11-01",
+      "updated_date": "2026-11-01T07:02:22Z",
+      "checked_date": "2026-11-01",
+      "aliases": [
+        "Cerlancism/chatgpt-subtitle-translator"
+      ],
+      "key_feature": "subtitle",
+      "score": 26,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 6,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 0,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1415832889": {
+      "repository_id": 1415832889,
+      "name": "onmax/comark-ui",
+      "url": "https://github.com/onmax/comark-ui",
+      "stars": 32,
+      "category": "屏幕工具",
+      "description": "Comark UI is a free, open source library built on Comark, with 40+ blocks for docs, reviews, and agent reports.",
+      "discovered_date": "2026-11-01",
+      "updated_date": "2026-11-01T06:55:54Z",
+      "checked_date": "2026-11-01",
+      "aliases": [
+        "onmax/comark-ui"
+      ],
+      "key_feature": "screenshot",
+      "score": 42,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1327444594": {
+      "repository_id": 1327444594,
+      "name": "mangeshghodke/DreamPlayer",
+      "url": "https://github.com/mangeshghodke/DreamPlayer",
+      "stars": 74,
+      "category": "音视频",
+      "description": "Open-source video player for Android, iPhone/iPad & Android TV: Dolby Vision, HDR10+, DTS-HD/TrueHD audio, SMB/NAS + Jellyfin/WebDAV streaming, subtitles. GPLv3, Flutter + ExoPlayer/Media3 + AetherEngine.",
+      "discovered_date": "2026-11-01",
+      "updated_date": "2026-11-01T06:27:57Z",
+      "checked_date": "2026-11-01",
+      "aliases": [
+        "mangeshghodke/DreamPlayer"
+      ],
+      "key_feature": "video player",
+      "score": 57,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 16,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 5,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "115315245": {
+      "repository_id": 115315245,
+      "name": "s-thom/howtoscreenshot",
+      "url": "https://github.com/s-thom/howtoscreenshot",
+      "stars": 54,
+      "category": "屏幕工具",
+      "description": "📸 A website to inform how to take screenshots on different platforms",
+      "discovered_date": "2026-11-01",
+      "updated_date": "2026-11-01T06:07:34Z",
+      "checked_date": "2026-11-01",
+      "aliases": [
+        "s-thom/howtoscreenshot"
+      ],
+      "key_feature": "screenshot",
+      "score": 23,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 6,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 10,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 0,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 0,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1206577576": {
+      "repository_id": 1206577576,
+      "name": "lzhgus/Capso",
+      "url": "https://github.com/lzhgus/Capso",
+      "stars": 1472,
+      "category": "屏幕工具",
+      "description": "Open-source screenshot and screen recording for macOS. The free, native alternative to CleanShot X. Built with Swift 6.0 and SwiftUI.",
+      "discovered_date": "2026-11-01",
+      "updated_date": "2026-11-01T06:02:08Z",
+      "checked_date": "2026-11-01",
+      "aliases": [
+        "lzhgus/Capso"
+      ],
+      "key_feature": "screenshot",
+      "score": 61,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "678316000": {
+      "repository_id": 678316000,
+      "name": "Horbin-Magician/rotor",
+      "url": "https://github.com/Horbin-Magician/rotor",
+      "stars": 26,
+      "category": "屏幕工具",
+      "description": "A fast, low occupancy and free toolbox for Windows and MacOS.",
+      "discovered_date": "2026-11-01",
+      "updated_date": "2026-10-31T15:45:03Z",
+      "checked_date": "2026-11-01",
+      "aliases": [
+        "Horbin-Magician/rotor"
+      ],
+      "key_feature": "screenshot",
+      "score": 57,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 16,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 5,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1393710470": {
+      "repository_id": 1393710470,
+      "name": "exuupery/island",
+      "url": "https://github.com/exuupery/island",
+      "stars": 84,
+      "category": "屏幕工具",
+      "description": "Island - Dynamic Island for Windows: a liquid pill at the top of the screen with live events, clipboard history, screenshots, a command bar, weather and AI. Free, with a one-time Pro upgrade.",
+      "discovered_date": "2026-11-01",
+      "updated_date": "2026-10-31T15:44:00Z",
+      "checked_date": "2026-11-01",
+      "aliases": [
+        "exuupery/island"
+      ],
+      "key_feature": "screenshot",
+      "score": 61,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
           "max": 10,
           "pending": 2,
           "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
