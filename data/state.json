@@ -1065,7 +1065,7 @@
       "cloud_runs": [
         "41403883595"
       ],
-      "email_result": "sending",
+      "email_result": "accepted",
       "smtp_attempts": 1,
       "retry_used": false,
       "over_budget": false,
@@ -1302,7 +1302,7 @@
       "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
       "prepared": true,
       "subject": "GitHub 冷门好物日报｜2026-11-02｜今日暂无通过核查的项目",
-      "smtp_phase": "persist_intent",
+      "smtp_phase": "persist_result",
       "smtp_data_attempts": 1
     }
   },
