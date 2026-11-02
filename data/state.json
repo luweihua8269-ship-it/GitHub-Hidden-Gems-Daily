@@ -1046,6 +1046,256 @@
       "subject": "GitHub 冷门好物日报｜2026-11-01｜今日暂无通过核查的项目",
       "smtp_phase": "completed",
       "smtp_data_attempts": 1
+    },
+    "2026-11-02": {
+      "date": "2026-11-02",
+      "github_api_requests": 37,
+      "candidates": 60,
+      "deep_checked": 10,
+      "recommendations": 0,
+      "llm_calls": 0,
+      "llm_input_tokens": 0,
+      "llm_output_tokens": 0,
+      "ai_cost_cny": 0,
+      "ai_cost_basis": "程序没有模型接口或模型调用路径",
+      "program_seconds": 17.19,
+      "actions_job_seconds": null,
+      "actions_billed_cost": null,
+      "provider_remaining_quota": null,
+      "cloud_runs": [
+        "41403883595"
+      ],
+      "email_result": "not_configured",
+      "smtp_attempts": 0,
+      "retry_used": false,
+      "over_budget": false,
+      "stops": [],
+      "api_events": [
+        {
+          "path": "/repos/luweihua8269-ship-it/GitHub-Hidden-Gems-Daily",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/rate_limit",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Awindow-manager+stars%3A20..5000+pushed%3A%3E2026-05-06+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 29,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Aphoto-management+stars%3A20..5000+pushed%3A%3E2026-05-06+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+          "status": 200,
+          "remaining": 28,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Ascreen-mirroring+stars%3A20..5000+pushed%3A%3E2026-05-06+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 27,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Aaudio-player+stars%3A20..5000+pushed%3A%3E2026-05-06+archived%3Afalse+fork%3Afalse&per_page=12&sort=updated&order=desc",
+          "status": 200,
+          "remaining": 26,
+          "truncated": false
+        },
+        {
+          "path": "/search/repositories?q=topic%3Ae-ink+stars%3A20..5000+pushed%3A%3E2026-05-06+archived%3Afalse+fork%3Afalse&per_page=12&sort=stars&order=desc",
+          "status": 200,
+          "remaining": 25,
+          "truncated": false
+        },
+        {
+          "path": "/repos/froggy744/PIC",
+          "status": 200,
+          "remaining": 4998,
+          "truncated": false
+        },
+        {
+          "path": "/repos/froggy744/PIC/releases/latest",
+          "status": 200,
+          "remaining": 4999,
+          "truncated": false
+        },
+        {
+          "path": "/repos/froggy744/PIC/readme?ref=v1.0.1",
+          "status": 200,
+          "remaining": 4997,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ZHINFINITY/Mpv-infinity",
+          "status": 200,
+          "remaining": 4996,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ZHINFINITY/Mpv-infinity/releases/latest",
+          "status": 200,
+          "remaining": 4998,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ZHINFINITY/Mpv-infinity/readme?ref=v2.2.3",
+          "status": 200,
+          "remaining": 4995,
+          "truncated": true
+        },
+        {
+          "path": "/repos/usetrmnl/trmnl-firmware",
+          "status": 200,
+          "remaining": 4994,
+          "truncated": false
+        },
+        {
+          "path": "/repos/usetrmnl/trmnl-firmware/releases/latest",
+          "status": 200,
+          "remaining": 4997,
+          "truncated": false
+        },
+        {
+          "path": "/repos/usetrmnl/trmnl-firmware/readme?ref=v1.8.18",
+          "status": 200,
+          "remaining": 4993,
+          "truncated": true
+        },
+        {
+          "path": "/repos/dmellok/tesserae",
+          "status": 200,
+          "remaining": 4992,
+          "truncated": false
+        },
+        {
+          "path": "/repos/dmellok/tesserae/releases/latest",
+          "status": 200,
+          "remaining": 4996,
+          "truncated": false
+        },
+        {
+          "path": "/repos/dmellok/tesserae/readme?ref=v0.480.0",
+          "status": 200,
+          "remaining": 4991,
+          "truncated": true
+        },
+        {
+          "path": "/repos/Bitpainter75/FerrumPix",
+          "status": 200,
+          "remaining": 4990,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Bitpainter75/FerrumPix/releases/latest",
+          "status": 200,
+          "remaining": 4995,
+          "truncated": false
+        },
+        {
+          "path": "/repos/Bitpainter75/FerrumPix/readme?ref=latest",
+          "status": 200,
+          "remaining": 4989,
+          "truncated": true
+        },
+        {
+          "path": "/repos/rockbenben/scrcpy-helper",
+          "status": 200,
+          "remaining": 4988,
+          "truncated": false
+        },
+        {
+          "path": "/repos/rockbenben/scrcpy-helper/releases/latest",
+          "status": 200,
+          "remaining": 4994,
+          "truncated": false
+        },
+        {
+          "path": "/repos/rockbenben/scrcpy-helper/readme?ref=v1.6.2",
+          "status": 200,
+          "remaining": 4987,
+          "truncated": false
+        },
+        {
+          "path": "/repos/SolderedElectronics/Inkplate-Arduino-library",
+          "status": 200,
+          "remaining": 4986,
+          "truncated": false
+        },
+        {
+          "path": "/repos/SolderedElectronics/Inkplate-Arduino-library/releases/latest",
+          "status": 200,
+          "remaining": 4993,
+          "truncated": false
+        },
+        {
+          "path": "/repos/SolderedElectronics/Inkplate-Arduino-library/readme?ref=11.2.1",
+          "status": 200,
+          "remaining": 4985,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ReKindleOS/ReKindle",
+          "status": 200,
+          "remaining": 4984,
+          "truncated": false
+        },
+        {
+          "path": "/repos/ReKindleOS/ReKindle/releases/latest",
+          "status": 404
+        },
+        {
+          "path": "/repos/ReKindleOS/ReKindle/readme?ref=main",
+          "status": 200,
+          "remaining": 4983,
+          "truncated": false
+        },
+        {
+          "path": "/repos/zeeyado/koassistant.koplugin",
+          "status": 200,
+          "remaining": 4982,
+          "truncated": false
+        },
+        {
+          "path": "/repos/zeeyado/koassistant.koplugin/releases/latest",
+          "status": 200,
+          "remaining": 4991,
+          "truncated": false
+        },
+        {
+          "path": "/repos/zeeyado/koassistant.koplugin/readme?ref=v0.24.1",
+          "status": 200,
+          "remaining": 4981,
+          "truncated": true
+        },
+        {
+          "path": "/repos/aitjcize/esp32-photoframe",
+          "status": 200,
+          "remaining": 4980,
+          "truncated": false
+        },
+        {
+          "path": "/repos/aitjcize/esp32-photoframe/releases/latest",
+          "status": 200,
+          "remaining": 4990,
+          "truncated": false
+        },
+        {
+          "path": "/repos/aitjcize/esp32-photoframe/readme?ref=v2.19.0",
+          "status": 200,
+          "remaining": 4979,
+          "truncated": true
+        }
+      ],
+      "collection_started": true,
+      "actions_free_policy": "public repository; workflow fixed ubuntu-latest; no artifacts/cache/larger runner",
+      "prepared": true,
+      "subject": "GitHub 冷门好物日报｜2026-11-02｜今日暂无通过核查的项目"
     }
   },
   "repositories": {
@@ -1656,12 +1906,12 @@
       "repository_id": 1289448348,
       "name": "Bitpainter75/FerrumPix",
       "url": "https://github.com/Bitpainter75/FerrumPix",
-      "stars": 743,
+      "stars": 744,
       "category": "照片管理",
       "description": "FerrumPix is a desktop photo management and editing application for Linux,  Windows and macOS.",
       "discovered_date": "2026-10-30",
-      "updated_date": "2026-10-29T22:35:01Z",
-      "checked_date": "2026-10-30",
+      "updated_date": "2026-11-01T20:35:01Z",
+      "checked_date": "2026-11-02",
       "aliases": [
         "Bitpainter75/FerrumPix"
       ],
@@ -1706,12 +1956,12 @@
       "repository_id": 1248940745,
       "name": "dmellok/tesserae",
       "url": "https://github.com/dmellok/tesserae",
-      "stars": 984,
+      "stars": 989,
       "category": "旧设备改造",
       "description": "E-ink dashboard companion. Compose dashboards in a browser, render server-side, and push to e-ink panels over REST or MQTT.",
       "discovered_date": "2026-10-30",
-      "updated_date": "2026-10-29T22:04:31Z",
-      "checked_date": "2026-10-30",
+      "updated_date": "2026-11-01T22:21:43Z",
+      "checked_date": "2026-11-02",
       "aliases": [
         "dmellok/tesserae"
       ],
@@ -1756,12 +2006,12 @@
       "repository_id": 742912310,
       "name": "usetrmnl/trmnl-firmware",
       "url": "https://github.com/usetrmnl/trmnl-firmware",
-      "stars": 1200,
+      "stars": 1201,
       "category": "旧设备改造",
       "description": "TRMNL ePaper device firmware",
       "discovered_date": "2026-10-30",
-      "updated_date": "2026-10-29T18:31:04Z",
-      "checked_date": "2026-10-30",
+      "updated_date": "2026-11-02T01:28:19Z",
+      "checked_date": "2026-11-02",
       "aliases": [
         "usetrmnl/trmnl-firmware"
       ],
@@ -1861,7 +2111,7 @@
       "description": "Inkplate family Arduino library. The easiest way to add e-paper to your project. ",
       "discovered_date": "2026-10-30",
       "updated_date": "2026-10-28T14:32:39Z",
-      "checked_date": "2026-10-30",
+      "checked_date": "2026-11-02",
       "aliases": [
         "SolderedElectronics/Inkplate-Arduino-library"
       ],
@@ -1906,12 +2156,12 @@
       "repository_id": 1280281715,
       "name": "rockbenben/scrcpy-helper",
       "url": "https://github.com/rockbenben/scrcpy-helper",
-      "stars": 117,
+      "stars": 118,
       "category": "屏幕工具",
       "description": "不用背 scrcpy 的命令行参数：勾几个选项就把安卓手机投屏到 Windows 电脑，还能无线投屏、录屏、把手机当摄像头。免安装，解压双击即用",
       "discovered_date": "2026-10-30",
-      "updated_date": "2026-10-27T07:07:21Z",
-      "checked_date": "2026-10-30",
+      "updated_date": "2026-10-30T21:11:49Z",
+      "checked_date": "2026-11-02",
       "aliases": [
         "rockbenben/scrcpy-helper"
       ],
@@ -1961,7 +2211,7 @@
       "description": "Your Kindle Upgraded",
       "discovered_date": "2026-10-30",
       "updated_date": "2026-10-27T02:47:30Z",
-      "checked_date": "2026-10-30",
+      "checked_date": "2026-11-02",
       "aliases": [
         "ReKindleOS/ReKindle"
       ],
@@ -2006,12 +2256,12 @@
       "repository_id": 1017556132,
       "name": "zeeyado/koassistant.koplugin",
       "url": "https://github.com/zeeyado/koassistant.koplugin",
-      "stars": 281,
+      "stars": 288,
       "category": "旧设备改造",
       "description": "A powerful AI assistant integrated into KOReader.",
       "discovered_date": "2026-10-30",
       "updated_date": "2026-10-26T18:48:48Z",
-      "checked_date": "2026-10-30",
+      "checked_date": "2026-11-02",
       "aliases": [
         "zeeyado/koassistant.koplugin"
       ],
@@ -2896,6 +3146,156 @@
         },
         "成本与上手难度": {
           "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1356383943": {
+      "repository_id": 1356383943,
+      "name": "froggy744/PIC",
+      "url": "https://github.com/froggy744/PIC",
+      "stars": 50,
+      "category": "照片管理",
+      "description": "PIC — A free, open-source photo manager and editor for Linux. Rediscover the Picasa and iPhoto experience with beautiful galleries, albums, non-destructive editing, RAW support and collages. Built with Rust, GTK4 and libadwaita.",
+      "discovered_date": "2026-11-02",
+      "updated_date": "2026-11-02T06:48:58Z",
+      "checked_date": "2026-11-02",
+      "aliases": [
+        "froggy744/PIC"
+      ],
+      "key_feature": "photo manager",
+      "score": 64,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 20,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 8,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1337342898": {
+      "repository_id": 1337342898,
+      "name": "ZHINFINITY/Mpv-infinity",
+      "url": "https://github.com/ZHINFINITY/Mpv-infinity",
+      "stars": 183,
+      "category": "音视频",
+      "description": "Ad-free Android video and music player with MPV and Media3 engines, smooth-motion frame interpolation up to 120 fps, Liquid Glass UI, HDR/Dolby Vision, AI subtitle translation, Jellyfin and Seerr.",
+      "discovered_date": "2026-11-02",
+      "updated_date": "2026-11-02T06:29:42Z",
+      "checked_date": "2026-11-02",
+      "aliases": [
+        "ZHINFINITY/Mpv-infinity"
+      ],
+      "key_feature": "subtitle",
+      "score": 54,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 16,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 16,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 7,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 5,
+          "max": 10,
+          "pending": 2,
+          "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
+        }
+      },
+      "verification": "仅公开文档核查；未下载、未运行、未验证二进制安全或功能",
+      "ever_recommended": false
+    },
+    "1119680149": {
+      "repository_id": 1119680149,
+      "name": "aitjcize/esp32-photoframe",
+      "url": "https://github.com/aitjcize/esp32-photoframe",
+      "stars": 268,
+      "category": "旧设备改造",
+      "description": "Feature-rich firmware for ESP32-based e-paper displays with superior image quality.",
+      "discovered_date": "2026-11-02",
+      "updated_date": "2026-10-24T01:28:13Z",
+      "checked_date": "2026-11-02",
+      "aliases": [
+        "aitjcize/esp32-photoframe"
+      ],
+      "key_feature": "e-ink",
+      "score": 49,
+      "score_basis": {
+        "新意与惊喜感": {
+          "earned": 10,
+          "max": 30,
+          "pending": 20,
+          "basis": "小众程度与视觉资料仅作线索；独创性和惊喜感待编辑确认"
+        },
+        "普通用户实际价值": {
+          "earned": 14,
+          "max": 30,
+          "pending": 10,
+          "basis": "描述匹配使用场景、程序包及安装章节；真实体验待确认"
+        },
+        "可视化演示能力": {
+          "earned": 12,
+          "max": 20,
+          "pending": 4,
+          "basis": "README 媒体标记与可下载应用；未打开验证媒体和画面效果"
+        },
+        "可用性和维护状态": {
+          "earned": 10,
+          "max": 10,
+          "pending": 0,
+          "basis": "最近推送、正式 Release 与明确许可证；推送不等于功能维护"
+        },
+        "成本与上手难度": {
+          "earned": 3,
           "max": 10,
           "pending": 2,
           "basis": "安装包和安装章节；硬件、内购及运行成本仍需用户核对"
